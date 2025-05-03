@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>新用户注册</title>
+
+<!-- Fav Icon -->
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/flation.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">    
+
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+        <!-- preloader -->
+        <div class="preloader"></div>
+        <!-- preloader -->
+        <!-- registration-section -->
+        <section class="registration-section bg-color-3">
+            <div class="pattern">
+                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-85.png);"></div>
+                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-86.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="inner-box">
+                    <div class="content-box">
+                        <div class="title-box">
+                            <h3>新用户注册</h3>
+                        </div>
+                        <div class="inner">
+                            <form action="{{ url_for('login_user') }}" method="post" class="registration-form">
+                                <div class="row clearfix">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>用户名</label>
+                                        <input type="text" name="fname" placeholder="请输入用户名" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>邮箱</label>
+                                        <input type="email" name="email" placeholder="请输入邮箱" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>密码</label>
+                                        <input type="password" name="password" placeholder="请输入密码" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>确认密码</label>
+                                        <input type="password" name="cpassword" placeholder="请再次确认密码" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <div class="custom-check-box">
+                                            <div class="custom-controls-stacked">
+                                                <label class="custom-control material-checkbox">
+                                                    <input type="checkbox" class="material-control-input">
+                                                    <span class="material-control-indicator"></span>
+                                                    <span class="description">点击同意服务协议和隐私协议</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn-one">注册<i class="icon-Arrow-Right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="text"><span>or</span></div>
+                            <div class="login-now"><p>已经拥有账号了？ <a href="{{ url_for('login_user') }}">立即登录</a></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- registration-section end -->
+    </div>
+</body><!-- End of .page_wrapper -->
+</html>

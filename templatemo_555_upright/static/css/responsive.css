@@ -1,0 +1,21 @@
+@media only screen and (max-width: 5000px) {
+    .boxed_wrapper {
+      overflow: hidden;
+    }
+  }
+
+
+@media only screen and (max-width: 767px) {
+    .appointment-section,
+    .registration-section {
+      padding: 70px 0px;
+    }
+    .registration-section .content-box .inner .social-links li {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .registration-section .content-box .inner .social-links li a {
+      width: 100%;
+    }
+  }

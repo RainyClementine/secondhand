@@ -1,0 +1,13 @@
+create database shb;
+
+use shb;
+
+CREATE TABLE items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type VARCHAR(50),
+    price DOUBLE,
+    disciption varchar(500),
+    longitude DOUBLE,
+    latitude DOUBLE
+);
