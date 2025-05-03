@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upright</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">  <!-- https://fontawesome.com/-->  
-    <link rel="stylesheet" href="css/magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">        <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="slick/slick.min.css">          <!-- https://kenwheeler.github.io/slick/ -->
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="css/templatemo-upright.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
     
 </head>
@@ -73,7 +73,7 @@
             <div class="tm-main">
                 <!-- Home section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-01.jpg"></div>                   
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-01.jpg') }}"></div>                   
                     <section id="home" class="tm-section">
                         <h2 class="tm-text-primary">Welcome to Upright</h2>
                         <hr class="mb-5">
@@ -106,7 +106,7 @@
                                         mi at tortor tincidunt, ac consequat ante cursus.
                                     </p>
                                     <div class="text-right">
-                                        <a href="login.html" class="btn btn-primary tm-btn-next">登录</a>
+                                        <a href="{{ url_for('login_user') }}" class="btn btn-primary tm-btn-next">登录</a>
                                     </div>                                    
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
                 </div>
                 <!-- Gallery section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-02.jpg"></div>                   
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>                   
                     <section id="gallery" class="tm-section">
                         <h2 class="tm-text-primary">Upright Gallery</h2>
                         <hr class="mb-5">
@@ -202,257 +202,257 @@
                                 
                                 
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-01.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-01.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-01.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-01.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-01.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-01.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>  
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-01.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-01.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-01.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-01.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-01.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-01.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-02.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-02.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-02.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-02.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-02.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-02.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-02.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-02.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-02.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-02.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-02.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-02.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-03.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-03.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-03.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-03.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-03.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-03.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-03.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-03.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-03.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>  
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-03.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-03.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-03.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-04.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-04.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-04.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-04.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-04.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-04.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-04.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-04.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-04.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-04.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-04.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-04.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-05.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-05.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-05.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-05.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-05.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-05.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-05.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-05.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-05.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-05.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-05.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-05.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>  
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-06.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-06.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-06.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-06.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-06.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-06.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-06.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-06.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-06.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-06.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-06.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-06.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-07.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-07.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-07.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-07.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-07.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-07.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-07.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-07.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-07.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-07.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-07.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-07.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-08.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-08.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-08.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-08.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-08.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-08.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>  
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-08.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-08.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-08.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-08.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-08.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-08.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item building">
-                                    <img src="img/gallery/tn/building-09.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/building-09.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/building-09.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="img/gallery/tn/nature-09.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/nature-09.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/nature-09.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure> 
                                 <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="img/gallery/tn/portrait-09.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/portrait-09.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/portrait-09.jpg') }}">View more</a>						
                                     </figcaption>			
                                 </figure>
                                 <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="img/gallery/tn/animal-09.jpg" alt="Image"/>
+                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="img/gallery/animal-09.jpg">View more</a>						
+                                        <a href="{{ url_for('static', filename='img/gallery/animal-09.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
+                                </figure>
                             </div>
                             <div class="tm-paging">
                                 <a href="javascript:void(0);" class="active tm-paging-link" data-page="1">1</a>
@@ -463,17 +463,17 @@
 
                         </div>
                         <figure class="effect-honey edge-to-edge-portrait">
-                            <img src="img/gallery/tn/portrait-08.jpg" alt="Image"/>
+                            <img src="{{ url_for('static', filename='img/gallery/tn/portrait-08.jpg') }}" alt="Image"/>
                             <figcaption>
                                 <h2><i>Dreamy Honey</i></h2>
-                                <a href="img/gallery/portrait-08.jpg">View more</a>						
+                                <a href="{{ url_for('static', filename='img/gallery/portrait-08.jpg') }}">View more</a>						
                             </figcaption>			
                         </figure>
                     </section>
                 </div>
                 <!-- About section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-03.jpg"></div>
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
                     <section id="about" class="tm-section">
                         <h2 class="tm-text-primary">About Upright CSS Template</h2>
                         <hr class="mb-5">
@@ -490,7 +490,7 @@
                                 </p>
                             </div>
                             <div class="tm-col-about tm-col-about-r">
-                                <img src="img/img-about-01.jpg" alt="Image" class="img-fluid mb-5 tm-img-about">
+                                <img src="{{ url_for('static', filename='img/img-about-01.jpg') }}" alt="Image" class="img-fluid mb-5 tm-img-about">
                                 <p>
                                     Duis fringilla eget purus luctus sodales. Sed auctor odio quis ligula dignissim efficitur vitae vitae quam.
                                 </p>
@@ -500,7 +500,7 @@
                             <div class="tm-carousel">
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -518,7 +518,7 @@
                                 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -536,7 +536,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -554,7 +554,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -572,7 +572,7 @@
                                 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -590,7 +590,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -608,7 +608,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -626,7 +626,7 @@
                                 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-02.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -644,7 +644,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-03.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -662,7 +662,7 @@
 
                                 <div class="tm-carousel-item">
                                     <figure class="effect-honey mb-4">
-                                        <img src="img/about-01.jpg" alt="Featured Item">
+                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
                                         <figcaption>
                                             <ul class="tm-social">
                                                 <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
@@ -684,7 +684,7 @@
 
                 <!-- Contact section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="img/img-04.jpg"></div>
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-04.jpg') }}"></div>
                     <div id="contact" class="tm-section">
                         <h2 class="tm-text-primary">Contact Upright</h2>
                         <hr class="mb-5">
@@ -765,14 +765,23 @@
             </div> <!-- .tm-main -->                      
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
-    <script src="js/jquery-3.4.1.min.js"></script>          <!-- https://jquery.com/ -->
-    <script src="js/jquery.singlePageNav.min.js"></script>  <!-- https://github.com/ChrisWojcik/single-page-nav -->
-    <script src="js/parallax/parallax.min.js"></script>     <!-- https://pixelcog.github.io/parallax.js/ -->
-    <script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ -->
-    <script src="js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
-    <script src="js/jquery.magnific-popup.min.js"></script> <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
-    <script src="slick/slick.min.js"></script>              <!-- https://kenwheeler.github.io/slick/ -->
-    <script src="js/templatemo-script.js"></script>
-    <script src="js/gaode_map.js"></script>
+    <!-- <script src="js/jquery-3.4.1.min.js"></script>          https://jquery.com/ -->
+    <!-- <script src="js/jquery.singlePageNav.min.js"></script>  https://github.com/ChrisWojcik/single-page-nav -->
+    <!-- <script src="js/parallax/parallax.min.js"></script>     https://pixelcog.github.io/parallax.js/ -->
+    <!-- <script src="js/imagesloaded.pkgd.min.js"></script>     https://imagesloaded.desandro.com/ -->
+    <!-- <script src="js/isotope.pkgd.min.js"></script>          https://isotope.metafizzy.co/ -->
+    <!-- <script src="js/jquery.magnific-popup.min.js"></script> https://dimsemenov.com/plugins/magnific-popup/ -->
+    <!-- <script src="slick/slick.min.js"></script>              https://kenwheeler.github.io/slick/ -->
+    <!-- <script src="js/templatemo-script.js"></script> -->
+    <!-- <script src="js/gaode_map.js"></script> -->
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/gaode_map.js') }}"></script>
 </body>
 </html> 
