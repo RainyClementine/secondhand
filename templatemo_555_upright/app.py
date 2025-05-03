@@ -4,17 +4,27 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Byj20040720@localhost:3306/shb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-SHB = SQLAlchemy(app)  # 全局数据库对象
-class Item(SHB.Model):
-    __tablename__ = 'items'  # 指定表名（可选，默认自动推断）
-    
-    id = SHB.Column(SHB.Integer, primary_key=True, autoincrement=True)
-    name = SHB.Column(SHB.String(100), nullable=False)
-    kind = SHB.Column(SHB.String(50))
-    price = SHB.Column(SHB.Float)
-    message = SHB.Column(SHB.String(500))  # 注意字段名拼写需与表一致
-    longitude = SHB.Column(SHB.Float)
-    latitude = SHB.Column(SHB.Float)
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    __tablename__ = 'users'
+    username = db.Column(db.String(50), primary_key=True)
+    email = db.Column(db.String(100), unique=True, nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+    items = db.relationship('Item', backref='owner', lazy=True)  # 一对多关系
+
+class Item(db.Model):
+    __tablename__ = 'items'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    kind = db.Column(db.String(50))
+    price = db.Column(db.Float)
+    message = db.Column(db.String(500))
+    longitude = db.Column(db.Float)
+    latitude = db.Column(db.Float)
+    image_data = db.Column(db.LargeBinary)  # 存储图片二进制
+    user = db.Column(db.String(50), db.ForeignKey('users.username', ondelete='CASCADE'))
+
 
 @app.route('/')
 @app.route('/index')
@@ -44,8 +54,8 @@ def post_item():
             longitude=data.get('longitude'),
             latitude=data.get('latitude')
         )
-    SHB.session.add(new_item)
-    SHB.session.commit()
+    db.session.add(new_item)
+    db.session.commit()
 
     return render_template('index.html'),200
 

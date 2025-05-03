@@ -1,13 +1,22 @@
-create database shb;
+CREATE DATABASE shb;
 
-use shb;
+USE shb;
+
+CREATE TABLE users (
+    username VARCHAR(50) PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
 
 CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     kind VARCHAR(50),
     price DOUBLE,
-    message varchar(500),
+    message VARCHAR(500),
     longitude DOUBLE,
-    latitude DOUBLE
+    latitude DOUBLE,
+    image_data LONGBLOB,
+    user VARCHAR(50),
+    FOREIGN KEY (user) REFERENCES users(username) ON DELETE CASCADE
 );
