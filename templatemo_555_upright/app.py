@@ -3,7 +3,16 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
+@app.route('/api/post_item', methods=['POST'])
+def post_item():
+    data=request.form
+    print(data)
+    return "Successfully Added",200
 
 
 
