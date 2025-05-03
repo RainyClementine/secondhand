@@ -73,13 +73,13 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .tm-section-wrap {
-	width: calc(100% - 500px);
-	margin-left: 500px;
+	width: calc(100% - 450px);
+	margin-left: 450px;
 	margin-right: 0;
 	position: relative;
 }
 
-.tm-section { padding: 50px 70px 50px 0; }
+.tm-section { padding: 200px 70px 200px 50; }
 
 #gallery,
 #about,
@@ -287,6 +287,68 @@ a.tm-paging-link:hover {
     background: #006699;
     color: white;
 }
+
+/* -------------------- */
+.gallery-content-wrapper {
+	position: relative;
+	display: flex;
+	margin-right: -150px; /* 抵消容器可能有的右侧padding，使特色图片能延伸到边缘 */
+}
+
+/* 左侧主要内容区域 */
+.gallery-main-content {
+	width: 100%; /* 调整此值以控制左侧内容的宽度 */
+	padding-right: 20px; /* 在主内容和特色图片之间添加一些间距 */
+}
+
+/* 边缘到边缘的特色肖像图片 */
+.edge-to-edge-portrait {
+	position: absolute;
+	top: 0; /* 与tm-gallery-links顶部对齐 */
+	right: 0; /* 对齐到容器右侧 */
+	left: 79%; /* 与主内容区域宽度相匹配 */
+	height: 100%; /* 填满整个高度区域 */
+	margin: 0;
+	max-height: none;
+	min-width: auto; /* 覆盖默认的min-width */
+	max-width: none; /* 覆盖默认的max-width */
+	width: auto; /* 让宽度自动计算 */
+	z-index: 10;
+	overflow: hidden;
+}
+
+.edge-to-edge-portrait img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* 确保图片覆盖整个区域且不变形 */
+}
+
+/* 确保tm-gallery在小屏幕上也有正确的宽度 */
+.tm-gallery {
+	width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+	.gallery-content-wrapper {
+		display: block;
+	}
+	
+	.gallery-main-content {
+		width: 100%;
+		padding-right: 0;
+	}
+	
+	.edge-to-edge-portrait {
+		position: relative;
+		left: 0;
+		width: 100%;
+		height: 300px; /* 在小屏幕上给定一个固定高度 */
+		margin: 20px 0;
+	}
+}
+/* -------------- */
+
 
 @media (max-width: 1972px) { .tm-paging { max-width: 870px; } }
 @media (max-width: 1660px) { .tm-paging { max-width: 580px; } }
