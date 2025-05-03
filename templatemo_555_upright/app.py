@@ -24,7 +24,7 @@ def login_user():
 def post_item():
     data=request.form
     print(data)
-    return "Successfully Added",200
+    return render_template('index.html'),200
 
 
 
