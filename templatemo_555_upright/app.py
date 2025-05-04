@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/shb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:qq;200301161517@localhost:3306/shb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'My_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=3)  # 设置 session 有效期
@@ -163,18 +163,36 @@ def post_item():
 
 @app.route('/get_items',methods=['GET','POST'])
 def get_items():
-    # 查询所有物品
-    items = Item.query.all()
+    # 获取前端发送的筛选条件（JSON格式）
+    filters = request.get_json()
     
-    # 构建JSON响应数据
-    items_list = []
-    for item in items:
-        items_list.append({
-            'name': item.name,
-            'price': item.price,
-            'longitude': item.longitude,
-            'latitude': item.latitude,
-        })
+    # 初始化查询
+    query = Item.query
+    
+    # 价格范围筛选
+    min_price = filters.get('minprice')
+    if min_price is not None:
+        query = query.filter(Item.price >= float(min_price))
+        
+    max_price = filters.get('maxprice')
+    if max_price is not None:
+        query = query.filter(Item.price <= float(max_price))
+    
+    # 类别筛选
+    kind_list = filters.get('kindlist', [])
+    if kind_list:  # 如果类别列表不为空
+        query = query.filter(Item.kind.in_(kind_list))
+    
+    # 执行查询
+    items = query.all()
+    
+    # 构建响应数据
+    items_list = [{
+        'name': item.name,
+        'price': item.price,
+        'longitude': item.longitude,
+        'latitude': item.latitude
+    } for item in items]
     
     return jsonify({
         'success': True,
