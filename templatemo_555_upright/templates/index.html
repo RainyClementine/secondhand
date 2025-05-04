@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
     
@@ -25,13 +26,14 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <!-- Leftside bar -->
+            <!-- 侧边栏 -->
             <div id="tm-sidebar" class="tm-sidebar"> 
                 <nav class="tm-nav">
                     <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
                     <div>
+                        <!-- 放置LOGO图片 -->
                         <img src="path/to/your/image.png" alt="Brand Logo" class="tm-brand">
                         
                         <ul id="tm-main-nav">
@@ -39,7 +41,6 @@
                                 <a href="#home" class="nav-link current">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-home nav-icon"></i>
-                                    
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -63,102 +64,440 @@
                                     
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="https://paypal.me/templatemo" class="nav-link external" target="_parent" rel="sponsored">
-                                    <div class="triangle-right"></div>
-                                    <i class="fas fa-external-link-alt nav-icon"></i>
-                                    
-                                </a>
-                            </li>
                         </ul>
                     </div>
-                    <footer class="mb-3 tm-mt-100">
-                        <!-- Design: <a href="https://templatemo.com" target="_parent" rel="sponsored">TemplateMo</a> -->
-                    </footer>
                 </nav>
             </div>
             
             <div class="tm-main">
                 <!-- Home section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-01.jpg') }}"></div>                   
+                    <div class="tm-parallax" data-parallax="scroll"
+                        data-image-src="{{ url_for('static', filename='img/img-01.jpg') }}"></div>
                     <section id="home" class="tm-section">
-                        <h2 class="tm-text-primary">Welcome to Upright</h2>
-                        <hr class="mb-5">
-                        <div class="row">
-                            <div class="col-lg-6 tm-col-home mb-4">
-                                <div class="tm-text-container">
-                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
-                                        <i class="fas fa-satellite-dish fa-4x tm-text-primary"></i>
-                                    </div>                                
-                                    <p>
-                                        Leftmost column is placed for logo and main menu.
-                                        After that is an image column. Right side column 
-                                        is a 100% full-width content.
+
+                        <!-- 顶部标题区域 -->
+                        <div class="row mb-5 tm-header-section">
+                            <div class="col-lg-12 text-center">
+                                <!-- 主标题容器，增加内边距和动画效果 -->
+                                <div class="tm-header-content animate__animated animate__fadeInDown">
+                                    <h1 class="tm-text-primary mb-3 tm-main-title">
+                                        <span class="tm-highlight">校园二手交易平台</span>
+                                    </h1>
+                                    <p class="lead tm-text-secondary tm-subtitle">
+                                        让闲置流动 · 让资源重生 · 让校园更环保
                                     </p>
-                                    <p>
-                                        Right side can put many contents and it will
-                                        scroll up / down. Left side is fixed. Parallax
-                                        Image changes for different pages.
-                                    </p>
-                                </div>                                
-                            </div>
-                            <div class="col-lg-6 tm-col-home mb-4">
-                                <div class="tm-text-container">
-                                    <div class="tm-icon-container mb-5 mr-0 ml-auto">
-                                        <i class="fas fa-broadcast-tower fa-4x tm-text-primary"></i>
-                                    </div>                                 
-                                    <p>
-                                        Quisque tincidunt, sem rutrum euismod ornare, tortor arcu tempus 
-                                        lorem, accumsan suscipit mauris lorem at lorem. Praesent feugiat 
-                                        mi at tortor tincidunt, ac consequat ante cursus.
-                                    </p>
-                                    <div class="text-right">
-                                        <a href="{{ url_for('login_user') }}" class="btn btn-primary tm-btn-next">登录</a>
-                                    </div>                                    
+                                    <!-- 分割线增强 -->
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <div class="tm-divider tm-divider-gradient"></div>
+                                    </div>
+                                </div>
+                        
+                                <!-- 添加一个行动按钮 -->
+                                <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
+                                    <a href="{{ url_for('login_user') }}" class="btn btn-primary btn-lg tm-cta-btn">
+                                        <i class="fas fa-handshake mr-2"></i>立即交易
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <hr class="tm-hr-short mb-5">
-                        <div class="row tm-row-home">                            
-                            <div class="tm-col-home tm-col-home-l">
-                                <div class="media mb-4">
-                                    <i class="fas fa-scroll fa-4x tm-post-icon tm-text-primary"></i>
-                                    <div class="media-body">
-                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">24 September 2020</a>  
-                                        <p>
-                                            Upright is free responsive HTML CSS template by <a href="https://templatemo.com/page/1" target="_parent" rel="sponsored">TemplateMo</a>. 
-                                            You can feel free to adapt and apply this layout for your 
-                                        commercial or non-commercial websites. </p>
-                                    </div>                                    
-                                </div>
-                                <div class="media mb-4">
-                                    <i class="fas fa-cloud-sun fa-4x tm-post-icon tm-text-primary"></i>
-                                    <div class="media-body">
-                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">22 September 2020</a>  
-                                        <p>
-                                            You are not allowed to re-distribute this template as a ZIP file 
-                                            on any template collection website for the template download purpose. 
-                                            Please contact us for more information.
-                                        </p>
-                                    </div>                                    
-                                </div>
-                                <div class="media mb-4">
-                                    <i class="fas fa-dove fa-4x tm-post-icon tm-text-primary"></i>
-                                    <div class="media-body">
-                                        <a href="#" class="d-block mb-2 tm-text-primary tm-post-link">16 September 2020</a>  
-                                        <p>
-                                            You may want to support us by making   <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a small donation via PayPal</a>. That will be helpful. We hope you like this Upright Template for your work.
-                                        </p>
-                                    </div>                                    
+                
+                        <!-- 特色服务卡片 -->
+                        <div class="row tm-features-row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-book-open fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">教材交易</h4>
+                                    <p>学长学姐的二手教材，价格实惠<br>涵盖各专业课程，笔记齐全<br>帮你节省教材开支</p>
                                 </div>
                             </div>
-                            <div class="tm-col-home mr-0 ml-auto">
-                                <div class="tm-img-home-container"></div>                                
+                        
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-laptop fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">数码产品</h4>
+                                    <p>学生自用电脑、平板、手机<br>价格亲民，支持当面验货<br>校园内交易更放心</p>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-home fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">校园生活</h4>
+                                    <p>自行车、宿舍用品、小家电<br>毕业季特惠，闲置再利用<br>满足校园生活各种需求</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- 热门商品轮播 -->
+                        <div class="row mb-5">
+                            <div class="col-lg-12">
+                                <h3 class="carousel-title">热门二手商品</h3>
+                                <div class="tm-carousel-container">
+                                    <!-- 轮播视窗 - 添加额外容器控制可见区域 -->
+                                    <div class="tm-carousel-viewport">
+                                        <!-- 轮播主体 -->
+                                        <div class="tm-carousel">
+                                            <!-- 轮播项1 - 笔记本电脑 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item1.png') }}" alt="MacBook Pro">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">MacBook Pro 2021 M1芯片 13寸</h5>
+                                                        <div class="tm-product-price">¥5,200 <small>原价: ¥9,999</small></div>
+                                                        <div class="tm-product-meta">计算机系张学长 · 使用1年</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <span class="tm-review-count">(28)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项2 - 手机 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item2.png') }}" alt="iPhone 13">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">iPhone 13 128GB 白色 98新</h5>
+                                                        <div class="tm-product-price">¥3,600 <small>原价: ¥5,999</small></div>
+                                                        <div class="tm-product-meta">文学院李学姐 · 带原装盒</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(15)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项3 - 教材 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item3.png') }}" alt="经济学教材">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">曼昆《经济学原理》第8版</h5>
+                                                        <div class="tm-product-price">¥50 <small>原价: ¥108</small></div>
+                                                        <div class="tm-product-meta">经管学院 · 含详细笔记</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span class="tm-review-count">(42)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项4 - 自行车 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item4.png') }}" alt="山地自行车">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">捷安特山地自行车 21速</h5>
+                                                        <div class="tm-product-price">¥680 <small>原价: ¥1,299</small></div>
+                                                        <div class="tm-product-meta">体育学院王同学 · 送车锁</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(13)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项5 - 平板电脑 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item5.png') }}" alt="iPad Air">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">iPad Air 4 64GB 天蓝色</h5>
+                                                        <div class="tm-product-price">¥2,800 <small>原价: ¥4,299</small></div>
+                                                        <div class="tm-product-meta">艺术学院陈学姐 · 带保护套</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(9)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项6 - 宿舍电器 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item6.png') }}" alt="迷你冰箱">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">美的迷你冰箱 单门 35L</h5>
+                                                        <div class="tm-product-price">¥200 <small>原价: ¥399</small></div>
+                                                        <div class="tm-product-meta">大四毕业季 · 使用2年</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <span class="tm-review-count">(21)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项7 - 耳机 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item7.png') }}" alt="AirPods Pro">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">AirPods Pro 2代 降噪耳机</h5>
+                                                        <div class="tm-product-price">¥1,050 <small>原价: ¥1,899</small></div>
+                                                        <div class="tm-product-meta">电子系刘同学 · 发票齐全</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <span class="tm-review-count">(37)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项8 - 游戏机 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item8.png') }}" alt="PS5游戏机">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">PS5数字版 带3款热门游戏</h5>
+                                                        <div class="tm-product-price">¥2,600 <small>原价: ¥3,899</small></div>
+                                                        <div class="tm-product-meta">机电学院赵同学 · 99新</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(11)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项9 - 台灯 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item9.png') }}" alt="护眼台灯">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">小米护眼台灯 智能调光</h5>
+                                                        <div class="tm-product-price">¥80 <small>原价: ¥199</small></div>
+                                                        <div class="tm-product-meta">考研结束 · 使用1年</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <span class="tm-review-count">(29)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项10 - 键盘 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item10.png') }}" alt="机械键盘">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">罗技G系列机械键盘 青轴</h5>
+                                                        <div class="tm-product-price">¥220 <small>原价: ¥429</small></div>
+                                                        <div class="tm-product-meta">计算机协会 · 9成新</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <span class="tm-review-count">(18)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项11 - 电风扇 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item11.png') }}" alt="宿舍电风扇">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">美的宿舍用静音电风扇</h5>
+                                                        <div class="tm-product-price">¥60 <small>原价: ¥129</small></div>
+                                                        <div class="tm-product-meta">毕业生转让 · 功能完好</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(14)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- 轮播项12 - 滑板 -->
+                                            <div class="tm-carousel-item">
+                                                <div class="tm-product-card">
+                                                    <div class="tm-product-img-container">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item12.png') }}" alt="专业滑板">
+                                                    </div>
+                                                    <div class="tm-product-info">
+                                                        <h5 class="tm-product-title">专业双翘滑板 进口枫木板</h5>
+                                                        <div class="tm-product-price">¥180 <small>原价: ¥350</small></div>
+                                                        <div class="tm-product-meta">滑板社成员 · 带护具</div>
+                                                        <div class="tm-product-rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <span class="tm-review-count">(7)</span>
+                                                        </div>
+                                                        <a href="#" class="tm-view-btn">联系卖家</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- 轮播导航控件 -->
+                                    <button class="tm-carousel-control prev" aria-label="Previous">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                
+                                    <button class="tm-carousel-control next" aria-label="Next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                
+                                    <!-- 轮播指示器 -->
+                                    <div class="tm-carousel-indicators">
+                                        <!-- 指示器将由JS动态生成 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- 行动号召区 -->
+                        <div class="row tm-cta-row align-items-center">
+                            <div class="col-lg-8">
+                                <h3 class="mb-3">立即加入校园二手交易社区</h3>
+                                <p class="mb-0">注册即可发布商品，与校内同学直接交易，省去中间商差价</p>
+                            </div>
+                            <div class="col-lg-4 text-lg-right">
+                                <a href="{{ url_for('login_user') }}" class="btn btn-primary btn-lg tm-btn-action">免费注册</a>
+                            </div>
+                        </div>
+                
+                        <!-- 最新动态 -->
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <h3 class="text-center mb-4">平台动态</h3>
+                                <div class="tm-news-container">
+                                    <div class="media tm-news-item">
+                                        <img src="{{ url_for('static', filename='img/indexPage/news1.png') }}" class="mr-3" alt="新闻图片">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">新学期教材特惠活动</h5>
+                                            <p>大量二手教材上架，涵盖计算机、经济、文学等多个专业，价格优惠...</p>
+                                            <a href="#" class="btn btn-sm btn-outline-secondary">阅读更多</a>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="media tm-news-item">
+                                        <img src="{{ url_for('static', filename='img/indexPage/news2.png') }}" class="mr-3" alt="新闻图片">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">毕业季旧物回收计划启动</h5>
+                                            <p>帮助毕业生快速处理闲置物品，平台提供免费上门取件服务，环保又便捷。</p>
+                                            <a href="#" class="btn btn-sm btn-outline-secondary">了解详情</a>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="media tm-news-item">
+                                        <img src="{{ url_for('static', filename='img/indexPage/news3.png') }}" class="mr-3" alt="新闻图片">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">二手电子设备租赁服务上线</h5>
+                                            <p>临时需要平板、笔记本或投影仪？平台新增电子设备短期租赁功能，按日计费，方便实用。</p>
+                                            <a href="#" class="btn btn-sm btn-outline-secondary">查看详情</a>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="media tm-news-item">
+                                        <img src="{{ url_for('static', filename='img/indexPage/news4.png') }}" class="mr-3" alt="新闻图片">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">爱心捐赠专场活动</h5>
+                                            <p>为山区小学筹集图书和学习用品，欢迎同学们捐赠闲置好物，共筑温暖校园。</p>
+                                            <a href="#" class="btn btn-sm btn-outline-secondary">参与捐赠</a>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- 可继续添加更多动态项 -->
+                                </div>
                             </div>
                         </div>
                     </section>
                 </div>
+
                 <!-- Gallery section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>                   
@@ -484,6 +823,7 @@
 
                     </section>
                 </div>
+
                 <!-- About section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
@@ -778,26 +1118,599 @@
             </div> <!-- .tm-main -->                      
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
-    <!-- <script src="js/jquery-3.4.1.min.js"></script>          https://jquery.com/ -->
-    <!-- <script src="js/jquery.singlePageNav.min.js"></script>  https://github.com/ChrisWojcik/single-page-nav -->
-    <!-- <script src="js/parallax/parallax.min.js"></script>     https://pixelcog.github.io/parallax.js/ -->
-    <!-- <script src="js/imagesloaded.pkgd.min.js"></script>     https://imagesloaded.desandro.com/ -->
-    <!-- <script src="js/isotope.pkgd.min.js"></script>          https://isotope.metafizzy.co/ -->
-    <!-- <script src="js/jquery.magnific-popup.min.js"></script> https://dimsemenov.com/plugins/magnific-popup/ -->
-    <!-- <script src="slick/slick.min.js"></script>              https://kenwheeler.github.io/slick/ -->
-    <!-- <script src="js/templatemo-script.js"></script> -->
-    <!-- <script src="js/gaode_map.js"></script> -->
+
     <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.singlePageNav.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/parallax/parallax.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script>
+    <!-- 需要注释掉这句话:与下面的js文件有冲突 -->
+    <!-- <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script> --> 
     <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/gaode_map.js') }}"></script>
     <script src="{{ url_for('static', filename='js/loading.js') }}"></script>
-
-
 </body>
 </html> 
+<style>
+
+/* 顶部标题区域样式 */
+.tm-header-section {
+    padding: 80px 0 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.tm-header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4e9af1, #2ed573, #ff6b81);
+}
+
+.tm-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tm-main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.tm-highlight {
+    background: linear-gradient(90deg, #4e9af1, #2ed573);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 0 10px;
+}
+
+.tm-subtitle {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.tm-divider-gradient {
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(90deg, #4e9af1, #2ed573);
+    border-radius: 2px;
+}
+
+.tm-cta-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(78, 154, 241, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.tm-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(78, 154, 241, 0.4);
+}
+
+.tm-cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.tm-cta-btn:hover::before {
+    left: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tm-header-section {
+        padding: 60px 0 40px;
+    }
+    
+    .tm-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .tm-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tm-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .tm-cta-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* 特色卡片样式 */
+.tm-feature-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.tm-feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 轮播容器 */
+.tm-carousel-container {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #fff;
+    padding: 25px 25px 45px;
+}
+
+/* 轮播视窗 - 限制可见区域 */
+.tm-carousel-viewport {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* 轮播内容区 */
+.tm-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+/* 轮播项 */
+.tm-carousel-item {
+    min-width: calc(25% - 15px);
+    flex: 0 0 calc(25% - 15px);
+    transition: all 0.3s ease;
+}
+
+/* 商品卡片 */
+.tm-product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tm-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 商品图片容器 */
+.tm-product-img-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* 固定宽高比 4:3 */
+}
+
+.tm-product-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tm-product-card:hover .tm-product-img-container img {
+    transform: scale(1.05);
+}
+
+/* 商品标签 */
+.tm-product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.tm-hot-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ff0844);
+}
+
+.tm-new-badge {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.tm-discount-badge {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+}
+
+/* 商品信息 */
+.tm-product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.tm-product-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 44px;
+}
+
+.tm-product-price {
+    color: #ff3d57;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tm-product-price small {
+    color: #999;
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+/* 评分样式 */
+.tm-product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #ffc107;
+}
+
+.tm-review-count {
+    color: #777;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+/* 查看按钮 */
+.tm-view-btn {
+    background: linear-gradient(45deg, #3f51b5, #5677fc);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.tm-view-btn:hover {
+    background: linear-gradient(45deg, #303f9f, #3f51b5);
+    transform: translateY(-2px);
+}
+
+/* 轮播控制按钮 */
+.tm-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70px);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #3f51b5;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.tm-carousel-control:hover {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.tm-carousel-control.prev {
+    left: 10px;
+}
+
+.tm-carousel-control.next {
+    right: 10px;
+}
+
+/* 轮播指示器 */
+.tm-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+.tm-carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tm-carousel-indicator.active {
+    background: #3f51b5;
+    transform: scale(1.2);
+}
+
+/* 响应式布局 */
+@media (max-width: 1199px) {
+    .tm-carousel-item {
+        min-width: calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 991px) {
+    .tm-carousel-item {
+        min-width: calc(50% - 10px);
+        flex: 0 0 calc(50% - 10px);
+    }
+    .tm-carousel {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tm-carousel-item {
+        min-width: 100%;
+        flex: 0 0 100%;
+    }
+    .tm-carousel {
+        gap: 0;
+    }
+    .tm-carousel-control {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* 行动号召区样式 */
+.tm-cta-row {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+/* 新闻项样式 */
+.tm-news-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.tm-news-item img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+</style>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+        // 获取轮播元素
+        const carousel = document.querySelector('.tm-carousel');
+        const items = document.querySelectorAll('.tm-carousel-item');
+        const prevBtn = document.querySelector('.tm-carousel-control.prev');
+        const nextBtn = document.querySelector('.tm-carousel-control.next');
+        const indicatorsContainer = document.querySelector('.tm-carousel-indicators');
+
+        let currentIndex = 0;
+        let itemWidth;
+        let itemsPerView;
+        let maxIndex;
+
+        // 根据视口宽度设置每次显示的数量
+        function updateCarouselLayout() {
+            const viewportWidth = window.innerWidth;
+
+            if (viewportWidth >= 1200) {
+                itemsPerView = 4; // 大屏幕显示4个
+            } else if (viewportWidth >= 992) {
+                itemsPerView = 3; // 中等屏幕显示3个
+            } else if (viewportWidth >= 768) {
+                itemsPerView = 2; // 小屏幕显示2个
+            } else {
+                itemsPerView = 1; // 超小屏幕显示1个
+            }
+
+            // 计算每个项目的宽度
+            const carouselViewport = carousel.parentElement;
+            const carouselWidth = carouselViewport.clientWidth;
+            const gap = viewportWidth <= 767 ? 0 : (viewportWidth <= 991 ? 15 : 20);
+
+            // 考虑间隔的宽度计算
+            const totalGapWidth = gap * (itemsPerView - 1);
+            itemWidth = (carouselWidth - totalGapWidth) / itemsPerView;
+
+            // 设置每个项目的宽度
+            items.forEach(item => {
+                item.style.minWidth = `${itemWidth}px`;
+                item.style.flex = `0 0 ${itemWidth}px`;
+            });
+
+            // 更新最大索引
+            maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1) - 3;
+
+            // 重新设置轮播位置
+            goToSlide(Math.min(currentIndex, maxIndex));
+
+            // 更新指示器
+            updateIndicators();
+        }
+
+        // 滑动到特定索引
+        function goToSlide(index) {
+            if (index < 0) {
+                index = maxIndex;
+            } else if (index > maxIndex) {
+                index = 0;
+            }
+
+            currentIndex = index;
+
+            // 计算位移值 (考虑间隔)
+            const gap = window.innerWidth <= 767 ? 0 : (window.innerWidth <= 991 ? 15 : 20);
+            const slideWidth = itemWidth + gap;
+            const translateX = -1 * currentIndex * itemsPerView * slideWidth;
+
+            carousel.style.transform = `translateX(${translateX}px)`;
+
+            // 更新指示器状态
+            updateIndicatorState();
+        }
+
+        // 更新指示器数量
+        function updateIndicators() {
+            // 清空现有指示器
+            indicatorsContainer.innerHTML = '';
+
+            // 创建新指示器
+            for (let i = 0; i <= maxIndex; i++) {
+                const indicator = document.createElement('span');
+                indicator.className = 'tm-carousel-indicator';
+                if (i === currentIndex) {
+                    indicator.classList.add('active');
+                }
+                indicator.setAttribute('data-index', i);
+                indicator.addEventListener('click', function () {
+                    goToSlide(parseInt(this.getAttribute('data-index')));
+                });
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+
+        // 更新指示器状态
+        function updateIndicatorState() {
+            const indicators = document.querySelectorAll('.tm-carousel-indicator');
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        // 下一张幻灯片
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        // 上一张幻灯片
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        // 初始化轮播
+        updateCarouselLayout();
+
+        // 绑定按钮事件
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // 自动轮播
+        let autoplayInterval = setInterval(nextSlide, 5000);
+
+        // 鼠标悬停时暂停自动轮播
+        const carouselContainer = document.querySelector('.tm-carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 5000);
+        });
+
+        // 添加触摸滑动支持
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            // 暂停自动轮播
+            clearInterval(autoplayInterval);
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            // 恢复自动轮播
+            autoplayInterval = setInterval(nextSlide, 5000);
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // 向左滑动，显示下一项
+                nextSlide();
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // 向右滑动，显示上一项
+                prevSlide();
+            }
+        }
+
+        // 监听窗口大小变化
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            // 添加防抖动功能，避免频繁调整布局
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateCarouselLayout, 250);
+        });
+    });
+</script>
