@@ -103,6 +103,12 @@ def login_email_try():
             'message': '邮箱不存在'
         }), 401
     
+    if user.password !=password:
+        return jsonify({
+            'success': False,
+            'message': '密码错误'
+        }), 401
+    
     # 登录成功，设置session
     session['username'] = user.username
     
@@ -130,6 +136,12 @@ def login_user_try():
         return jsonify({
             'success': False,
             'message': '用户名不存在'
+        }), 401
+    
+    if user.password !=password:
+        return jsonify({
+            'success': False,
+            'message': '密码错误'
         }), 401
     
     # 登录成功，设置session
