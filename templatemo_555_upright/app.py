@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify, render_template,session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
-app = Flask(__name__, static_folder='static')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/shb'
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Byj20040720@localhost:3306/shb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'My_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=3)  # 设置 session 有效期
@@ -103,6 +103,12 @@ def login_email_try():
             'message': '邮箱不存在'
         }), 401
     
+    if user.password !=password:
+        return jsonify({
+            'success': False,
+            'message': '密码错误'
+        }), 401
+    
     # 登录成功，设置session
     session['username'] = user.username
     
@@ -130,6 +136,12 @@ def login_user_try():
         return jsonify({
             'success': False,
             'message': '用户名不存在'
+        }), 401
+    
+    if user.password !=password:
+        return jsonify({
+            'success': False,
+            'message': '密码错误'
         }), 401
     
     # 登录成功，设置session
