@@ -161,6 +161,25 @@ def post_item():
     else:
         return render_template('login_user.html'),403
 
+@app.route('/get_items',methods=['GET','POST'])
+def get_items():
+    # 查询所有物品
+    items = Item.query.all()
+    
+    # 构建JSON响应数据
+    items_list = []
+    for item in items:
+        items_list.append({
+            'name': item.name,
+            'price': item.price,
+            'longitude': item.longitude,
+            'latitude': item.latitude,
+        })
+    
+    return jsonify({
+        'success': True,
+        'items': items_list
+    })
 
 
 if __name__ == '__main__':
