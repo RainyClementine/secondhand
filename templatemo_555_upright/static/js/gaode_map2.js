@@ -74,29 +74,42 @@ marker.on('mouseout', function () {
 
 
 document.getElementById('btn-map').addEventListener('click', async function (e) {
-    e.preventDefault(); // 阻止默认表单提交
+    e.preventDefault();
 
-    
     try {
-        const response = await fetch('/get_items', {
-            method: 'GET'
-        });
+        const response = await fetch('/get_items', { method: 'GET' });
+        const data = await response.json();
 
-        if (response.status === 200) {
-            
-            alert('发布成功！');
-            
-           
-        } 
-        else {
-            // 其他错误
-            const errorData = await response.json().catch(() => null);
-            const errorMsg = errorData?.message || '发布失败，请重试';
-            alert(errorMsg);
+        if (data.success) {
+            const items = data.items;
+
+            const infoWindow = new AMap.InfoWindow({
+                offset: new AMap.Pixel(0, -30)
+            });
+
+            items.forEach(function (item) {
+                const marker = new AMap.Marker({
+                    position: [item.longitude, item.latitude],
+                    map: map2
+                });
+
+                marker.on('mouseover', function () {
+                    const content = `名称：${item.name}<br>价格：${item.price}元`;
+                    infoWindow.setContent(content);
+                    infoWindow.open(map2, marker.getPosition());
+                });
+
+                marker.on('mouseout', function () {
+                    infoWindow.close();
+                });
+            });
+
+            alert('物品已加载到地图！');
+        } else {
+            alert('物品加载失败，请稍后重试。');
         }
-    } 
-    catch (error) {
-        console.error('网络错误：', error);
-        alert('网络错误，无法发布');
+    } catch (error) {
+        console.error('获取物品失败：', error);
+        alert('网络错误，无法加载物品');
     }
 });
