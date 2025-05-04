@@ -439,17 +439,6 @@
                             </div>
                         </div>
                 
-                        <!-- 行动号召区 -->
-                        <div class="row tm-cta-row align-items-center">
-                            <div class="col-lg-8">
-                                <h3 class="mb-3">立即加入校园二手交易社区</h3>
-                                <p class="mb-0">注册即可发布商品，与校内同学直接交易，省去中间商差价</p>
-                            </div>
-                            <div class="col-lg-4 text-lg-right">
-                                <a href="{{ url_for('login_user') }}" class="btn btn-primary btn-lg tm-btn-action">免费注册</a>
-                            </div>
-                        </div>
-                
                         <!-- 最新动态 -->
                         <div class="row mt-5">
                             <div class="col-lg-12">
@@ -506,9 +495,9 @@
                         <hr class="mb-5">
                         
                         <!-- 添加一个包装容器以实现更好的布局控制 -->
-                        <div class="gallery-content-wrapper">
+                        <div class="gallery-content-wrapper", style="display: flex;">
                             <!-- 左侧内容区域 -->
-                            <div class="gallery-main-content">
+                            <div class="gallery-main-content", style="flex: 1;">
                                 <!-- 导航链接 -->
                                 <ul class="tm-gallery-links">
                                     <li>
@@ -542,285 +531,273 @@
                                         </a>
                                     </li>
                                 </ul>
-                        
-
-                            
-                            <div class="tm-gallery">
-                                
-                                
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                <!-- Gallery grid -->
+                                <div class="tm-gallery">
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-01.jpg') }}">View more</a>						
+                                    <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>  
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>  
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-01.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-01.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-01.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-02.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-02.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-02.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-02.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-02.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-03.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-03.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-03.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>  
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>  
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-03.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-03.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-04.jpg') }}">View more</a>						
+                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-04.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/nature-04.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-04.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-04.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/animal-05.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-05.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-05.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-05.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/nature-05.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>  
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>  
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/nature-06.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/animal-06.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-06.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-06.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-06.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/nature-07.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-07.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/animal-07.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-07.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-07.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-08.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-08.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>  
-                                <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-08.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-08.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>  
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-08.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/animal-08.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item building">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item building">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/building-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/building-09.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item nature">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item nature">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/nature-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/nature-09.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure> 
-                                <figure class="effect-honey tm-gallery-item portrait">
+                                    </figure> 
+                                    <figure class="effect-honey tm-gallery-item portrait">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/portrait-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/portrait-09.jpg') }}">View more</a>						
                                     </figcaption>			
-                                </figure>
-                                <figure class="effect-honey tm-gallery-item animal">
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item animal">
                                     <img src="{{ url_for('static', filename='img/gallery/tn/animal-09.jpg') }}" alt="Image"/>
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
                                         <a href="{{ url_for('static', filename='img/gallery/animal-09.jpg') }}">View more</a>						
                                     </figcaption>			
+                                    </figure>
+                                </div>
+                                <div class="tm-paging">
+                                    <a href="javascript:void(0);" class="active tm-paging-link" data-page="1">1</a>
+                                    <a href="javascript:void(0);" class="tm-paging-link" data-page="2">2</a>
+                                    <a href="javascript:void(0);" class="tm-paging-link" data-page="3">3</a>
+                                    <a href="javascript:void(0);" class="tm-paging-link" data-page="4">4</a>
+                                </div>
+                            </div>
+
+                            <!-- Special figure on the right side -->
+                            <div class="special-figure-container">
+                                <figure class="effect-honey edge-to-edge-portrait" onclick='loading.in("{{ url_for("infinity") }}", "right")'>
+                                    <img src="{{ url_for('static', filename='img/arrow_pic.png') }}" alt="Image" />
+                                    <figcaption>
+                                        <h2><i>Dreamy Honey</i></h2>
+                                        <a href="{{ url_for('static', filename='img/arrow_pic.png') }}">View more</a>
+                                    </figcaption>
                                 </figure>
                             </div>
-                            <div class="tm-paging">
-                                <a href="javascript:void(0);" class="active tm-paging-link" data-page="1">1</a>
-                                <a href="javascript:void(0);" class="tm-paging-link" data-page="2">2</a>
-                                <a href="javascript:void(0);" class="tm-paging-link" data-page="3">3</a>
-                                <a href="javascript:void(0);" class="tm-paging-link" data-page="4">4</a>
-                            </div>
-
                         </div>
-                        <figure class="effect-honey edge-to-edge-portrait" onclick='loading.in("{{ url_for("infinity") }}", "right")'>
-
-
-                            <img src="{{ url_for('static', filename='img/arrow_pic.png') }}" alt="Image"/>
-                            <figcaption>
-                                <h2><i>Dreamy Honey</i></h2>
-                                <a href="{{ url_for('static', filename='img/arrow_pic.png') }}">View more</a>						
-                            </figcaption>			
-                        </figure>
-                        
-
-
                     </section>
                 </div>
 
@@ -830,217 +807,9 @@
                     <section id="about" class="tm-section">
                         <h2 class="tm-text-primary">About Upright CSS Template</h2>
                         <hr class="mb-5">
-                        
-                        <!-- <div class="row tm-row-about">
-                            <div class="tm-col-about tm-col-about-l">
-                                <p class="mb-4">
-                            If you want to support TemplateMo, you can contribute <a rel="sponsored" href="https://paypal.me/templatemo" target="_parent">a small donation via <strong>PayPal</strong></a>. This will be very helpful. Thank you. </p>
-                                <p class="mb-4">
-                                    Aliquam ornare varius erat vel aliquet. Proin ac neque a tortor tristique semper eget eget sapien. Morbi vitae diam a odio lobortis mattis sed nec justo. 
-                                </p>
-                                <p class="mb-4">
-                                    Suspendisse sagittis tortor vel turpis aliquet, vitae molestie erat luctus.
-                                </p>
-                            </div>
-                            <div class="tm-col-about tm-col-about-r">
-                                <img src="{{ url_for('static', filename='img/img-about-01.jpg') }}" alt="Image" class="img-fluid mb-5 tm-img-about">
-                                <p>
-                                    Duis fringilla eget purus luctus sodales. Sed auctor odio quis ligula dignissim efficitur vitae vitae quam.
-                                </p>
-                            </div>
-                        </div> -->
                         <!-- Map -->
                         <div class="mapouter mb-4">
                             <div id="amap-container-2" class="amap-container" style="width: 100%; height: 520px;"></div>
-                        </div>
-
-
-                        <div class="mt-5">
-                            <div class="tm-carousel">
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Walk</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Founder and CEO</h4>
-                                    </div>
-                                </div>
-                                
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Jenifer Soft</h3>
-                                        <p>This is a carousel for a list of 10 team members. Each member image hover has 3 social icons.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Managing Director</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Rock</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Financial Officer</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Second</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Senior Director</h4>
-                                    </div>
-                                </div>
-                                
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Jenifer Second</h3>
-                                        <p>This is a carousel for a list of 10 team members. Each member image hover has 3 social icons.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Accounting Officer</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Second</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Financial Assistant</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Third</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Designer</h4>
-                                    </div>
-                                </div>
-                                
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-02.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Jenifer Third</h3>
-                                        <p>This is a carousel for a list of 10 team members. Each member image hover has 3 social icons.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Program Director</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-03.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">David Three</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Financial Assistant</h4>
-                                    </div>
-                                </div>
-
-                                <div class="tm-carousel-item">
-                                    <figure class="effect-honey mb-4">
-                                        <img src="{{ url_for('static', filename='img/about-01.jpg') }}" alt="Featured Item">
-                                        <figcaption>
-                                            <ul class="tm-social">
-                                                <li><a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                            </ul>
-                                        </figcaption>
-                                    </figure>
-                                    <div class="tm-about-text">
-                                        <h3 class="mb-3 tm-text-primary tm-about-title">Calvin Four</h3>
-                                        <p>Aliquam efficitur, velit ut aliquet molestie, nulla dolor faucibus neque, quis hendrerit.</p>
-                                        <h4 class="tm-text-secondary tm-about-subtitle">Media Partner</h4>
-                                    </div>
-                                </div>
-
-                                <div class="form-group tm-text-right">
-                                    <button type="submit" class="btn btn-primary" id="btn-map">发布</button>
-                                </div>
-                            </div>
                         </div>
                     </section>
                 </div>
@@ -1528,14 +1297,6 @@
     }
 }
 
-/* 行动号召区样式 */
-.tm-cta-row {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 40px 0;
-}
-
 /* 新闻项样式 */
 .tm-news-item {
     padding: 20px;
@@ -1548,6 +1309,42 @@
     border-radius: 4px;
 }
 
+/* 画廊部分 */
+.gallery-container-wrapper {
+    display: flex;
+    gap: 10px; /* Space between gallery and special figure */
+}
+
+.gallery-main-content {
+    flex: 1;
+}
+
+.special-figure-container {
+    width: 200px; /* Adjust width as needed */
+    margin-left: 20px;
+}
+
+.edge-to-edge-portrait {
+    height: 100%;
+}
+
+/* Make sure the figure inside takes full height */
+.special-figure-container figure {
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+    
+    .special-figure-container {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
 
 </style>
 
@@ -1595,7 +1392,7 @@
             });
 
             // 更新最大索引
-            maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1) - 3;
+            maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
 
             // 重新设置轮播位置
             goToSlide(Math.min(currentIndex, maxIndex));
@@ -1631,6 +1428,7 @@
             indicatorsContainer.innerHTML = '';
 
             // 创建新指示器
+            console.log("maxIndex", maxIndex);
             for (let i = 0; i <= maxIndex; i++) {
                 const indicator = document.createElement('span');
                 indicator.className = 'tm-carousel-indicator';

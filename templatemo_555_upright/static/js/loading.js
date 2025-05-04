@@ -50,5 +50,5 @@ window.addEventListener("load", () => {
     // 缩短初始加载延迟从500ms到300ms
     setTimeout(() => {
         loading.out();
-    }, 300); // 原为500
+    }, 500); // 原为500
 })
