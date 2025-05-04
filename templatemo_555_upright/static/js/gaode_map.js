@@ -33,36 +33,48 @@ geolocation.getCurrentPosition(function (status, result) {
 });
 
 // 拦截“发布”按钮提交事件
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-e.preventDefault(); // 阻止默认表单提交
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault(); // 阻止默认表单提交
 
-if (!currentPosition) {
-    alert('正在获取定位信息，请稍候再试');
-    return;
-}
-
-const formData = new FormData(this);
-
-// 附加经纬度信息
-formData.append('longitude', currentPosition.lng);
-formData.append('latitude', currentPosition.lat);
-
-// 替换为你后端接收接口地址（例如 /api/post_item）
-fetch('/api/post_item', {
-    method: 'POST',
-    body: formData
-})
-.then(response => {
-    if (response.ok) {
-    alert('发布成功！');
-    this.reset(); // 重置表单
-    } else {
-    alert('发布失败，请重试');
+    if (!currentPosition) {
+        alert('正在获取定位信息，请稍候再试');
+        return;
     }
-})
-.catch(error => {
-    console.error('网络错误：', error);
-    alert('网络错误，无法发布');
-});
-});
 
+    const formData = new FormData(this);
+    
+    // 附加经纬度信息
+    formData.append('longitude', currentPosition.lng);
+    formData.append('latitude', currentPosition.lat);
+
+    try {
+        const response = await fetch('/post_item', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.status === 200) {
+            // 成功提交
+            alert('发布成功！');
+            this.reset(); // 重置表单
+            
+            // 如果后端返回的是重定向到index.html，可以这样处理
+            window.location.href = '/'; // 跳转到首页
+        } 
+        else if (response.status === 403) {
+            // 未登录
+            alert('请先登录！');
+            window.location.href = '/login_user'; // 跳转到登录页
+        }
+        else {
+            // 其他错误
+            const errorData = await response.json().catch(() => null);
+            const errorMsg = errorData?.message || '发布失败，请重试';
+            alert(errorMsg);
+        }
+    } 
+    catch (error) {
+        console.error('网络错误：', error);
+        alert('网络错误，无法发布');
+    }
+});
