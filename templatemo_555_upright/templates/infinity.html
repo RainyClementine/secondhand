@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
     <title>Infinite Scrolling Canvas with Zoom Effect</title>
     <style>
         * {
@@ -94,10 +95,71 @@
         .slide-center {
             transform: translateX(0);
         }
+
+
+        /* 返回按钮 */
+        .button {
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            display: flex;
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3rem 1rem;
+            border: 0.15rem solid #FFD700;
+            border-radius: 2rem;
+            cursor: pointer;
+        }
+
+        .button_text {
+            font-family: 'Kumbh Sans', sans-serif;
+            font-size: 2rem;
+            color: #FFD700;
+            letter-spacing: 0.05rem;
+            margin-right: 0.5rem;
+        }
+
+        .button_icon {
+            width: 1.5rem;
+            fill: none;
+            stroke: #FFD700;
+            stroke-width: 30;
+            transition: transform 0.8s ease;
+            transform: translateY(15%);
+        }
+        
+        .button_icon_bias {
+            transition: stroke-dasharray 0.6s ease;
+        }
+
+        .button_arrow .button_icon_bias {
+            stroke-dasharray: 205 300 205 300;
+        }
+
+        .button_cross .button_icon {
+            transform: translateY(-15%);
+        }
+
+        .button_cross .button_icon_bias {
+            stroke-dasharray: 0 0 400 0;
+        }
+
+        .button_cross:hover .button_icon_bias {
+            stroke-dasharray: 20 60 240 60 20;
+        }
     </style>
 </head>
 
 <body>
+    <div class="button button_cross" onclick='loading.in("{{ url_for("index") }}", "left")'>
+        <p class="button_text">BACK</p>
+        <svg class="button_icon" viewBox="0 0 283.9 425.8">
+            <line class="button_icon_bias" x1="0" y1="141.9" x2="283.9" y2="425.8" />
+            <line class="button_icon_bias" x1="283.9" y1="141.9" x2="0" y2="425.8" />
+        </svg>
+    </div>
+
     <div class="loading slide-center">
         <svg viewbox='0 0 50 50'>
             <circle r='25' cx='25' cy='25'></circle>
