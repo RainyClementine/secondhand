@@ -17,7 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
-   
+    <style>
+    .tm-brand {
+        width: 140px !important;
+        height: auto;
+        max-width: 100%;
+        margin-left: -20px; /* 添加负的左边距，使logo向左偏移 */
+        /* 或者使用相对定位
+        position: relative;
+        left: -20px;
+        */
+    }
+    </style>
 </head>
 <body>    
     <div class="loading slide-center">
@@ -36,7 +47,7 @@
                     </button>
                     <div>
                         <!-- 放置LOGO图片 -->
-                        <img src="path/to/your/image.png" alt="Brand Logo" class="tm-brand">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Brand Logo" class="tm-brand">
                         
                         <ul id="tm-main-nav">
                             <li class="nav-item">                                

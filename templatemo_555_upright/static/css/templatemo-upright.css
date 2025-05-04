@@ -149,32 +149,36 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .nav-link {
-	position: relative;
-	color: #006699;
-	font-size: 1.4rem;
-	padding-top: 15px;
-	padding-bottom: 15px;
+    position: relative;
+    color: #006699;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0; /* 移除默认的左内边距 */
 }
 
 .triangle-right {
-	position: absolute;
-	top: 9px;
-	left: -40px;
-	width: 0;
-	height: 0;
-	border-top: 21px solid transparent;
-	border-left: 20px solid #006699;
-	border-bottom: 21px solid transparent;
-	opacity: 0;
-	transition: all 0.3s ease;
+    position: absolute;
+    top: 9px;
+    left: -25px; /* 保持原始位置 */
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-left: 20px solid #006699;
+    border-bottom: 21px solid transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .nav-item:hover .nav-link,
 .nav-link.current {
-	background-color: #F2F2F2;
-	color: #006699;
-	padding-left: 30px;
+    background-color: #F2F2F2;
+    color: #006699;
+    padding-left: 10px; /* 减少悬停时的左内边距，使背景向左移动 */
+    margin-left: -15px; /* 添加负的左外边距，使整个元素向左移动 */
+    padding-right: 30px; /* 增加右内边距，保持整体宽度 */
 }
+
 
 .nav-item:hover > .nav-link > .triangle-right,
 .nav-link.current > .triangle-right {
@@ -182,8 +186,9 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .nav-icon {
-	width: 40px;
-	margin-right: 20px;
+    width: 40px;
+    margin-right: 10px; /* 减少右侧边距 */
+    margin-left: 0; /* 重置左边距 */
 }
 
 /* Home section */
