@@ -17,7 +17,22 @@ https://templatemo.com/tm-555-upright
 	
 */
 
-html, body { overflow-x: hidden; }
+/* html, body { 
+	overflow-x: hidden; 
+	overflow: hidden; 
+} */
+
+html, body {
+	overflow: auto;              /* 保留滚动功能 */
+	-ms-overflow-style: none;    /* IE 和旧版 Edge */
+	scrollbar-width: none;       /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;               /* Chrome、Safari、Edge (Chromium) */
+}
+
 body { font-family: 'Kumbh Sans', sans-serif; }
 div, a, p { color: #666666; }
 p, address { line-height: 1.8; }

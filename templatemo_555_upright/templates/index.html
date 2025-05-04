@@ -6,6 +6,7 @@
     <title>Upright</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='slick/slick.min.css') }}">
@@ -36,6 +37,9 @@
             <circle r='25' cx='25' cy='25'></circle>
         </svg>
         <p>&nbsp;&nbsp;LOADING</p>
+    </div>
+    <div class="side-progress-bar">
+        <div class="side-progress-fill" id="progressFill"></div>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -973,5 +977,6 @@
     <script src="{{ url_for('static', filename='js/gaode_map2.js') }}"></script>
     <script src="{{ url_for('static', filename='js/loading.js') }}"></script>
     <script src="{{ url_for('static', filename='js/homesection.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
 </body>
 </html> 
