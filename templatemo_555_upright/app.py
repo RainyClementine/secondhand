@@ -35,6 +35,10 @@ def index():
 def infinity():
     return render_template('infinity.html')
 
+@app.route('/details')
+def details():
+    return render_template('details.html')
+
 @app.route('/register')
 def register():
     return render_template('register.html')
