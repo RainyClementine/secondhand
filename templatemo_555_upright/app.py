@@ -2,8 +2,13 @@ from flask import Flask, request, jsonify, render_template,session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
+<<<<<<< HEAD
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:qq;200301161517@localhost:3306/shb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Byj20040720@localhost:3306/shb'
+=======
+app = Flask(__name__, static_folder='static')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/shb'
+>>>>>>> bd0bc9fcadc6d3f4232355a1b199ab9e8f7ad29a
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'My_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=3)  # 设置 session 有效期
