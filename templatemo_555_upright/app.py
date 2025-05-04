@@ -38,25 +38,44 @@ def infinity():
 @app.route('/register')
 def register():
     return render_template('register.html')
-#前端调试用，不完整
-@app.route('/register', methods=['POST'])
+
+@app.route('/register_try', methods=['POST'])
 def register_try():
-    if request.method == 'POST':
-        data = request.get_json()
-
-        # 这里添加你的注册逻辑，比如检查用户名是否已存在等
-        username = data.get('username')
-        email = data.get('email')
-        password = data.get('password')
-        print(username)
-        print(email)
-        print(password)
-
-        # 返回成功响应
+    # 获取前端发送的JSON数据
+    data = request.get_json()
+    
+    username = data.get('username')
+    email = data.get('email')
+    password = data.get('password')
+    
+    # 检查用户名是否已存在
+    if User.query.filter_by(username=username).first():
         return jsonify({
-            'success': True,
-            'message': '大富大贵！！'
-        })
+            'success': False,
+            'message': '用户名已存在'
+        }), 400
+    
+    # 检查邮箱是否已存在
+    if User.query.filter_by(email=email).first():
+        return jsonify({
+            'success': False,
+            'message': '邮箱已被注册'
+        }), 400
+    
+    # 添加到数据库
+    new_user=User(
+        username=username,
+        email=email,
+        password=password
+    )
+    db.session.add(new_user)
+    db.session.commit()
+    
+    return jsonify({
+        'success': True,
+        'message': '欢迎新成员！！大富大贵！！'
+    })
+
 @app.route('/login_email')
 def login_email():
     return render_template('login_email.html')
@@ -67,7 +86,6 @@ def login_email_try():
         data = request.get_json()
         email = data.get('email')
         password = data.get('password')
-        print(email)
         print(password)
 
         # 返回成功响应
@@ -93,6 +111,7 @@ def login_user_try():
             'success': False,
             'message': '大大贵！！'
         })
+
 @app.route('/api/post_item', methods=['POST'])
 def post_item():
     data=request.form
@@ -112,4 +131,6 @@ def post_item():
 
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
