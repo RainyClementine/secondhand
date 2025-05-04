@@ -1,8 +1,9 @@
-
+// 这个地图是发布页面的地图设置
+// 还有提交发布物品到后端的交互
 let currentPosition = null; // 当前经纬度
 
 // 初始化高德地图并获取定位
-var map = new AMap.Map('amap-container', {
+var map = new AMap.Map('amap-container-1', {
 zoom: 14,
 center: [116.397428, 39.90923]
 });
