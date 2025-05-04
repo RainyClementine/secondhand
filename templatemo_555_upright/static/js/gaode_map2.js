@@ -89,16 +89,20 @@ function addItemsToMap(items) {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-map').addEventListener('click', function() {
         // 获取筛选条件
-        const minPrice = document.getElementById('price_min').value || null;
-        const maxPrice = document.getElementById('price_max').value || null;
-        const kindSelect = document.getElementById('contact-select');
-        const kind = kindSelect.value !== "" ? kindSelect.value : null;
+        const minPrice = document.getElementById('price_min').value || 0;
+        const maxPrice = document.getElementById('price_max').value || 10000000;
+        const kindSelect = document.getElementById('contact-select-2');
+        // id = contact-select-2 是为了和发布页面的那个类别输入框区分
         
+        
+        const kind = kindSelect.value === "all" ? ["elec", "cloth", "book", "run"] : [kindSelect.value] ;
+        console.log("ooo",kindSelect)
+        console.log("ooo",kind)
         // 准备发送到后端的数据
         const filterData = {
             minprice: minPrice,
             maxprice: maxPrice,
-            kindlist: kind ? [kind] : []
+            kindlist: kind 
         };
         
         // 使用Fetch API发送POST请求到后端
