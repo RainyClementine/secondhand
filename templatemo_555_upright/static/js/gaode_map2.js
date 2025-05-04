@@ -50,24 +50,53 @@ var data = [
       position: [113.2644, 23.1291],
       info: '这是广州'
     }
-  ];
+];
 
-  var infoWindow = new AMap.InfoWindow({
-    offset: new AMap.Pixel(0, -30)
-  });
-  
-  data.forEach(function (item) {
-    var marker = new AMap.Marker({
-      position: item.position,
-      map: map2 // 注意是map2
-    });
-  
-    marker.on('mouseover', function () {
-      infoWindow.setContent(item.info);
-      infoWindow.open(map2, marker.getPosition()); // 注意是map2
-    });
-  
-    marker.on('mouseout', function () {
-      infoWindow.close();
-    });
-  });
+var infoWindow = new AMap.InfoWindow({
+offset: new AMap.Pixel(0, -30)
+});
+
+data.forEach(function (item) {
+var marker = new AMap.Marker({
+    position: item.position,
+    map: map2 // 注意是map2
+});
+
+marker.on('mouseover', function () {
+    infoWindow.setContent(item.info);
+    infoWindow.open(map2, marker.getPosition()); // 注意是map2
+});
+
+marker.on('mouseout', function () {
+    infoWindow.close();
+});
+});
+
+
+document.getElementById('btn-map').addEventListener('click', async function (e) {
+    e.preventDefault(); // 阻止默认表单提交
+
+    
+    try {
+        const response = await fetch('/get_items', {
+            method: 'GET'
+        });
+
+        if (response.status === 200) {
+            
+            alert('发布成功！');
+            
+           
+        } 
+        else {
+            // 其他错误
+            const errorData = await response.json().catch(() => null);
+            const errorMsg = errorData?.message || '发布失败，请重试';
+            alert(errorMsg);
+        }
+    } 
+    catch (error) {
+        console.error('网络错误：', error);
+        alert('网络错误，无法发布');
+    }
+});

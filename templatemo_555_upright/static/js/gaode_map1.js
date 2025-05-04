@@ -34,7 +34,7 @@ geolocation.getCurrentPosition(function (status, result) {
 });
 
 // 拦截“发布”按钮提交事件
-document.getElementById('contact-form').addEventListener('submit', async function (e) {
+document.getElementById('btn-submit').addEventListener('click', async function (e) {
     e.preventDefault(); // 阻止默认表单提交
 
     if (!currentPosition) {
@@ -42,7 +42,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         return;
     }
 
-    const formData = new FormData(this);
+    const form = document.getElementById('contact-form'); 
+    const formData = new FormData(form); 
     
     // 附加经纬度信息
     formData.append('longitude', currentPosition.lng);
