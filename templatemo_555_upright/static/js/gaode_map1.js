@@ -58,10 +58,7 @@ document.getElementById('btn-submit').addEventListener('click', async function (
         if (response.status === 200) {
             // 成功提交
             alert('发布成功！');
-            this.reset(); // 重置表单
-            
-            // 如果后端返回的是重定向到index.html，可以这样处理
-            window.location.href = '/'; // 跳转到首页
+           
         } 
         else if (response.status === 403) {
             // 未登录
