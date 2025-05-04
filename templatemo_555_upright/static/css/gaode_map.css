@@ -1,0 +1,20 @@
+.mapouter {
+    margin-bottom: 160px; /* map下面的margin */
+}
+
+
+.map-section {
+    margin-bottom: 30px;
+}
+
+.button-row {
+    margin-top: 50px; 
+    padding-top: 20px;
+}
+
+.amap-container {
+    height: 520px;
+    width: 100%;
+    display: block;
+    margin-bottom: 40px;
+}
