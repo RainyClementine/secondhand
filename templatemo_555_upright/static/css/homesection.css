@@ -1,0 +1,403 @@
+/* 顶部标题区域样式 */
+.tm-header-section {
+    padding: 80px 0 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.tm-header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4e9af1, #2ed573, #ff6b81);
+}
+
+.tm-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tm-main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.tm-highlight {
+    background: linear-gradient(90deg, #4e9af1, #2ed573);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 0 10px;
+}
+
+.tm-subtitle {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.tm-divider-gradient {
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(90deg, #4e9af1, #2ed573);
+    border-radius: 2px;
+}
+
+.tm-cta-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(78, 154, 241, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.tm-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(78, 154, 241, 0.4);
+}
+
+.tm-cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.tm-cta-btn:hover::before {
+    left: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tm-header-section {
+        padding: 60px 0 40px;
+    }
+    
+    .tm-main-title {
+        font-size: 2.2rem;
+    }
+    
+    .tm-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .tm-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .tm-cta-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* 特色卡片样式 */
+.tm-feature-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.tm-feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 轮播容器 */
+.tm-carousel-container {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: #fff;
+    padding: 25px 25px 45px;
+}
+
+/* 轮播视窗 - 限制可见区域 */
+.tm-carousel-viewport {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* 轮播内容区 */
+.tm-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+/* 轮播项 */
+.tm-carousel-item {
+    min-width: calc(25% - 15px);
+    flex: 0 0 calc(25% - 15px);
+    transition: all 0.3s ease;
+}
+
+/* 商品卡片 */
+.tm-product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tm-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 商品图片容器 */
+.tm-product-img-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* 固定宽高比 4:3 */
+}
+
+.tm-product-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tm-product-card:hover .tm-product-img-container img {
+    transform: scale(1.05);
+}
+
+/* 商品标签 */
+.tm-product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.tm-hot-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ff0844);
+}
+
+.tm-new-badge {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.tm-discount-badge {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+}
+
+/* 商品信息 */
+.tm-product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.tm-product-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 44px;
+}
+
+.tm-product-price {
+    color: #ff3d57;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tm-product-price small {
+    color: #999;
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+/* 评分样式 */
+.tm-product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #ffc107;
+}
+
+.tm-review-count {
+    color: #777;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+/* 查看按钮 */
+.tm-view-btn {
+    background: linear-gradient(45deg, #3f51b5, #5677fc);
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.tm-view-btn:hover {
+    background: linear-gradient(45deg, #303f9f, #3f51b5);
+    transform: translateY(-2px);
+}
+
+/* 轮播控制按钮 */
+.tm-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70px);
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #3f51b5;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.tm-carousel-control:hover {
+    background: #3f51b5;
+    color: #fff;
+}
+
+.tm-carousel-control.prev {
+    left: 10px;
+}
+
+.tm-carousel-control.next {
+    right: 10px;
+}
+
+/* 轮播指示器 */
+.tm-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+.tm-carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tm-carousel-indicator.active {
+    background: #3f51b5;
+    transform: scale(1.2);
+}
+
+/* 响应式布局 */
+@media (max-width: 1199px) {
+    .tm-carousel-item {
+        min-width: calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 991px) {
+    .tm-carousel-item {
+        min-width: calc(50% - 10px);
+        flex: 0 0 calc(50% - 10px);
+    }
+    .tm-carousel {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tm-carousel-item {
+        min-width: 100%;
+        flex: 0 0 100%;
+    }
+    .tm-carousel {
+        gap: 0;
+    }
+    .tm-carousel-control {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* 行动号召区样式 */
+.tm-cta-row {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+/* 新闻项样式 */
+.tm-news-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.tm-news-item img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
