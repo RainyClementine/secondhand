@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-upright.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homesection.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gaode_map.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
-    
+   
 </head>
 <body>    
     <div class="loading slide-center">
@@ -800,40 +800,71 @@
                                 </figure>
                             </div>
                         </div>
-<<<<<<< Updated upstream
-=======
-                        <figure class="effect-honey edge-to-edge-portrait" onclick='loading.in("{{ url_for("infinity") }}", "right")'>
-
-
-                            <img src="{{ url_for('static', filename='img/arrow_pic.png') }}" alt="Image"/>
-                            <figcaption>
-                                <h2><i>Dreamy Honey</i></h2>
-                                <a href="{{ url_for('static', filename='img/arrow_pic.png') }}">View more</a>						
-                            </figcaption>			
-                        </figure>
->>>>>>> Stashed changes
                     </section>
                 </div>
 
+                
                 <!-- About section -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
+                    
                     <section id="about" class="tm-section">
-                        <h2 class="tm-text-primary">About Upright CSS Template</h2>
-                        <hr class="mb-5">
-                        <!-- Map -->
-                        <div class="mapouter mb-4">
-                            <div id="amap-container-2" class="amap-container" style="width: 100%; height: 520px;"></div>
+                        <div class="container">
+                            <div class="row mb-1">
+                                <div class="col-12">
+                                    <h2 class="tm-text-primary">About Upright CSS Template</h2>
+                                    <hr class="mb-2">
+                                </div>
+                            </div>
+                            
+                            <!-- Map - Now with map-section class -->
+                            <div class="row mb-2 map-section">
+                                <div class="col-12">
+                                    <div class="mapouter">
+                                        <div id="amap-container-2" class="amap-container" style="width: 100%; height: 580px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Button row with additional class for spacing -->
+                            <div class="row button-row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <select class="form-control rounded-0" id="contact-select" name="kind">
+                                            <option value="" disabled selected>选择类别</option>
+                                            <option value="elec">数码 &amp; 电子商品</option>
+                                            <option value="cloth">衣服 &amp; 运动户外</option>
+                                            <option value="book">书籍</option>
+                                            <option value="run">跑腿</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="number" id="price_min" name="price_min" min="0" step="1" class="form-control rounded-0" placeholder="最低价格" required />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="number" id="price_max" name="price_max" max="2000" step="2" class="form-control rounded-0" placeholder="最高价格" required />
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block" id="btn-map">筛选</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-<<<<<<< Updated upstream
-=======
-                        <!-- button -->
-                        <div class="form-group tm-text-right">
-                            <button type="submit" class="btn btn-primary" id="btn-map">发布</button>
-                        </div>
->>>>>>> Stashed changes
                     </section>
                 </div>
+
+
+
+
 
                 <!-- Contact section -->
                 <div class="tm-section-wrap">
@@ -933,617 +964,3 @@
     <script src="{{ url_for('static', filename='js/homesection.js') }}"></script>
 </body>
 </html> 
-<<<<<<< Updated upstream
-<style>
-
-/* 顶部标题区域样式 */
-.tm-header-section {
-    padding: 80px 0 60px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.tm-header-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #4e9af1, #2ed573, #ff6b81);
-}
-
-.tm-header-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.tm-main-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.tm-highlight {
-    background: linear-gradient(90deg, #4e9af1, #2ed573);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    padding: 0 10px;
-}
-
-.tm-subtitle {
-    font-size: 1.4rem;
-    color: #555;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-.tm-divider-gradient {
-    height: 4px;
-    width: 100px;
-    background: linear-gradient(90deg, #4e9af1, #2ed573);
-    border-radius: 2px;
-}
-
-.tm-cta-btn {
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(78, 154, 241, 0.3);
-    transition: all 0.3s ease;
-    border: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.tm-cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(78, 154, 241, 0.4);
-}
-
-.tm-cta-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: 0.5s;
-}
-
-.tm-cta-btn:hover::before {
-    left: 100%;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .tm-header-section {
-        padding: 60px 0 40px;
-    }
-    
-    .tm-main-title {
-        font-size: 2.2rem;
-    }
-    
-    .tm-subtitle {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .tm-main-title {
-        font-size: 1.8rem;
-    }
-    
-    .tm-cta-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
-
-/* 特色卡片样式 */
-.tm-feature-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-.tm-feature-card:hover {
-    transform: translateY(-5px);
-}
-
-/* 轮播容器 */
-.tm-carousel-container {
-    position: relative;
-    margin-top: 30px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    background: #fff;
-    padding: 25px 25px 45px;
-}
-
-/* 轮播视窗 - 限制可见区域 */
-.tm-carousel-viewport {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-/* 轮播内容区 */
-.tm-carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 20px;
-}
-
-/* 轮播项 */
-.tm-carousel-item {
-    min-width: calc(25% - 15px);
-    flex: 0 0 calc(25% - 15px);
-    transition: all 0.3s ease;
-}
-
-/* 商品卡片 */
-.tm-product-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.tm-product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* 商品图片容器 */
-.tm-product-img-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 75%; /* 固定宽高比 4:3 */
-}
-
-.tm-product-img-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.tm-product-card:hover .tm-product-img-container img {
-    transform: scale(1.05);
-}
-
-/* 商品标签 */
-.tm-product-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 20px;
-    z-index: 2;
-}
-
-.tm-hot-badge {
-    background: linear-gradient(45deg, #ff6b6b, #ff0844);
-}
-
-.tm-new-badge {
-    background: linear-gradient(45deg, #4facfe, #00f2fe);
-}
-
-.tm-discount-badge {
-    background: linear-gradient(45deg, #f9d423, #ff4e50);
-}
-
-/* 商品信息 */
-.tm-product-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    position: relative;
-}
-
-.tm-product-title {
-    margin: 0 0 8px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    height: 44px;
-}
-
-.tm-product-price {
-    color: #ff3d57;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.tm-product-price small {
-    color: #999;
-    font-size: 14px;
-    text-decoration: line-through;
-    margin-left: 8px;
-}
-
-/* 评分样式 */
-.tm-product-rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    color: #ffc107;
-}
-
-.tm-review-count {
-    color: #777;
-    font-size: 13px;
-    margin-left: 5px;
-}
-
-/* 查看按钮 */
-.tm-view-btn {
-    background: linear-gradient(45deg, #3f51b5, #5677fc);
-    border: none;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    margin-top: auto;
-}
-
-.tm-view-btn:hover {
-    background: linear-gradient(45deg, #303f9f, #3f51b5);
-    transform: translateY(-2px);
-}
-
-/* 轮播控制按钮 */
-.tm-carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-70px);
-    width: 44px;
-    height: 44px;
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: #3f51b5;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    transition: all 0.3s ease;
-}
-
-.tm-carousel-control:hover {
-    background: #3f51b5;
-    color: #fff;
-}
-
-.tm-carousel-control.prev {
-    left: 10px;
-}
-
-.tm-carousel-control.next {
-    right: 10px;
-}
-
-/* 轮播指示器 */
-.tm-carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 8px;
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-}
-
-.tm-carousel-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.tm-carousel-indicator.active {
-    background: #3f51b5;
-    transform: scale(1.2);
-}
-
-/* 响应式布局 */
-@media (max-width: 1199px) {
-    .tm-carousel-item {
-        min-width: calc(33.333% - 14px);
-        flex: 0 0 calc(33.333% - 14px);
-    }
-}
-
-@media (max-width: 991px) {
-    .tm-carousel-item {
-        min-width: calc(50% - 10px);
-        flex: 0 0 calc(50% - 10px);
-    }
-    .tm-carousel {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    .tm-carousel-item {
-        min-width: 100%;
-        flex: 0 0 100%;
-    }
-    .tm-carousel {
-        gap: 0;
-    }
-    .tm-carousel-control {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-    }
-}
-
-/* 新闻项样式 */
-.tm-news-item {
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-}
-.tm-news-item img {
-    width: 120px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-/* 画廊部分 */
-.gallery-container-wrapper {
-    display: flex;
-    gap: 10px; /* Space between gallery and special figure */
-}
-
-.gallery-main-content {
-    flex: 1;
-}
-
-.special-figure-container {
-    width: 200px; /* Adjust width as needed */
-    margin-left: 20px;
-}
-
-.edge-to-edge-portrait {
-    height: 100%;
-}
-
-/* Make sure the figure inside takes full height */
-.special-figure-container figure {
-    height: 100%;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .gallery-container {
-        flex-direction: column;
-    }
-    
-    .special-figure-container {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-}
-
-</style>
-
-<script>
-   document.addEventListener('DOMContentLoaded', function () {
-        // 获取轮播元素
-        const carousel = document.querySelector('.tm-carousel');
-        const items = document.querySelectorAll('.tm-carousel-item');
-        const prevBtn = document.querySelector('.tm-carousel-control.prev');
-        const nextBtn = document.querySelector('.tm-carousel-control.next');
-        const indicatorsContainer = document.querySelector('.tm-carousel-indicators');
-
-        let currentIndex = 0;
-        let itemWidth;
-        let itemsPerView;
-        let maxIndex;
-
-        // 根据视口宽度设置每次显示的数量
-        function updateCarouselLayout() {
-            const viewportWidth = window.innerWidth;
-
-            if (viewportWidth >= 1200) {
-                itemsPerView = 4; // 大屏幕显示4个
-            } else if (viewportWidth >= 992) {
-                itemsPerView = 3; // 中等屏幕显示3个
-            } else if (viewportWidth >= 768) {
-                itemsPerView = 2; // 小屏幕显示2个
-            } else {
-                itemsPerView = 1; // 超小屏幕显示1个
-            }
-
-            // 计算每个项目的宽度
-            const carouselViewport = carousel.parentElement;
-            const carouselWidth = carouselViewport.clientWidth;
-            const gap = viewportWidth <= 767 ? 0 : (viewportWidth <= 991 ? 15 : 20);
-
-            // 考虑间隔的宽度计算
-            const totalGapWidth = gap * (itemsPerView - 1);
-            itemWidth = (carouselWidth - totalGapWidth) / itemsPerView;
-
-            // 设置每个项目的宽度
-            items.forEach(item => {
-                item.style.minWidth = `${itemWidth}px`;
-                item.style.flex = `0 0 ${itemWidth}px`;
-            });
-
-            // 更新最大索引
-            maxIndex = Math.max(0, Math.ceil(items.length / itemsPerView) - 1);
-
-            // 重新设置轮播位置
-            goToSlide(Math.min(currentIndex, maxIndex));
-
-            // 更新指示器
-            updateIndicators();
-        }
-
-        // 滑动到特定索引
-        function goToSlide(index) {
-            if (index < 0) {
-                index = maxIndex;
-            } else if (index > maxIndex) {
-                index = 0;
-            }
-
-            currentIndex = index;
-
-            // 计算位移值 (考虑间隔)
-            const gap = window.innerWidth <= 767 ? 0 : (window.innerWidth <= 991 ? 15 : 20);
-            const slideWidth = itemWidth + gap;
-            const translateX = -1 * currentIndex * itemsPerView * slideWidth;
-
-            carousel.style.transform = `translateX(${translateX}px)`;
-
-            // 更新指示器状态
-            updateIndicatorState();
-        }
-
-        // 更新指示器数量
-        function updateIndicators() {
-            // 清空现有指示器
-            indicatorsContainer.innerHTML = '';
-
-            // 创建新指示器
-            console.log("maxIndex", maxIndex);
-            for (let i = 0; i <= maxIndex; i++) {
-                const indicator = document.createElement('span');
-                indicator.className = 'tm-carousel-indicator';
-                if (i === currentIndex) {
-                    indicator.classList.add('active');
-                }
-                indicator.setAttribute('data-index', i);
-                indicator.addEventListener('click', function () {
-                    goToSlide(parseInt(this.getAttribute('data-index')));
-                });
-                indicatorsContainer.appendChild(indicator);
-            }
-        }
-
-        // 更新指示器状态
-        function updateIndicatorState() {
-            const indicators = document.querySelectorAll('.tm-carousel-indicator');
-            indicators.forEach((indicator, index) => {
-                if (index === currentIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-
-        // 下一张幻灯片
-        function nextSlide() {
-            goToSlide(currentIndex + 1);
-        }
-
-        // 上一张幻灯片
-        function prevSlide() {
-            goToSlide(currentIndex - 1);
-        }
-
-        // 初始化轮播
-        updateCarouselLayout();
-
-        // 绑定按钮事件
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-
-        // 自动轮播
-        let autoplayInterval = setInterval(nextSlide, 5000);
-
-        // 鼠标悬停时暂停自动轮播
-        const carouselContainer = document.querySelector('.tm-carousel-container');
-        carouselContainer.addEventListener('mouseenter', () => {
-            clearInterval(autoplayInterval);
-        });
-
-        carouselContainer.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 5000);
-        });
-
-        // 添加触摸滑动支持
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        carousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            // 暂停自动轮播
-            clearInterval(autoplayInterval);
-        }, { passive: true });
-
-        carousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-            // 恢复自动轮播
-            autoplayInterval = setInterval(nextSlide, 5000);
-        }, { passive: true });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            if (touchStartX - touchEndX > swipeThreshold) {
-                // 向左滑动，显示下一项
-                nextSlide();
-            } else if (touchEndX - touchStartX > swipeThreshold) {
-                // 向右滑动，显示上一项
-                prevSlide();
-            }
-        }
-
-        // 监听窗口大小变化
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            // 添加防抖动功能，避免频繁调整布局
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(updateCarouselLayout, 250);
-        });
-    });
-</script>
-=======
->>>>>>> Stashed changes
