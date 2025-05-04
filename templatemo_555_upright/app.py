@@ -96,7 +96,7 @@ def login_email_try():
     if not user:
         return jsonify({
             'success': False,
-            'message': '用户名不存在'
+            'message': '邮箱不存在'
         }), 401
     
     # 登录成功，设置session
