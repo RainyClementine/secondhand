@@ -16,7 +16,6 @@ CREATE TABLE items (
     message VARCHAR(500),
     longitude DOUBLE,
     latitude DOUBLE,
-    image_data LONGBLOB,
     user VARCHAR(50),
     FOREIGN KEY (user) REFERENCES users(username) ON DELETE CASCADE
 );
