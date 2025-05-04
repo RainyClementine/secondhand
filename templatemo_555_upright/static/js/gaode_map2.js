@@ -38,18 +38,7 @@ geolocation.getCurrentPosition(function (status, result) {
 
 
 var data = [
-    {
-      position: [116.397428, 39.90923],
-      info: '这是北京'
-    },
-    {
-      position: [121.4737, 31.2304],
-      info: '这是上海'
-    },
-    {
-      position: [113.2644, 23.1291],
-      info: '这是广州'
-    }
+    
 ];
 
 var infoWindow = new AMap.InfoWindow({
