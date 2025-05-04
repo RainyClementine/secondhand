@@ -1,115 +1,161 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
 
-    <title>用户名登录</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    <!-- Fav Icon -->
+  <title>用户名登录</title>
+  <!-- Fav Icon   这个应该是浏览器标签页上图标，可以考虑要不要加 -->
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/flation.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <script src="{{ url_for('static', filename='js/passwordToggle.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flation.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/color.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">    
+</head>
 
-  </head>
+<body>
+  <div class="boxed_wrapper bg-color-3">
+    <div class="login-wrapper">
+      <div class="login-container">
+        <!-- 左边图片区域 -->
+        <div class="login-image"><img src="{{ url_for('static', filename='img/login_img.png') }}" alt="登录图"></div>
 
-  <!-- page wrapper -->
-  <body>
-    <div class="boxed_wrapper">
-      <!-- preloader -->
-      <div class="preloader"></div>
-      <!-- preloader -->
-
-      <!-- registration-section -->
-      <section class="registration-section bg-color-3">
-        <div class="pattern">
-          <div
-            class="pattern-1"
-            style="background-image: url(assets/images/shape/shape-85.png)"
-          ></div>
-          <div
-            class="pattern-2"
-            style="background-image: url(assets/images/shape/shape-86.png)"
-          ></div>
-        </div>
-        <div class="auto-container">
-          <div class="inner-box">
-            <div class="content-box">
-              <div class="title-box">
-                <h3>用户名登录</h3>
-                <a href="{{ url_for('login_email') }}">切换为邮箱登录</a>
-              </div>
-              <div class="inner">
-                <form
-                  action="{{ url_for('index') }}"
-                  method="post"
-                  class="registration-form"
-                >
-                  <div class="row clearfix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                      <label>用户名</label>
-                      <input
-                        type="text"
-                        name="text"
-                        placeholder="请输入用户名"
-                        required=""
-                      />
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                      <label>密码</label>
-                      <input
-                        type="password"
-                        name="password"
-                        placeholder="请输入密码"
-                        required=""
-                      />
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                      <div class="forgot-passowrd clearfix">
-                        <a href="{{ url_for('register') }}">忘记密码？</a>
+        <!-- 右边登录表单区域 -->
+        <div class="login-form-wrapper">
+          <section class="registration-section ">
+            <div class="inner-box">
+              <div class="content-box">
+                <div class="title-box">
+                  <h3>用户名登录</h3>
+                  <a href="{{ url_for('login_email') }}">切换为邮箱登录</a>
+                </div>
+                <div class="inner">
+                  <form id="registrationForm" class="registration-form">
+                    <div class="row clearfix">
+                      <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                        <label>用户名</label>
+                        <input type="text" id="username" name="username" placeholder="请输入用户名" required="" />
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                        <label>密码</label>
+                        <div class="password-input-container">
+                          <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                          <span class="toggle-password" data-target="#password">
+                            <i class="fas fa-eye"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                        <div class="forgot-passowrd clearfix">
+                          <a href="{{ url_for('register') }}">忘记密码？</a>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                        <button type="submit" class="theme-btn-one">
+                          登录<i class="icon-Arrow-Right"></i>
+                        </button>
                       </div>
                     </div>
-                    <div
-                      class="col-lg-12 col-md-12 col-sm-12 form-group message-btn"
-                    >
-                      <button type="submit" class="theme-btn-one">
-                        登录<i class="icon-Arrow-Right"></i>
-                      </button>
-                    </div>
+                  </form>
+                  <div class="text"><span>or</span></div>
+                  <div class="login-now">
+                    <p>
+                      没有账号?
+                      <a href="{{ url_for('register') }}">立即注册</a>
+                    </p>
                   </div>
-                </form>
-                <div class="text"><span>or</span></div>
-                <div class="login-now">
-                  <p>
-                    没有账号?
-                    <a href="{{ url_for('register') }}">立即注册</a>
-                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+          <!-- registration-section end -->
         </div>
-      </section>
-      <!-- registration-section end -->
+      </div>
     </div>
-  </body>
-  <!-- End of .page_wrapper -->
+  </div>
+  <!-- 弹窗 -->
+  <dialog id="messageDialog" class="message-dialog">
+    <div class="dialog-content">
+      <span id="dialogMessage"></span>
+    </div>
+  </dialog>
+  <!-- 后面可以考虑是否放进一个专门的js里 -->
+  <script>
+    $(document).ready(function () {
+      // 初始化弹窗（禁用默认按钮）
+      $("#dialog-message").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {} // 不显示按钮
+      });
+
+      // 表单提交处理
+      $('#registrationForm').submit(function (e) {
+        e.preventDefault();
+        // 准备数据
+        var formData = {
+          username: $('#username').val(),
+          password: $('#password').val()
+        };
+
+        // 发送AJAX请求,这边跳转的逻辑是写死在前端的，如果要提取成一个js复用，得进行处理
+        $.ajax({
+          type: 'POST',
+          url: "{{ url_for('login_user_try') }}",
+          contentType: 'application/json',
+          data: JSON.stringify(formData),
+          dataType: 'json',
+          success: function (response) {
+            if (response.success) {
+              showDialog(response.message, true);
+              setTimeout(() => {
+                window.location.href = "{{ url_for('index') }}";
+              }, 2000);
+            } else {
+              showDialog(response.message, false);
+            }
+          },
+          error: function (xhr) {
+            let errorMsg = xhr.responseJSON?.message || "服务器错误，请稍后再试！";
+            showAlert(errorMsg, "error");
+          }
+        });
+      });
+      //还是用后端传来的信息来显示提示，因为考虑到不同种类的错误，用户名重复，邮箱重复等
+      function showDialog(message, isSuccess = true) {
+        const dialog = document.getElementById('messageDialog');
+        const messageElement = document.getElementById('dialogMessage');
+
+        // 设置消息内容和样式
+        messageElement.textContent = message;
+        dialog.className = isSuccess ? 'message-dialog dialog-success' : 'message-dialog dialog-error';
+
+        // 显示对话框
+        dialog.showModal();
+
+        // 2秒后自动关闭
+        setTimeout(() => {
+          dialog.close();
+        }, 2000);
+      }
+    });
+  </script>
+</body>
+
 </html>
