@@ -169,3 +169,20 @@ document.addEventListener('DOMContentLoaded', function () {
         resizeTimeout = setTimeout(updateCarouselLayout, 250);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const newsItems = document.querySelectorAll('.tm-news-item');
+    
+    newsItems.forEach(item => {
+      item.addEventListener('mousemove', function(e) {
+        // Calculate mouse position relative to the item
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Set CSS variables to store mouse position
+        this.style.setProperty('--mouse-x', x + 'px');
+        this.style.setProperty('--mouse-y', y + 'px');
+      });
+    });
+  });
