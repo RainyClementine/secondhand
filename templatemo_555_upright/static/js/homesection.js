@@ -185,4 +185,44 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.setProperty('--mouse-y', y + 'px');
       });
     });
-  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 创建自定义光标元素
+    const customCursor = document.createElement('div');
+    customCursor.className = 'custom-cursor';
+    document.body.appendChild(customCursor);
+    
+    // 获取所有新闻项目
+    const newsItems = document.querySelectorAll('.tm-news-item');
+    
+    // 为每个新闻项目添加事件监听器
+    newsItems.forEach(item => {
+        // 获取该项目对应的光标图片路径
+        const cursorImage = item.getAttribute('data-cursor-image');
+        
+        // 当鼠标进入新闻项目时
+        item.addEventListener('mouseenter', function() {
+            // 设置自定义光标的背景图片
+            if (cursorImage) {
+                customCursor.style.backgroundImage = `url('${cursorImage}')`;
+            } else {
+                // 默认图标，如果未指定图片
+                customCursor.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg>')`;
+            }
+            customCursor.classList.add('active');
+        });
+        
+        // 当鼠标离开新闻项目时
+        item.addEventListener('mouseleave', function() {
+            customCursor.classList.remove('active');
+        });
+        
+        // 跟踪鼠标在新闻项目上的移动
+        item.addEventListener('mousemove', function(e) {
+            // 偏移量使光标位于鼠标中心
+            customCursor.style.left = (e.clientX - 24) + 'px';
+            customCursor.style.top = (e.clientY - 24) + 'px';
+        });
+    });
+});

@@ -463,3 +463,39 @@
     text-align: center;
     border-radius: 10px;
 }
+
+/* 鼠标变成图片的效果 */
+
+
+.custom-cursor {
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #333;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: rotate(-15deg) scale(0);
+    transition: transform 0.3s ease;
+    display: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-2 2.5-2 2.5 2 2.5 2 2.5v-5h4v5l2-2.5 2-2.5-2-2.5-2-2.5v5h-4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
+.custom-cursor.active {
+    display: block;
+    transform: rotate(-15deg) scale(1);
+    animation: cursorAppear 0.3s ease forwards;
+}
+
+@keyframes cursorAppear {
+    0% {
+        transform: rotate(-15deg) scale(0);
+    }
+    100% {
+        transform: rotate(-15deg) scale(1);
+    }
+}
