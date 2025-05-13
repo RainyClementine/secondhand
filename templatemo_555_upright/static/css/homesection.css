@@ -143,14 +143,17 @@
 .tm-carousel {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 20px;
+    /* 移除原来的间隙设置 */
+    gap: 0;
 }
 
 /* 轮播项 */
 .tm-carousel-item {
-    min-width: calc(25% - 15px);
-    flex: 0 0 calc(25% - 15px);
+    /* 修改为25%，填满整个空间 */
+    min-width: 25%;
+    flex: 0 0 25%;
     transition: all 0.3s ease;
+    padding: 0 5px; /* 添加小的内边距，保持一点视觉分隔 */
 }
 
 /* 商品卡片 */
@@ -163,6 +166,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    /* 可以增加最小宽度确保卡片足够宽 */
+    min-width: 100%;
 }
 
 .tm-product-card:hover {
@@ -239,7 +244,7 @@
 }
 
 .tm-product-price {
-    color: #ff3d57;
+    color: #FFD700;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -267,7 +272,6 @@
     font-size: 13px;
     margin-left: 5px;
 }
-
 /* 查看按钮 */
 .tm-view-btn {
     background: linear-gradient(45deg, #3f51b5, #5677fc);
