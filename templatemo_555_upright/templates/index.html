@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>校园二手交易平台</title>
     <link rel="icon" href="{{ url_for('static', filename='img/logo2.png') }}" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
@@ -20,19 +22,21 @@
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
     <style>
-    .tm-brand {
-        width: 140px !important;
-        height: auto;
-        max-width: 100%;
-        margin-left: -20px; /* 添加负的左边距，使logo向左偏移 */
-        /* 或者使用相对定位
+        .tm-brand {
+            width: 140px !important;
+            height: auto;
+            max-width: 100%;
+            margin-left: -20px;
+            /* 添加负的左边距，使logo向左偏移 */
+            /* 或者使用相对定位
         position: relative;
         left: -20px;
         */
-    }
+        }
     </style>
 </head>
-<body>    
+
+<body>
     <div class="loading slide-center">
         <svg viewbox='0 0 50 50'>
             <circle r='25' cx='25' cy='25'></circle>
@@ -45,7 +49,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- 侧边栏 -->
-            <div id="tm-sidebar" class="tm-sidebar"> 
+            <div id="tm-sidebar" class="tm-sidebar">
                 <nav class="tm-nav">
                     <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
@@ -53,9 +57,9 @@
                     <div>
                         <!-- 放置LOGO图片 -->
                         <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Brand Logo" class="tm-brand">
-                        
+
                         <ul id="tm-main-nav">
-                            <li class="nav-item">                                
+                            <li class="nav-item">
                                 <a href="#home" class="nav-link current">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-home nav-icon"></i>
@@ -65,28 +69,28 @@
                                 <a href="#gallery" class="nav-link">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-boxes nav-icon"></i>
-                                    
+
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#about" class="nav-link">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-map-marker-alt nav-icon"></i>
-                                    
+
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#contact" class="nav-link">
                                     <div class="triangle-right"></div>
                                     <i class="fas fa-upload nav-icon"></i>
-                                    
+
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </div>
-            
+
             <div class="tm-main">
                 <!-- Home section -->
                 <div class="tm-section-wrap">
@@ -110,7 +114,7 @@
                                         <div class="tm-divider tm-divider-gradient"></div>
                                     </div>
                                 </div>
-                        
+
                                 <!-- 添加一个行动按钮 -->
                                 <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
                                     <a href="{{ url_for('login_user') }}" class="btn btn-primary btn-lg tm-cta-btn">
@@ -119,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                
+
                         <!-- 特色服务卡片 -->
                         <div class="row tm-features-row">
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -131,7 +135,7 @@
                                     <p>学长学姐的二手教材，价格实惠<br>涵盖各专业课程，笔记齐全<br>帮你节省教材开支</p>
                                 </div>
                             </div>
-                        
+
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="tm-feature-card text-center p-4 h-100">
                                     <div class="tm-feature-icon mb-4">
@@ -141,7 +145,7 @@
                                     <p>学生自用电脑、平板、手机<br>价格亲民，支持当面验货<br>校园内交易更放心</p>
                                 </div>
                             </div>
-                        
+
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="tm-feature-card text-center p-4 h-100">
                                     <div class="tm-feature-icon mb-4">
@@ -152,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                
+
                         <!-- 热门商品轮播 -->
                         <div class="row mb-5">
                             <div class="col-lg-12">
@@ -166,205 +170,223 @@
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item1.png') }}" alt="MacBook Pro">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item1.png') }}"
+                                                            alt="MacBook Pro">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">MacBook Pro 2021 M1芯片 13寸</h5>
-                                                        <div class="tm-product-price">¥5,200 <small>原价: ¥9,999</small></div>
+                                                        <div class="tm-product-price">¥5,200 <small>原价: ¥9,999</small>
+                                                        </div>
                                                         <div class="tm-product-meta">计算机系张学长 · 使用1年</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项2 - 手机 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item2.png') }}" alt="iPhone 13">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item2.png') }}"
+                                                            alt="iPhone 13">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">iPhone 13 128GB 白色 98新</h5>
-                                                        <div class="tm-product-price">¥3,600 <small>原价: ¥5,999</small></div>
+                                                        <div class="tm-product-price">¥3,600 <small>原价: ¥5,999</small>
+                                                        </div>
                                                         <div class="tm-product-meta">文学院李学姐 · 带原装盒</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项3 - 教材 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item3.png') }}" alt="经济学教材">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item3.png') }}"
+                                                            alt="经济学教材">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">曼昆《经济学原理》第8版</h5>
                                                         <div class="tm-product-price">¥50 <small>原价: ¥108</small></div>
                                                         <div class="tm-product-meta">经管学院 · 含详细笔记</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项4 - 自行车 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item4.png') }}" alt="山地自行车">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item4.png') }}"
+                                                            alt="山地自行车">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">捷安特山地自行车 21速</h5>
-                                                        <div class="tm-product-price">¥680 <small>原价: ¥1,299</small></div>
+                                                        <div class="tm-product-price">¥680 <small>原价: ¥1,299</small>
+                                                        </div>
                                                         <div class="tm-product-meta">体育学院王同学 · 送车锁</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项5 - 平板电脑 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item5.png') }}" alt="iPad Air">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item5.png') }}"
+                                                            alt="iPad Air">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">iPad Air 4 64GB 天蓝色</h5>
-                                                        <div class="tm-product-price">¥2,800 <small>原价: ¥4,299</small></div>
+                                                        <div class="tm-product-price">¥2,800 <small>原价: ¥4,299</small>
+                                                        </div>
                                                         <div class="tm-product-meta">艺术学院陈学姐 · 带保护套</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项6 - 宿舍电器 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item6.png') }}" alt="迷你冰箱">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item6.png') }}"
+                                                            alt="迷你冰箱">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">美的迷你冰箱 单门 35L</h5>
                                                         <div class="tm-product-price">¥200 <small>原价: ¥399</small></div>
                                                         <div class="tm-product-meta">大四毕业季 · 使用2年</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项7 - 耳机 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item7.png') }}" alt="AirPods Pro">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item7.png') }}"
+                                                            alt="AirPods Pro">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">AirPods Pro 2代 降噪耳机</h5>
-                                                        <div class="tm-product-price">¥1,050 <small>原价: ¥1,899</small></div>
+                                                        <div class="tm-product-price">¥1,050 <small>原价: ¥1,899</small>
+                                                        </div>
                                                         <div class="tm-product-meta">电子系刘同学 · 发票齐全</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项8 - 游戏机 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item8.png') }}" alt="PS5游戏机">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item8.png') }}"
+                                                            alt="PS5游戏机">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">PS5数字版 带3款热门游戏</h5>
-                                                        <div class="tm-product-price">¥2,600 <small>原价: ¥3,899</small></div>
+                                                        <div class="tm-product-price">¥2,600 <small>原价: ¥3,899</small>
+                                                        </div>
                                                         <div class="tm-product-meta">机电学院赵同学 · 99新</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项9 - 台灯 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item9.png') }}" alt="护眼台灯">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item9.png') }}"
+                                                            alt="护眼台灯">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">小米护眼台灯 智能调光</h5>
                                                         <div class="tm-product-price">¥80 <small>原价: ¥199</small></div>
                                                         <div class="tm-product-meta">考研结束 · 使用1年</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项10 - 键盘 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item10.png') }}" alt="机械键盘">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item10.png') }}"
+                                                            alt="机械键盘">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">罗技G系列机械键盘 青轴</h5>
                                                         <div class="tm-product-price">¥220 <small>原价: ¥429</small></div>
                                                         <div class="tm-product-meta">计算机协会 · 9成新</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项11 - 电风扇 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item11.png') }}" alt="宿舍电风扇">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item11.png') }}"
+                                                            alt="宿舍电风扇">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">美的宿舍用静音电风扇</h5>
                                                         <div class="tm-product-price">¥60 <small>原价: ¥129</small></div>
                                                         <div class="tm-product-meta">毕业生转让 · 功能完好</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+
                                             <!-- 轮播项12 - 滑板 -->
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item12.png') }}" alt="专业滑板">
+                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item12.png') }}"
+                                                            alt="专业滑板">
                                                     </div>
                                                     <div class="tm-product-info">
                                                         <h5 class="tm-product-title">专业双翘滑板 进口枫木板</h5>
                                                         <div class="tm-product-price">¥180 <small>原价: ¥350</small></div>
                                                         <div class="tm-product-meta">滑板社成员 · 带护具</div>
-                                                        
+
                                                         <a href="#" class="tm-view-btn">联系卖家</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                
+
                                     <!-- 轮播导航控件 -->
                                     <button class="tm-carousel-control prev" aria-label="Previous">
                                         <i class="fas fa-chevron-left"></i>
                                     </button>
-                                
+
                                     <button class="tm-carousel-control next" aria-label="Next">
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
-                                
+
                                     <!-- 轮播指示器 -->
                                     <div class="tm-carousel-indicators">
                                         <!-- 指示器将由JS动态生成 -->
@@ -372,79 +394,79 @@
                                 </div>
                             </div>
                         </div>
-                
+
                         <!-- 最新动态 -->
                         <div class="row mt-5">
                             <div class="col-lg-12">
                                 <h3 class="text-center mb-4">平台动态</h3>
                                 <div class="option4 tm-news-container">
-                                    <div class="media tm-news-item" data-cursor-image="{{ url_for('static', filename='img/indexPage/news1.png') }}">
-                                         <!-- 左侧编号 -->
+                                    <div class="media tm-news-item"
+                                        data-cursor-image="{{ url_for('static', filename='img/indexPage/news1.png') }}">
+                                        <!-- 左侧编号 -->
                                         <div class="news-index d-flex justify-content-center align-items-center">
                                             01&nbsp;
                                         </div>
                                         <div class="media-body">
                                             <h5 class="mt-0">新学期教材特惠活动</h5>
                                             <p>大量二手教材上架，涵盖计算机、经济、文学等多个专业，价格优惠...</p>
-                                            
+
                                         </div>
                                     </div>
-                        
-                                    <div class="media tm-news-item" data-cursor-image="{{ url_for('static', filename='img/indexPage/news2.png') }}">
+
+                                    <div class="media tm-news-item"
+                                        data-cursor-image="{{ url_for('static', filename='img/indexPage/news2.png') }}">
                                         <div class="news-index d-flex justify-content-center align-items-center">
                                             02&nbsp;
                                         </div>
                                         <div class="media-body">
                                             <h5 class="mt-0">毕业季旧物回收计划启动</h5>
                                             <p>帮助毕业生快速处理闲置物品，平台提供免费上门取件服务，环保又便捷。</p>
-                                            
+
                                         </div>
                                     </div>
-                        
-                                    <div class="media tm-news-item" data-cursor-image="{{ url_for('static', filename='img/indexPage/news3.png') }}">
+
+                                    <div class="media tm-news-item"
+                                        data-cursor-image="{{ url_for('static', filename='img/indexPage/news3.png') }}">
                                         <div class="news-index d-flex justify-content-center align-items-center">
                                             03&nbsp;
                                         </div>
                                         <div class="media-body">
                                             <h5 class="mt-0">二手电子设备租赁服务上线</h5>
                                             <p>临时需要平板、笔记本或投影仪？平台新增电子设备短期租赁功能，按日计费，方便实用。</p>
-                                            
+
                                         </div>
                                     </div>
-                        
-                                    <div class="media tm-news-item" data-cursor-image="{{ url_for('static', filename='img/indexPage/news4.png') }}">
+
+                                    <div class="media tm-news-item"
+                                        data-cursor-image="{{ url_for('static', filename='img/indexPage/news4.png') }}">
                                         <div class="news-index d-flex justify-content-center align-items-center">
                                             04&nbsp;
                                         </div>
                                         <div class="media-body">
                                             <h5 class="mt-0">爱心捐赠专场活动</h5>
                                             <p>为山区小学筹集图书和学习用品，欢迎同学们捐赠闲置好物，共筑温暖校园。</p>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
                             </div>
                         </div>
-
-
-
-
-                        
                     </section>
                 </div>
 
                 <!-- Gallery section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>                   
+                    <div class="tm-parallax" data-parallax="scroll"
+                        data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>
                     <section id="gallery" class="tm-section">
                         <h2 class="tm-text-primary">Upright Gallery</h2>
                         <hr class="mb-5">
-                        
+
                         <!-- 添加一个包装容器以实现更好的布局控制 -->
-                        <div class="gallery-content-wrapper", style="display: flex;">
+                        <div class="gallery-content-wrapper" , style="display: flex;">
                             <!-- 左侧内容区域 -->
-                            <div class="gallery-main-content", style="flex: 1;">
+                            <div class="gallery-main-content" , style="flex: 1;">
                                 <!-- 导航链接 -->
                                 <ul class="tm-gallery-links">
                                     <li>
@@ -454,19 +476,19 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="portrait">
+                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="elec">
                                             <i class="fas fa-laptop tm-gallery-link-icon"></i>
                                             数码 &amp; 电子商品
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="nature">
+                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="cloth">
                                             <i class="fas fa-tshirt tm-gallery-link-icon"></i>
                                             衣服 &amp; 运动户外
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="animal">
+                                        <a href="javascript:void(0);" class="tm-gallery-link" data-filter="book">
                                             <i class="fas fa-book tm-gallery-link-icon"></i>
                                             书籍
                                         </a>
@@ -480,254 +502,324 @@
                                 </ul>
                                 <!-- Gallery grid -->
                                 <div class="tm-gallery">
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-01.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-01.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
                                     <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-01.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                    <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>  
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-01.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-01.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-01.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-02.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-01.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-02.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-02.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-02.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-03.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-03.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-03.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>  
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-03.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-04.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('details') }}" onclick="event.stopImmediatePropagation();">View more</a>
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-04.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-04.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-04.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-04.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-04.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-04.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-05.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-05.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-05.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-05.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-05.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-05.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-05.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-05.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>  
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-06.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-06.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-06.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-06.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-06.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-06.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-06.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-06.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-07.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-07.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-07.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-07.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-07.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-07.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-07.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-07.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-08.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-08.jpg') }}">View more</a>						
-                                    </figcaption>			
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-01.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
                                     <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-08.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-08.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure>  
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-08.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-08.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-02.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-02.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-02.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-02.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
                                     <figure class="effect-honey tm-gallery-item building">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/building-09.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/building-09.jpg') }}">View more</a>						
-                                    </figcaption>			
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-03.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
-                                    <figure class="effect-honey tm-gallery-item nature">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/nature-09.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/nature-09.jpg') }}">View more</a>						
-                                    </figcaption>			
-                                    </figure> 
-                                    <figure class="effect-honey tm-gallery-item portrait">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/portrait-09.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/portrait-09.jpg') }}">View more</a>						
-                                    </figcaption>			
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-03.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
                                     </figure>
-                                    <figure class="effect-honey tm-gallery-item animal">
-                                    <img src="{{ url_for('static', filename='img/gallery/tn/animal-09.jpg') }}" alt="Image"/>
-                                    <figcaption>
-                                        <h2><i>Dreamy Honey</i></h2>
-                                        <a href="{{ url_for('static', filename='img/gallery/animal-09.jpg') }}">View more</a>						
-                                    </figcaption>			
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-03.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-03.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-04.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('details') }}"
+                                                onclick="event.stopImmediatePropagation();">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-04.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-04.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-04.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/cloth-04.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-04.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-04.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-05.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/book-05.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-05.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-05.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-05.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-05.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-05.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/cloth-05.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-06.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/cloth-06.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-06.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/book-06.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-06.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-06.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-06.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-06.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-07.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/cloth-07.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-07.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-07.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-07.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/book-07.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-07.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-07.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-08.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-08.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-08.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-08.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-08.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/book-08.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item building">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/building-09.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/building-09.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item cloth">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/cloth-09.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/cloth-09.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item elec">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/elec-09.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/elec-09.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="effect-honey tm-gallery-item book">
+                                        <img src="{{ url_for('static', filename='img/gallery/tn/book-09.jpg') }}"
+                                            alt="Image" />
+                                        <figcaption>
+                                            <h2><i>Dreamy Honey</i></h2>
+                                            <a href="{{ url_for('static', filename='img/gallery/book-09.jpg') }}">View
+                                                more</a>
+                                        </figcaption>
                                     </figure>
                                 </div>
                                 <div class="tm-paging">
-                                    <a href="javascript:void(0);" class="active tm-paging-link" data-page="1">1</a>
+                                    <a href="javascript:void(0);" class="tm-paging-link" data-page="1">1</a>
                                     <a href="javascript:void(0);" class="tm-paging-link" data-page="2">2</a>
                                     <a href="javascript:void(0);" class="tm-paging-link" data-page="3">3</a>
                                     <a href="javascript:void(0);" class="tm-paging-link" data-page="4">4</a>
@@ -736,7 +828,8 @@
 
                             <!-- Special figure on the right side -->
                             <div class="special-figure-container">
-                                <figure class="effect-honey edge-to-edge-portrait" onclick='loading.in("{{ url_for("infinity") }}", "right")'>
+                                <figure class="effect-honey edge-to-edge-portrait"
+                                    onclick='loading.in("{{ url_for("infinity") }}", "right")'>
                                     <img src="{{ url_for('static', filename='img/arrow_pic.png') }}" alt="Image" />
                                     <figcaption>
                                         <h2><i>Dreamy Honey</i></h2>
@@ -748,11 +841,12 @@
                     </section>
                 </div>
 
-                
+
                 <!-- About section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
-                    
+                    <div class="tm-parallax" data-parallax="scroll"
+                        data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
+
                     <section id="about" class="tm-section">
                         <div class="container">
                             <div class="row mb-1">
@@ -761,22 +855,23 @@
                                     <hr class="mb-2">
                                 </div>
                             </div>
-                            
+
                             <!-- Map - Now with map-section class -->
                             <div class="row mb-2 map-section">
                                 <div class="col-12">
                                     <div class="mapouter">
-                                        <div id="amap-container-2" class="amap-container" style="width: 100%; height: 580px;"></div>
+                                        <div id="amap-container-2" class="amap-container"
+                                            style="width: 100%; height: 580px;"></div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Button row with additional class for spacing -->
                             <div class="row button-row">
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <select class="form-control rounded-0" id="contact-select-2" name="kind">
-                                            <option value="all" >全部类别</option>
+                                            <option value="all">全部类别</option>
                                             <option value="elec">数码 &amp; 电子商品</option>
                                             <option value="cloth">衣服 &amp; 运动户外</option>
                                             <option value="book">书籍</option>
@@ -784,19 +879,21 @@
                                         </select>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="number" id="price_min" name="price_min" min="0" step="1" class="form-control rounded-0" placeholder="最低价格" required />
+                                        <input type="number" id="price_min" name="price_min" min="0" step="1"
+                                            class="form-control rounded-0" placeholder="最低价格" required />
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="number" id="price_max" name="price_max" max="2000" step="2" class="form-control rounded-0" placeholder="最高价格" required />
+                                        <input type="number" id="price_max" name="price_max" max="2000" step="2"
+                                            class="form-control rounded-0" placeholder="最高价格" required />
                                     </div>
                                 </div>
-                
+
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-block" id="btn-map">筛选</button>
@@ -813,7 +910,8 @@
 
                 <!-- Contact section -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-04.jpg') }}"></div>
+                    <div class="tm-parallax" data-parallax="scroll"
+                        data-image-src="{{ url_for('static', filename='img/img-04.jpg') }}"></div>
                     <div id="contact" class="tm-section">
                         <h2 class="tm-text-primary">Contact Upright</h2>
                         <hr class="mb-5">
@@ -821,10 +919,12 @@
                             <div class="col-xl-6 tm-contact-col-l mb-4">
                                 <form id="contact-form" action="" method="POST" class="tm-contact-form">
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control rounded-0" placeholder="宝贝名称" required />
+                                        <input type="text" name="name" class="form-control rounded-0" placeholder="宝贝名称"
+                                            required />
                                     </div>
                                     <div class="form-group">
-                                        <input type="number" name="price" min="0" step="0.01" class="form-control rounded-0" placeholder="价格" required />
+                                        <input type="number" name="price" min="0" step="0.01"
+                                            class="form-control rounded-0" placeholder="价格" required />
                                     </div>
                                     <div class="form-group">
                                         <select class="form-control" id="contact-select" name="kind">
@@ -835,9 +935,10 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="描述一下宝贝的品牌型号、货品来源..." required=></textarea>
+                                        <textarea rows="8" name="message" class="form-control rounded-0"
+                                            placeholder="描述一下宝贝的品牌型号、货品来源..." required=></textarea>
                                     </div>
-            
+
                                     <div class="form-group tm-text-right">
                                         <button type="submit" class="btn btn-primary" id="btn-submit">发布</button>
                                     </div>
@@ -846,16 +947,17 @@
                             <div class="col-xl-6 tm-contact-col-r">
                                 <!-- Map -->
                                 <div class="mapouter mb-4">
-                                    <div id="amap-container-1" class="amap-container" style="width: 100%; height: 520px;"></div>
+                                    <div id="amap-container-1" class="amap-container"
+                                        style="width: 100%; height: 520px;"></div>
                                 </div>
-            
+
                                 <!-- Address -->
                                 <address class="mb-4">
                                     120-240 eget purus luctus sodales. Sed<br>
                                     auctor odio quis ligula dignissim efficitur<br>
                                     vitae vitae quam 16502
                                 </address>
-            
+
                                 <!-- Links -->
                                 <ul class="tm-contact-links mb-4">
                                     <li class="mb-2">
@@ -872,25 +974,29 @@
                                     </li>
                                 </ul>
                                 <ul class="tm-contact-social">
-                                    <li><a href="https://fb.com/templatemo" class="tm-social-link"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://youtube.com" class="tm-social-link"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://fb.com/templatemo" class="tm-social-link"><i
+                                                class="fab fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com" class="tm-social-link"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://instagram.com" class="tm-social-link"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://youtube.com" class="tm-social-link"><i
+                                                class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Copyright -->                
+                <!-- Copyright -->
                 <div class="tm-section-wrap tm-copyright row">
                     <div class="col-12">
                         <div class="text-right">
                             <!-- 留空 -->
-                        </div> 
+                        </div>
                     </div>
-                </div>                 
-            </div> <!-- .tm-main -->                      
+                </div>
+            </div> <!-- .tm-main -->
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
 
@@ -901,7 +1007,7 @@
     <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
     <!-- 需要注释掉这句话:与下面的js文件有冲突 -->
-    <!-- <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script> --> 
+    <!-- <script src="{{ url_for('static', filename='slick/slick.min.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/templatemo-script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/gaode_map1.js') }}"></script>
     <script src="{{ url_for('static', filename='js/gaode_map2.js') }}"></script>
@@ -909,4 +1015,5 @@
     <script src="{{ url_for('static', filename='js/homesection.js') }}"></script>
     <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
 </body>
-</html> 
+
+</html>
