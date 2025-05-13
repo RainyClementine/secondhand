@@ -283,6 +283,7 @@ hr { border-top: 4px solid #CCC; }
 .tm-gallery-link-icon { width: 25px; }
 
 .tm-paging {
+	border-radius: 8px;
 	margin-top: 35px;
 	overflow: auto;
     display: flex;
@@ -290,6 +291,7 @@ hr { border-top: 4px solid #CCC; }
 }
 
 .tm-paging-link {
+	border-radius: 8px;		
     display: flex;
     float: left;
     width: 40px;
@@ -769,14 +771,26 @@ figure.effect-jianbian:hover ul li a {
 
 .tm-contact-col-l { padding-right: 25px; }
 
-.form-control {
-	padding: 15px 20px 10px;
-	width: 100%;
-	height: auto;
+
+.form-control { 
+    padding: 15px 20px 10px; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; /* 添加倒角效果 */
 }
 
-.form-group { margin-bottom: 25px; }
-select.form-control { border-radius: 0; }
+.form-group { 
+    margin-bottom: 25px; 
+}
+
+/* 覆盖原来的 rounded-0 类，确保倒角效果生效 */
+.form-control.rounded-0 {
+    border-radius: 8px !important; /* 使用 !important 确保覆盖 Bootstrap 的 rounded-0 类 */
+}
+.btn {
+    border-radius: 8px;
+}
+select.form-control { border-radius: 8px; }
 select.form-control option { height: 30px; }
 
 select:not([multiple]) {

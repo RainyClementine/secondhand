@@ -228,3 +228,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// 一下是3d tilt效果
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+// 选择所有需要添加3D倾斜效果的卡片
+const cards = document.querySelectorAll('.js-tilt');
+
+// 为每个卡片添加鼠标移动事件监听器
+cards.forEach(card => {
+    // 设置卡片的初始变换状态
+    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+    
+    // 添加鼠标移入事件
+    card.addEventListener('mouseenter', function() {
+        // 获取卡片中的子元素
+        const icon = this.querySelector('.tm-feature-icon');
+        const heading = this.querySelector('h4');
+        const paragraph = this.querySelector('p');
+        
+        // 将子元素向前推
+        if (icon) icon.style.transform = 'translateZ(60px)';
+        if (heading) heading.style.transform = 'translateZ(40px)';
+        if (paragraph) paragraph.style.transform = 'translateZ(20px)';
+    });
+    
+    // 添加鼠标移出事件
+    card.addEventListener('mouseleave', function() {
+        // 重置卡片的变换状态
+        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        
+        // 获取卡片中的子元素
+        const icon = this.querySelector('.tm-feature-icon');
+        const heading = this.querySelector('h4');
+        const paragraph = this.querySelector('p');
+        
+        // 重置子元素的变换状态
+        if (icon) icon.style.transform = 'translateZ(40px)';
+        if (heading) heading.style.transform = 'translateZ(30px)';
+        if (paragraph) paragraph.style.transform = 'translateZ(20px)';
+    });
+    
+    // 添加鼠标移动事件
+    card.addEventListener('mousemove', function(e) {
+        // 计算鼠标在卡片上的相对位置
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left; // 鼠标在卡片上的X坐标
+        const y = e.clientY - rect.top;  // 鼠标在卡片上的Y坐标
+        
+        // 计算卡片的中心点
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // 计算鼠标位置与中心点的差值，并归一化为-1到1之间
+        const deltaX = (x - centerX) / centerX;
+        const deltaY = (y - centerY) / centerY;
+        
+        // 计算倾斜角度，最大倾斜角度为12度
+        const tiltX = deltaY * 12;
+        const tiltY = -deltaX * 12;
+        
+        // 应用3D变换
+        this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.05)`;
+        
+        // 添加光泽效果
+        const glare = this.querySelector('.tm-glare');
+        if (glare) {
+            // 计算光泽效果的位置
+            const glareX = (x / rect.width) * 100;
+            const glareY = (y / rect.height) * 100;
+            glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%)`;
+        }
+    });
+});
+});

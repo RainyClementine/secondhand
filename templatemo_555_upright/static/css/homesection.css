@@ -132,6 +132,14 @@
     padding: 25px 25px 45px;
 }
 
+.carousel-title {
+    text-align: center;
+}
+
+/* .carousel-words {
+    ;
+} */
+
 /* 轮播视窗 - 限制可见区域 */
 .tm-carousel-viewport {
     overflow: hidden;
@@ -514,3 +522,72 @@
         transform: rotate(-15deg) scale(0);
     }
 }
+
+
+/* 3D 卡片效果 */
+/* .tm-features-row {
+    margin-top: 40px;
+    perspective: 1000px;
+} */
+
+.tm-feature-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tm-feature-card:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* 3D 内部元素效果 */
+/* .tm-feature-icon {
+    transform: translateZ(40px);
+    transition: transform 0.2s ease;
+} */
+
+.tm-feature-card h4 {
+    transform: translateZ(30px);
+    transition: transform 0.2s ease;
+    color: #333;
+    font-weight: 600;
+}
+
+.tm-feature-card p {
+    transform: translateZ(20px);
+    transition: transform 0.2s ease;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* 发光效果 */
+.tm-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tm-feature-card:hover::before {
+    opacity: 1;
+}
+
+/* 图标颜色渐变 */
+/* .tm-feature-icon i {
+    background: linear-gradient(120deg, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+} */
