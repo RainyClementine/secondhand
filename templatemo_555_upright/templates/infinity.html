@@ -459,7 +459,7 @@
             this.img_data = [];
             for (let i = 0; i < this.img_total; i++) {
                 let img = new Image();
-                img.src = "{{ url_for('static', filename='img/photos/') }}" + `photo (${i + 1}).png`;
+                img.src = "{{ url_for('static', filename='img/photos/') }}" + `photo (${i + 1}).jpg`;
       
                 // 当图片加载完成之后，创建对应图片数据并添加到img_data中
                 img.onload = () => {
