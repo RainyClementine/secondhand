@@ -97,7 +97,6 @@
                         <!-- 顶部标题区域 -->
                         <div class="row mb-5 tm-header-section">
                             <div class="col-lg-12 text-center">
-                                <!-- 主标题容器，增加内边距和动画效果 -->
                                 <div class="tm-header-content animate__animated animate__fadeInDown">
                                     <h1 class="tm-text-primary mb-3 tm-main-title">
                                         <span class="tm-highlight">校园二手交易平台</span>
@@ -105,13 +104,11 @@
                                     <p class="lead tm-text-secondary tm-subtitle">
                                         让闲置流动 · 让资源重生 · 让校园更环保
                                     </p>
-                                    <!-- 分割线增强 -->
                                     <div class="d-flex justify-content-center mt-4">
                                         <div class="tm-divider tm-divider-gradient"></div>
                                     </div>
                                 </div>
                         
-                                <!-- 添加一个行动按钮 -->
                                 <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
                                     <a href="{{ url_for('login_user') }}" class="btn btn-primary btn-lg tm-cta-btn">
                                         <i class="fas fa-handshake mr-2"></i>立即交易
@@ -121,7 +118,7 @@
                         </div>
                 
                         <!-- 特色服务卡片 -->
-                        <div class="row tm-features-row">
+                        <!-- <div class="row tm-features-row">
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="tm-feature-card text-center p-4 h-100">
                                     <div class="tm-feature-icon mb-4">
@@ -151,8 +148,38 @@
                                     <p>自行车、宿舍用品、小家电<br>毕业季特惠，闲置再利用<br>满足校园生活各种需求</p>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="row tm-features-row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card js-tilt text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-book-open fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">教材交易</h4>
+                                    <p>学长学姐的二手教材，价格实惠<br>涵盖各专业课程，笔记齐全<br>帮你节省教材开支</p>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card js-tilt text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-laptop fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">数码产品</h4>
+                                    <p>学生自用电脑、平板、手机<br>价格亲民，支持当面验货<br>校园内交易更放心</p>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="tm-feature-card js-tilt text-center p-4 h-100">
+                                    <div class="tm-feature-icon mb-4">
+                                        <i class="fas fa-home fa-3x tm-text-primary"></i>
+                                    </div>
+                                    <h4 class="mb-3">校园生活</h4>
+                                    <p>自行车、宿舍用品、小家电<br>毕业季特惠，闲置再利用<br>满足校园生活各种需求</p>
+                                </div>
+                            </div>
                         </div>
-                
                         <!-- 热门商品轮播 -->
                         <div class="row mb-5">
                             <div class="col-lg-12">
