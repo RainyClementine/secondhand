@@ -385,7 +385,6 @@ a.tm-paging-link:hover {
 
 	.tm-paging-link { margin-right: 5px; }
 }
-
 .tm-gallery figure {
 	position: relative;
 	z-index: 50;
@@ -399,6 +398,8 @@ a.tm-paging-link:hover {
 	background: #3085a3;
 	text-align: center;
 	cursor: pointer;
+	/* 添加圆角 */
+	border-radius: 10px;
 }
 
 .tm-gallery figure img {
@@ -407,6 +408,8 @@ a.tm-paging-link:hover {
 	min-height: 100%;
 	max-width: 100%;
 	opacity: 0.8;
+	/* 图片也添加圆角以匹配父容器 */
+	border-radius: 10px;
 }
 
 .tm-gallery figure figcaption {
@@ -416,8 +419,11 @@ a.tm-paging-link:hover {
 	font-size: 1em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	/* 添加圆角与figure一致 */
+	border-radius: 10px;
 }
 
+/* 其他CSS保持不变 */
 .tm-gallery figure figcaption::before,
 .tm-gallery figure figcaption::after {
 	pointer-events: none;
@@ -440,6 +446,7 @@ a.tm-paging-link:hover {
 	white-space: nowrap;
 	font-size: 0;
 	opacity: 0;
+	border-radius: 10px; /* 链接元素也添加圆角 */
 }
 
 .tm-gallery figure h2 {
@@ -463,12 +470,16 @@ a.tm-paging-link:hover {
 /***** Honey *****/
 /*---------------*/
 
-figure.effect-honey { background: #4a3753; }
+figure.effect-honey { 
+	background: #4a3753; 
+	border-radius: 10px; /* 确保蜂蜜效果也有圆角 */
+}
 
 figure.effect-honey img {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
+	border-radius: 10px; /* 确保图片有圆角 */
 }
 
 figure.effect-honey:hover img { opacity: 0.5; }
@@ -483,6 +494,9 @@ figure.effect-honey figcaption::before {
 	content: '';
 	-webkit-transform: translate3d(0,10px,0);
 	transform: translate3d(0,10px,0);
+	/* 底部横条添加圆角 */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 figure.effect-honey h2 {
@@ -529,22 +543,24 @@ figure.effect-honey:hover ul li a {
 	transform: translate3d(0,0,0);
 }
 
-/* jianiban */
+/* jianbian */
 figure.effect-jianbian { 
 	background: #4a3753; 
-  }
+	border-radius: 10px; /* 确保渐变效果也有圆角 */
+}
   
-  figure.effect-jianbian img {
-	opacity: 1; /* 改为完全不透明 */
+figure.effect-jianbian img {
+	opacity: 1;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
-  }
+	border-radius: 10px; /* 确保图片有圆角 */
+}
   
-  figure.effect-jianbian:hover img { 
-	opacity: 0.5; /* 保持 hover 时变暗效果 */
-  }
+figure.effect-jianbian:hover img { 
+	opacity: 0.5;
+}
   
-  figure.effect-jianbian figcaption::before {
+figure.effect-jianbian figcaption::before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -554,9 +570,12 @@ figure.effect-jianbian {
 	content: '';
 	-webkit-transform: translate3d(0,10px,0);
 	transform: translate3d(0,10px,0);
-  }
+	/* 底部横条添加圆角 */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
   
-  figure.effect-jianbian h2 {
+figure.effect-jianbian h2 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -566,40 +585,39 @@ figure.effect-jianbian {
 	text-align: left;
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
-  }
+}
   
-  figure.effect-jianbian h2 i {
+figure.effect-jianbian h2 i {
 	font-style: normal;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
-  }
+}
   
-  figure.effect-jianbian ul li a {
+figure.effect-jianbian ul li a {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
-  }
+}
   
-  figure.effect-jianbian figcaption::before,
-  figure.effect-jianbian h2 {
+figure.effect-jianbian figcaption::before,
+figure.effect-jianbian h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-  }
+}
   
-  figure.effect-jianbian:hover figcaption::before,
-  figure.effect-jianbian:hover h2,
-  figure.effect-jianbian:hover h2 i,
-  figure.effect-jianbian:hover ul li a {
+figure.effect-jianbian:hover figcaption::before,
+figure.effect-jianbian:hover h2,
+figure.effect-jianbian:hover h2 i,
+figure.effect-jianbian:hover ul li a {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-  }
-  
+}
 
 /* About */
 
