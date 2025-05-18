@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homesection.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gaode_map.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transpic.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=c1be19fd473d2fa33f31440a8a4dac69"></script>
@@ -27,12 +28,11 @@
             height: auto;
             max-width: 100%;
             margin-left: -20px;
-            /* 添加负的左边距，使logo向左偏移 */
-            /* 或者使用相对定位
-        position: relative;
-        left: -20px;
-        */
+            
         }
+        
+        
+        
     </style>
 </head>
 
@@ -121,39 +121,9 @@
                                 </div>
                             </div>
                         </div>
+                        
 
-                        <!-- 特色服务卡片 -->
-                        <!-- <div class="row tm-features-row">
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="tm-feature-card text-center p-4 h-100">
-                                    <div class="tm-feature-icon mb-4">
-                                        <i class="fas fa-book-open fa-3x tm-text-primary"></i>
-                                    </div>
-                                    <h4 class="mb-3">教材交易</h4>
-                                    <p>学长学姐的二手教材，价格实惠<br>涵盖各专业课程，笔记齐全<br>帮你节省教材开支</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="tm-feature-card text-center p-4 h-100">
-                                    <div class="tm-feature-icon mb-4">
-                                        <i class="fas fa-laptop fa-3x tm-text-primary"></i>
-                                    </div>
-                                    <h4 class="mb-3">数码产品</h4>
-                                    <p>学生自用电脑、平板、手机<br>价格亲民，支持当面验货<br>校园内交易更放心</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="tm-feature-card text-center p-4 h-100">
-                                    <div class="tm-feature-icon mb-4">
-                                        <i class="fas fa-home fa-3x tm-text-primary"></i>
-                                    </div>
-                                    <h4 class="mb-3">校园生活</h4>
-                                    <p>自行车、宿舍用品、小家电<br>毕业季特惠，闲置再利用<br>满足校园生活各种需求</p>
-                                </div>
-                            </div>
-                        </div> -->
+                        
                         <div class="row tm-features-row">
                             <div class="col-lg-4 col-md-6 mb-4">
                                 <div class="tm-feature-card js-tilt text-center p-4 h-100">
@@ -185,16 +155,56 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+                        
+
+                        <div class="portrait-container-wrapper">
+                            <!-- Left recycle text line -->
+                            <div class="home_portrait_textline">
+                                <div class="recycle-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div class="recycle-text">RECYCLE</div>
+                                <div class="recycle-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Original portrait container -->
+                            <div class="portrait-container">
+                                <img src="{{ url_for('static', filename='img/old.png') }}" alt="原始图片" class="portrait-image portrait-before">
+                                <img src="{{ url_for('static', filename='img/new.png') }}" alt="过渡后图片" class="portrait-image portrait-after">
+                                <div class="transition-line"></div>
+                            </div>
+                            
+                            <!-- Right recycle text line -->
+                            <div class="home_portrait_textline">
+                                <div class="recycle-icon rotate-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div class="recycle-text">REUSE</div>
+                                <div class="recycle-icon rotate-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <!-- 热门商品轮播 -->
-                        <div class="row mb-5">
+                        <!-- <div class="row mb-5">
                             <div class="col-lg-12">
                                 <h3 class="carousel-title">热门二手商品</h3>
                                 <div class="tm-carousel-container">
-                                    <!-- 轮播视窗 - 添加额外容器控制可见区域 -->
+                                    
                                     <div class="tm-carousel-viewport">
-                                        <!-- 轮播主体 -->
+                                       
                                         <div class="tm-carousel">
-                                            <!-- 轮播项1 - 笔记本电脑 -->
+                                            
+
+
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -212,7 +222,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项2 - 手机 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -230,7 +240,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项3 - 教材 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -247,7 +257,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项4 - 自行车 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -265,7 +275,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项5 - 平板电脑 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -283,7 +293,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项6 - 宿舍电器 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -300,7 +310,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项7 - 耳机 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -318,7 +328,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项8 - 游戏机 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -336,7 +346,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项9 - 台灯 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -353,7 +363,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项10 - 键盘 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -370,7 +380,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项11 - 电风扇 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -387,7 +397,7 @@
                                                 </div>
                                             </div>
 
-                                            <!-- 轮播项12 - 滑板 -->
+                                            
                                             <div class="tm-carousel-item">
                                                 <div class="tm-product-card">
                                                     <div class="tm-product-img-container">
@@ -406,7 +416,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- 轮播导航控件 -->
+                                    
                                     <button class="tm-carousel-control prev" aria-label="Previous">
                                         <i class="fas fa-chevron-left"></i>
                                     </button>
@@ -415,13 +425,15 @@
                                         <i class="fas fa-chevron-right"></i>
                                     </button>
 
-                                    <!-- 轮播指示器 -->
                                     <div class="tm-carousel-indicators">
-                                        <!-- 指示器将由JS动态生成 -->
+                                        
                                     </div>
+
+
+
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- 最新动态 -->
                         <div class="row mt-5">
@@ -1042,6 +1054,7 @@
     <script src="{{ url_for('static', filename='js/loading.js') }}"></script>
     <script src="{{ url_for('static', filename='js/homesection.js') }}"></script>
     <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/transpic.js') }}"></script>
 </body>
 
 </html>

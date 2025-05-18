@@ -4,6 +4,8 @@
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
+    /* margin-bottom: 0 !important; 
+    padding-bottom: 0;  */
 }
 
 .tm-header-section::before {
