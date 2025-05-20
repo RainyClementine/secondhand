@@ -1,0 +1,254 @@
+.tm-brand {
+    width: 140px !important;
+    height: auto;
+    max-width: 100%;
+    margin-left: -20px;
+    
+}
+
+/* 新增样式 */
+.tm-text-primary {
+    color: #4a6bdf;
+    font-weight: 700;
+}
+
+.divider-custom {
+    display: flex;
+    align-items: center;
+    margin: 1.25rem 0;
+}
+
+.divider-custom-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.divider-custom-icon {
+    padding: 0 1rem;
+    color: #4a6bdf;
+    font-size: 1.5rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #57606f;
+}
+
+/* 功能卡片样式 */
+.feature-cards {
+    margin-top: 2rem;
+}
+
+.feature-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.bg-primary { background-color: #4a6bdf; }
+.bg-success { background-color: #28a745; }
+.bg-info { background-color: #17a2b8; }
+
+.feature-card h4 {
+    margin-bottom: 1rem;
+    color: #2f3542;
+}
+
+.feature-card p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* 地图容器样式 */
+.map-header {
+    background: #f8f9fa;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #eee;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.map-legend {
+    font-size: 0.85rem;
+}
+
+.legend-item {
+    margin-left: 1rem;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.map-control {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 筛选区域样式 */
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+.form-control {
+    border-radius: 4px !important;
+}
+
+/* 热门服务标签 */
+.hot-services {
+    margin: 1rem 0;
+}
+
+.hot-services .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: normal;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.hot-services .badge:hover {
+    background-color: #4a6bdf !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.section-subtitle {
+    color: #4a6bdf;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content {
+    text-align: left;
+}
+
+.modal-content h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    color: #57606f;
+    font-size: 0.95rem;
+}
+
+.modal-list li {
+    margin-bottom: 0.75rem;
+}
+
+.modal-close {
+    background: #4a6bdf;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: #3a5ac8;
+}
+
+.modal-trigger {
+    cursor: pointer;
+    color: #4a6bdf;
+    font-size: 1.2rem;
+}
+
+/* Overlay for modal background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* 新样式：提示标题 */
+.tooltip-content h5 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #16a9a4;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 新样式：列表 */
+.tooltip-content ol {
+    padding-left: 20px;
+    margin: 0;
+    list-style: decimal;
+    color: #000000;
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.tooltip-content ol li {
+    margin-bottom: 8px;
+}
+
+/* 原有 tooltip 显隐控制样式（可选增强交互） */
+.tooltip-container:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}

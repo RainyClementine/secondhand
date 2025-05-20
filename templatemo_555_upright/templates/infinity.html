@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> 
-    <title>Infinite Scrolling Canvas with Zoom Effect</title>
+    <title>发现-无限</title>
     <style>
         * {
             padding: 0;
@@ -177,180 +177,168 @@
 </body>
 <script>
 
-     // 过渡动画的图片
-    let swith_img = {
-        img: new Image(),  // 实际的图片对象
-        x: 0,              // 图片的 x 坐标
-        y: 0,              // 图片的 y 坐标
-        img_width: 0,
-        img_height: 0,
-        scaleFactor: 1,        
-        targetScale: 1       
-    };
-
-    valid_canvas1 = 1;  // 禁用canvas1上的点击元素 不然会出来同时点击的bug
-    // >0 的时候有效
+    
     myRADIUS = 30;
     
 
-    const photobox2 = {
-        // canvas对象容器
-        canvas: null,
-        // canvas 2d上下文
-        context: null,
-        // 动画相关参数
-        animationId: null,
-        // 图片相关参数
+    // const photobox2 = {
+    //     // canvas对象容器
+    //     canvas: null,
+    //     // canvas 2d上下文
+    //     context: null,
+    //     // 动画相关参数
+    //     animationId: null,
+    //     // 图片相关参数
         
-        targetWidth: 0, // 目标宽度
-        targetHeight: 0, // 目标高度
-        mag_factor: 1.2, // 放大倍数
+    //     targetWidth: 0, // 目标宽度
+    //     targetHeight: 0, // 目标高度
+    //     mag_factor: 1.2, // 放大倍数
 
-        // 动画进度
-        animationProgress: 0,
-        animationSpeed: 0.1, // 动画速度
+    //     // 动画进度
+    //     animationProgress: 0,
+    //     animationSpeed: 0.1, // 动画速度
         
-        // 初始化
-        init() {
-            this.canvas = document.getElementById("canvas2");
-            this.context = this.canvas.getContext("2d");
-            this.targetHeight = swith_img.img_height / swith_img.scaleFactor * this.mag_factor;
-            this.targetWidth = swith_img.img_width / swith_img.scaleFactor * this.mag_factor;
-            this.creat_events();
-            this.resize();
-            this.startAnimation();
-        },
+    //     // 初始化
+    //     init() {
+    //         this.canvas = document.getElementById("canvas2");
+    //         this.context = this.canvas.getContext("2d");
+    //         this.targetHeight = swith_img.img_height / swith_img.scaleFactor * this.mag_factor;
+    //         this.targetWidth = swith_img.img_width / swith_img.scaleFactor * this.mag_factor;
+    //         this.creat_events();
+    //         this.resize();
+    //         this.startAnimation();
+    //     },
         
-        // 调整canvas大小
-        resize() {
-            this.canvas.width = this.canvas.clientWidth;
-            this.canvas.height = this.canvas.clientHeight;
-            console.log(swith_img.x, swith_img.y, swith_img.scaleFactor)
-            // this.draw();
-        },
+    //     // 调整canvas大小
+    //     resize() {
+    //         this.canvas.width = this.canvas.clientWidth;
+    //         this.canvas.height = this.canvas.clientHeight;
+    //         console.log(swith_img.x, swith_img.y, swith_img.scaleFactor)
+    //         // this.draw();
+    //     },
         
-        creat_events() {
-            this.canvas.addEventListener("mousedown", (e) => {
-                // 阻止事件继续传播，防止点击穿透
-                e.preventDefault();
-                e.stopPropagation();
+    //     creat_events() {
+    //         this.canvas.addEventListener("mousedown", (e) => {
+    //             // 阻止事件继续传播，防止点击穿透
+    //             e.preventDefault();
+    //             e.stopPropagation();
                 
-                if (canvas2.style.display !== "none") {
-                    // 停止正在进行的动画
-                    if (this.animationId) {
-                        cancelAnimationFrame(this.animationId);
-                        this.animationId = null;
-                    }
-                    canvas2.style.display = "none"; 
-                    canvas1.style.display = "block";
+    //             if (canvas2.style.display !== "none") {
+    //                 // 停止正在进行的动画
+    //                 if (this.animationId) {
+    //                     cancelAnimationFrame(this.animationId);
+    //                     this.animationId = null;
+    //                 }
+    //                 canvas2.style.display = "none"; 
+    //                 canvas1.style.display = "block";
                  
-                }
-        });
-    },
+    //             }
+    //     });
+    // },
 
-        // 绘制函数
-        draw() {
-            // 清空画布
-            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    //     // 绘制函数
+    //     draw() {
+    //         // 清空画布
+    //         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
             
-            // 计算左半屏中心位置
-            const targetX = this.canvas.width / 3; // 左半部分的中心x坐标
-            const targetY = this.canvas.height / 2; // 垂直中心y坐标
+    //         // 计算左半屏中心位置
+    //         const targetX = this.canvas.width / 3; // 左半部分的中心x坐标
+    //         const targetY = this.canvas.height / 2; // 垂直中心y坐标
 
-            // 计算当前位置（从初始位置逐渐移动到目标位置）
-            const currentX = swith_img.x + (targetX - swith_img.x) * this.animationProgress;
-            const currentY = swith_img.y + (targetY - swith_img.y) * this.animationProgress;
+    //         // 计算当前位置（从初始位置逐渐移动到目标位置）
+    //         const currentX = swith_img.x + (targetX - swith_img.x) * this.animationProgress;
+    //         const currentY = swith_img.y + (targetY - swith_img.y) * this.animationProgress;
             
-            // 计算当前大小（从初始大小逐渐变为目标大小）
-            const currentWidth = swith_img.img_width + (this.targetWidth - swith_img.img_width) * this.animationProgress;
-            const currentHeight = swith_img.img_height + (this.targetHeight - swith_img.img_height) * this.animationProgress;
+    //         // 计算当前大小（从初始大小逐渐变为目标大小）
+    //         const currentWidth = swith_img.img_width + (this.targetWidth - swith_img.img_width) * this.animationProgress;
+    //         const currentHeight = swith_img.img_height + (this.targetHeight - swith_img.img_height) * this.animationProgress;
             
-            // 计算图片的左上角坐标
-            const imgX = currentX - currentWidth / 2;
-            const imgY = currentY - currentHeight / 2;
+    //         // 计算图片的左上角坐标
+    //         const imgX = currentX - currentWidth / 2;
+    //         const imgY = currentY - currentHeight / 2;
             
-            // 设置圆角半径 (可以根据需要调整)
-            const radius = myRADIUS; // 圆角半径
+    //         // 设置圆角半径 (可以根据需要调整)
+    //         const radius = myRADIUS; // 圆角半径
             
-            // 保存当前上下文状态
-            this.context.save();
+    //         // 保存当前上下文状态
+    //         this.context.save();
             
-            // 开始创建圆角矩形路径
-            this.context.beginPath();
+    //         // 开始创建圆角矩形路径
+    //         this.context.beginPath();
             
-            // 绘制圆角矩形路径
-            // 从左上角开始，顺时针绘制
-            this.context.moveTo(imgX + radius, imgY); // 左上角水平线起点
-            this.context.lineTo(imgX + currentWidth - radius, imgY); // 上边水平线
-            this.context.arcTo(imgX + currentWidth, imgY, imgX + currentWidth, imgY + radius, radius); // 右上角
-            this.context.lineTo(imgX + currentWidth, imgY + currentHeight - radius); // 右边垂直线
-            this.context.arcTo(imgX + currentWidth, imgY + currentHeight, imgX + currentWidth - radius, imgY + currentHeight, radius); // 右下角
-            this.context.lineTo(imgX + radius, imgY + currentHeight); // 下边水平线
-            this.context.arcTo(imgX, imgY + currentHeight, imgX, imgY + currentHeight - radius, radius); // 左下角
-            this.context.lineTo(imgX, imgY + radius); // 左边垂直线
-            this.context.arcTo(imgX, imgY, imgX + radius, imgY, radius); // 左上角
+    //         // 绘制圆角矩形路径
+    //         // 从左上角开始，顺时针绘制
+    //         this.context.moveTo(imgX + radius, imgY); // 左上角水平线起点
+    //         this.context.lineTo(imgX + currentWidth - radius, imgY); // 上边水平线
+    //         this.context.arcTo(imgX + currentWidth, imgY, imgX + currentWidth, imgY + radius, radius); // 右上角
+    //         this.context.lineTo(imgX + currentWidth, imgY + currentHeight - radius); // 右边垂直线
+    //         this.context.arcTo(imgX + currentWidth, imgY + currentHeight, imgX + currentWidth - radius, imgY + currentHeight, radius); // 右下角
+    //         this.context.lineTo(imgX + radius, imgY + currentHeight); // 下边水平线
+    //         this.context.arcTo(imgX, imgY + currentHeight, imgX, imgY + currentHeight - radius, radius); // 左下角
+    //         this.context.lineTo(imgX, imgY + radius); // 左边垂直线
+    //         this.context.arcTo(imgX, imgY, imgX + radius, imgY, radius); // 左上角
             
-            // 关闭路径
-            this.context.closePath();
+    //         // 关闭路径
+    //         this.context.closePath();
             
-            // 裁剪为圆角矩形区域
-            this.context.clip();
+    //         // 裁剪为圆角矩形区域
+    //         this.context.clip();
             
-            // 在裁剪区域内绘制图片
-            this.context.drawImage(
-                swith_img.img, 
-                imgX, 
-                imgY, 
-                currentWidth, 
-                currentHeight
-            );
+    //         // 在裁剪区域内绘制图片
+    //         this.context.drawImage(
+    //             swith_img.img, 
+    //             imgX, 
+    //             imgY, 
+    //             currentWidth, 
+    //             currentHeight
+    //         );
             
-            // 恢复上下文状态
-            this.context.restore();
-        },
+    //         // 恢复上下文状态
+    //         this.context.restore();
+    //     },
         
-        // 启动动画
-        startAnimation() {
-            // 重置动画进度
-            this.animationProgress = 0;
+    //     // 启动动画
+    //     startAnimation() {
+    //         // 重置动画进度
+    //         this.animationProgress = 0;
             
-            const animate = () => {
-                // 更新动画进度
-                this.animationProgress += this.animationSpeed;
+    //         const animate = () => {
+    //             // 更新动画进度
+    //             this.animationProgress += this.animationSpeed;
                 
-                // 如果动画完成，停止动画
-                if (this.animationProgress >= 1) {
-                    this.animationProgress = 1;
-                    this.draw();
-                    cancelAnimationFrame(this.animationId);
-                    this.animationId = null;
-                    console.log("Animation completed");
-                    return;
-                }
+    //             // 如果动画完成，停止动画
+    //             if (this.animationProgress >= 1) {
+    //                 this.animationProgress = 1;
+    //                 this.draw();
+    //                 cancelAnimationFrame(this.animationId);
+    //                 this.animationId = null;
+    //                 console.log("Animation completed");
+    //                 return;
+    //             }
                 
-                // 绘制当前帧
-                this.draw();
+    //             // 绘制当前帧
+    //             this.draw();
                 
-                // 继续下一帧
-                this.animationId = requestAnimationFrame(animate);
-            };
+    //             // 继续下一帧
+    //             this.animationId = requestAnimationFrame(animate);
+    //         };
             
-            // 开始动画
-            this.animationId = requestAnimationFrame(animate);
-        },
+    //         // 开始动画
+    //         this.animationId = requestAnimationFrame(animate);
+    //     },
         
-        // 重新开始动画
-        restartAnimation() {
-            // 如果有正在进行的动画，先取消
-            if (this.animationId) {
-                cancelAnimationFrame(this.animationId);
-                this.animationId = null;
-            }
+    //     // 重新开始动画
+    //     restartAnimation() {
+    //         // 如果有正在进行的动画，先取消
+    //         if (this.animationId) {
+    //             cancelAnimationFrame(this.animationId);
+    //             this.animationId = null;
+    //         }
             
-            // 重新启动动画
-            this.startAnimation();
-        }
-    };
+    //         // 重新启动动画
+    //         this.startAnimation();
+    //     }
+    // };
     
 
     const photobox1 = 
@@ -528,29 +516,47 @@
                 this.startZoomAnimation();
             });
             
+            // // 当鼠标弹起时，开始惯性滑动，恢复缩放
+            // this.canvas.addEventListener("mouseup", (e) => {
+                
+            //     this.if_movable = false;
+            //     if()
+            //     {
+
+            //         this.check_img(e.x, e.y);
+            //         console.log("success");
+            //     }
+                    
+            //     else 
+            //         console.log("failed");
+                
+            //     // 设置目标缩放为原始大小
+            //     this.targetScale = 1;
+            //     this.startZoomAnimation();
+                
+            //     // 如果速度足够大，启动惯性滚动
+            //     if (Math.abs(this.velocityX) > 0.1 || Math.abs(this.velocityY) > 0.1) {
+            //         this.startMomentumScroll();
+            //     }
+            // });
             // 当鼠标弹起时，开始惯性滑动，恢复缩放
             this.canvas.addEventListener("mouseup", (e) => {
-                console.log("valid ", valid_canvas1);
                 this.if_movable = false;
-                if(valid_canvas1>0)
-                {
 
-                    this.check_img(e.x, e.y);
-                    console.log("success");
-                }
-                    
-                else 
-                    console.log("failed");
-                valid_canvas1 = valid_canvas1 + 1;
+                // 处理图像点击逻辑
+                this.check_img(e.x, e.y);
+                console.log("success");
+
                 // 设置目标缩放为原始大小
                 this.targetScale = 1;
                 this.startZoomAnimation();
-                
+
                 // 如果速度足够大，启动惯性滚动
                 if (Math.abs(this.velocityX) > 0.1 || Math.abs(this.velocityY) > 0.1) {
                     this.startMomentumScroll();
                 }
             });
+
             
             // 当鼠标离开选区时，也启动惯性滚动并恢复缩放
             this.canvas.addEventListener("mouseleave", () => {
@@ -907,33 +913,7 @@
             );
             // 如果存在，则输出
             if (img) {
-                // const actualX = (img.x - this.zoomCenter.x) * this.currentScale + this.zoomCenter.x;
-                // const actualY = (img.y - this.zoomCenter.y) * this.currentScale + this.zoomCenter.y;
-                const actualX = img.x - (this.img_width * img.scaleFactor - this.img_width) / 2;
-                const actualY = img.y - (this.img_height * img.scaleFactor - this.img_height) / 2;
-
-                const actualW = this.img_width * img.scaleFactor;
-                const actualH = this.img_height * img.scaleFactor;
-                swith_img = {
-                    img: img.img,
-                    x: actualX + actualW / 2,                           // Use the transformed coordinates
-                    y: actualY + actualH / 2,                           // Use the transformed coordinates
-                    img_width: actualW,  // Account for current zoom
-                    img_height: actualH,// Account for current zoom
-                    scaleFactor: img.scaleFactor || 1,
-                    targetScale: img.targetScale || 1
-                };
-                if (canvas1.style.display !== "none") {
-                    valid_canvas1 = -1;
-                    canvas2.style.display = "block"; // 显示第二个canvas
-                    photobox2.init();
-                    canvas1.style.display = "none";  // 隐藏第一个canvas
-                     // 添加延迟跳转
-                setTimeout(() => {
-                    const imgIndex = this.img_data.indexOf(img);
-                    window.location.href = "{{ url_for('details2') }}";
-                }, 1000); // 1秒后跳转
-                }
+                window.location.href = "{{ url_for('details2') }}";
             }
         }
     };

@@ -19,18 +19,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homesection.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/gaode_map.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/transpic.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ultimate.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <script src="https://webapi.amap.com/maps?v=2.0&key=1a90cfaf8bec1f855d5d39c51c888505"></script>
-    <style>
-        .tm-brand {
-            width: 140px !important;
-            height: auto;
-            max-width: 100%;
-            margin-left: -20px;
-            
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -181,248 +174,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- 热门商品轮播 -->
-                        <!-- <div class="row mb-5">
-                            <div class="col-lg-12">
-                                <h3 class="carousel-title">热门二手商品</h3>
-                                <div class="tm-carousel-container">
-                                    
-                                    <div class="tm-carousel-viewport">
-                                       
-                                        <div class="tm-carousel">
-                                            
-
-
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item1.png') }}"
-                                                            alt="MacBook Pro">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">MacBook Pro 2021 M1芯片 13寸</h5>
-                                                        <div class="tm-product-price">¥5,200 <small>原价: ¥9,999</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">计算机系张学长 · 使用1年</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item2.png') }}"
-                                                            alt="iPhone 13">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">iPhone 13 128GB 白色 98新</h5>
-                                                        <div class="tm-product-price">¥3,600 <small>原价: ¥5,999</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">文学院李学姐 · 带原装盒</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item3.png') }}"
-                                                            alt="经济学教材">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">曼昆《经济学原理》第8版</h5>
-                                                        <div class="tm-product-price">¥50 <small>原价: ¥108</small></div>
-                                                        <div class="tm-product-meta">经管学院 · 含详细笔记</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item4.png') }}"
-                                                            alt="山地自行车">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">捷安特山地自行车 21速</h5>
-                                                        <div class="tm-product-price">¥680 <small>原价: ¥1,299</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">体育学院王同学 · 送车锁</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item5.png') }}"
-                                                            alt="iPad Air">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">iPad Air 4 64GB 天蓝色</h5>
-                                                        <div class="tm-product-price">¥2,800 <small>原价: ¥4,299</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">艺术学院陈学姐 · 带保护套</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item6.png') }}"
-                                                            alt="迷你冰箱">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">美的迷你冰箱 单门 35L</h5>
-                                                        <div class="tm-product-price">¥200 <small>原价: ¥399</small></div>
-                                                        <div class="tm-product-meta">大四毕业季 · 使用2年</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item7.png') }}"
-                                                            alt="AirPods Pro">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">AirPods Pro 2代 降噪耳机</h5>
-                                                        <div class="tm-product-price">¥1,050 <small>原价: ¥1,899</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">电子系刘同学 · 发票齐全</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item8.png') }}"
-                                                            alt="PS5游戏机">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">PS5数字版 带3款热门游戏</h5>
-                                                        <div class="tm-product-price">¥2,600 <small>原价: ¥3,899</small>
-                                                        </div>
-                                                        <div class="tm-product-meta">机电学院赵同学 · 99新</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item9.png') }}"
-                                                            alt="护眼台灯">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">小米护眼台灯 智能调光</h5>
-                                                        <div class="tm-product-price">¥80 <small>原价: ¥199</small></div>
-                                                        <div class="tm-product-meta">考研结束 · 使用1年</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item10.png') }}"
-                                                            alt="机械键盘">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">罗技G系列机械键盘 青轴</h5>
-                                                        <div class="tm-product-price">¥220 <small>原价: ¥429</small></div>
-                                                        <div class="tm-product-meta">计算机协会 · 9成新</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item11.png') }}"
-                                                            alt="宿舍电风扇">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">美的宿舍用静音电风扇</h5>
-                                                        <div class="tm-product-price">¥60 <small>原价: ¥129</small></div>
-                                                        <div class="tm-product-meta">毕业生转让 · 功能完好</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="tm-carousel-item">
-                                                <div class="tm-product-card">
-                                                    <div class="tm-product-img-container">
-                                                        <img src="{{ url_for('static', filename='img/indexPage/hot-item12.png') }}"
-                                                            alt="专业滑板">
-                                                    </div>
-                                                    <div class="tm-product-info">
-                                                        <h5 class="tm-product-title">专业双翘滑板 进口枫木板</h5>
-                                                        <div class="tm-product-price">¥180 <small>原价: ¥350</small></div>
-                                                        <div class="tm-product-meta">滑板社成员 · 带护具</div>
-
-                                                        <a href="#" class="tm-view-btn">联系卖家</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                    <button class="tm-carousel-control prev" aria-label="Previous">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </button>
-
-                                    <button class="tm-carousel-control next" aria-label="Next">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </button>
-
-                                    <div class="tm-carousel-indicators">
-                                        
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                        </div> -->
 
                         <!-- 最新动态 -->
                         <div class="row mt-5">
@@ -894,53 +645,80 @@
                     <section id="about" class="tm-section">
                         <div class="container">
                             <!-- 标题 -->
+                            
                             <div class="row mb-4">
                                 <div class="col-12 text-center">
-                                    <h2 class="tm-text-primary mb-3">校园互助跑腿地图</h2>
+                                    <h2 class="tm-text-primary mb-3">
+                                        校园互助跑腿地图
+                                        <span class="tooltip-container" style="position: relative; display: inline-block; margin-left: 5px;">
+                                            <i class="fas fa-question-circle mr-2" style="font-size: 0.8em; cursor: help;"></i>
+                                            <div class="tooltip-content" style="position: absolute; width: 300px; background-color: white; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.2); padding: 15px; text-align: left; z-index: 1000; visibility: hidden; opacity: 0; transition: opacity 0.3s, visibility 0.3s; left: 50%; transform: translateX(-50%); top: 100%; margin-top: 10px;">
+                                                
+                                                <!-- 提示标题 -->
+                                                <h5>如何使用跑腿地图?</h5>
+
+                                                <!-- 使用说明列表 -->
+                                                <ol>
+                                                    <li>在地图上查看附近的跑腿服务或闲置物品位置</li>
+                                                    <li>点击标记点查看详情和联系方式</li>
+                                                    <li>通过筛选功能快速找到您需要的服务或物品</li>
+                                                    <li>联系对方协商交易细节</li>
+                                                    <li>完成交易后互相评价，积累信用</li>
+                                                </ol>
+
+                                                <!-- 气泡小箭头 -->
+                                                <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid white;"></div>
+                                            </div>
+                                        </span>
+                                    </h2>
+
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-map-marked-alt"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+
                                     <p class="lead">连接校园内的供需双方，让闲置物品和跑腿服务触手可及</p>
                                 </div>
                             </div>
-                
+
+
                             <!-- 功能说明卡片组 -->
                             <div class="row mb-5 feature-cards">
-                                <div class="col-md-4 mb-4">
-                                    <div class="feature-card h-100">
-                                        <div class="feature-icon bg-primary">
-                                            <i class="fas fa-route"></i>
+                                <div class="js-tilt col-md-4 mb-4">
+                                    <div class="feature-card js-tilt h-100">
+                                        <div class="js-tilt feature-icon bg-primary">
+                                            <i class="js-tilt fas fa-route"></i>
                                         </div>
                                         <h4>实时位置展示</h4>
                                         <p>在地图上直观查看校园内可提供的跑腿服务和闲置物品位置，距离一目了然</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="feature-card h-100">
-                                        <div class="feature-icon bg-success">
-                                            <i class="fas fa-hand-holding-heart"></i>
+                                <div class="js-tilt col-md-4 mb-4">
+                                    <div class="feature-card js-tilt h-100">
+                                        <div class="js-tilt feature-icon bg-success">
+                                            <i class="js-tilt fas fa-hand-holding-heart"></i>
                                         </div>
                                         <h4>互助共享</h4>
                                         <p>顺路帮忙取快递、带餐食，让校园生活更便捷，还能赚点零花钱</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-4">
-                                    <div class="feature-card h-100">
-                                        <div class="feature-icon bg-info">
-                                            <i class="fas fa-shield-alt"></i>
+                                <div class="js-tilt col-md-4 mb-4">
+                                    <div class="feature-card js-tilt h-100">
+                                        <div class="js-tilt feature-icon bg-info">
+                                            <i class="js-tilt fas fa-shield-alt"></i>
                                         </div>
                                         <h4>安全可靠</h4>
                                         <p>所有用户均经过学生认证，交易过程可追溯，保障双方权益</p>
                                     </div>
                                 </div>
                             </div>
+                            
                 
                             <!-- 地图区域 -->
                             <div class="row mb-4 map-section">
                                 <div class="col-12">
-                                    <div class="map-header d-flex justify-content-between align-items-center mb-3">
+                                    <div class="map-header d-flex justify-content-between align-items-center">
                                         <h4><i class="fas fa-map-marked-alt mr-2"></i>校园跑腿热点地图</h4>
                                         <div class="map-legend">
                                             <span class="legend-item"><i class="fas fa-circle text-primary"></i> 跑腿服务</span>
@@ -1005,35 +783,7 @@
                                 </div>
                             </div>
                 
-                            <!-- 使用指南折叠面板 -->
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <div class="guide-accordion" id="guideAccordion">
-                                        <div class="card">
-                                            <div class="card-header" id="headingOne">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                                                        data-target="#collapseOne">
-                                                        <i class="fas fa-question-circle mr-2"></i>如何使用跑腿地图？
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                                data-parent="#guideAccordion">
-                                                <div class="card-body">
-                                                    <ol>
-                                                        <li>在地图上查看附近的跑腿服务或闲置物品位置</li>
-                                                        <li>点击标记点查看详情和联系方式</li>
-                                                        <li>通过筛选功能快速找到您需要的服务或物品</li>
-                                                        <li>联系对方协商交易细节</li>
-                                                        <li>完成交易后互相评价，积累信用</li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                 
                             
                         </div>
@@ -1105,14 +855,7 @@
                     </div>
                 </div>
 
-                <!-- Copyright -->
-                <div class="tm-section-wrap tm-copyright row">
-                    <div class="col-12">
-                        <div class="text-right">
-                  
-                        </div> 
-                    </div>
-                </div>
+                
             </div> <!-- .tm-main -->
         </div> <!-- .row -->
     </div> <!-- .container-fluid -->
@@ -1132,175 +875,7 @@
     <script src="{{ url_for('static', filename='js/homesection.js') }}"></script>
     <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
     <script src="{{ url_for('static', filename='js/transpic.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/help-hover.js') }}"></script>
 </body>
 
 </html>
-
-<style>
-/* 新增样式 */
-.tm-text-primary {
-    color: #4a6bdf;
-    font-weight: 700;
-}
-
-.divider-custom {
-    display: flex;
-    align-items: center;
-    margin: 1.25rem 0;
-}
-
-.divider-custom-line {
-    flex-grow: 1;
-    height: 1px;
-    background-color: #dee2e6;
-}
-
-.divider-custom-icon {
-    padding: 0 1rem;
-    color: #4a6bdf;
-    font-size: 1.5rem;
-}
-
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #57606f;
-}
-
-/* 功能卡片样式 */
-.feature-cards {
-    margin-top: 2rem;
-}
-
-.feature-card {
-    padding: 2rem 1.5rem;
-    text-align: center;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.feature-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-}
-
-.bg-primary { background-color: #4a6bdf; }
-.bg-success { background-color: #28a745; }
-.bg-info { background-color: #17a2b8; }
-
-.feature-card h4 {
-    margin-bottom: 1rem;
-    color: #2f3542;
-}
-
-.feature-card p {
-    color: #7f8c8d;
-    font-size: 0.95rem;
-}
-
-/* 地图容器样式 */
-.map-header {
-    background: #f8f9fa;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px 8px 0 0;
-    border-bottom: 1px solid #eee;
-}
-
-.map-container {
-    position: relative;
-    border-radius: 0 0 8px 8px;
-    overflow: hidden;
-}
-
-.map-legend {
-    font-size: 0.85rem;
-}
-
-.legend-item {
-    margin-left: 1rem;
-}
-
-.map-overlay {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
-}
-
-.map-control {
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* 使用指南样式 */
-.guide-accordion .card {
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.guide-accordion .card-header {
-    background: #f8f9fa;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.guide-accordion .btn-link {
-    color: #4a6bdf;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-/* 筛选区域样式 */
-.input-group-text {
-    background-color: #f8f9fa;
-}
-
-.form-control {
-    border-radius: 4px !important;
-}
-
-/* 热门服务标签 */
-.hot-services {
-    margin: 1rem 0;
-}
-
-.hot-services .badge {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-    font-weight: normal;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: all 0.2s;
-}
-
-.hot-services .badge:hover {
-    background-color: #4a6bdf !important;
-    color: white !important;
-    transform: translateY(-2px);
-}
-
-.section-subtitle {
-    color: #4a6bdf;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-</style>
