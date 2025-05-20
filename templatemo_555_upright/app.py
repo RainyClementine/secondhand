@@ -40,6 +40,9 @@ def infinity():
 @app.route('/details')
 def details():
     return render_template('details.html')
+@app.route('/details2')
+def details2():
+    return render_template('details2.html')
 
 @app.route('/register')
 def register():

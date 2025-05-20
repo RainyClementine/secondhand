@@ -172,7 +172,8 @@
         });
     </script>
     <canvas class="photobox" id="canvas1"></canvas>
-    <canvas class="photobox" id="canvas2" style="display: none;"></canvas>
+    <canvas class="photobox" id="canvas2" style="display: none;">
+    </canvas>
 </body>
 <script>
 
@@ -927,6 +928,11 @@
                     canvas2.style.display = "block"; // 显示第二个canvas
                     photobox2.init();
                     canvas1.style.display = "none";  // 隐藏第一个canvas
+                     // 添加延迟跳转
+                setTimeout(() => {
+                    const imgIndex = this.img_data.indexOf(img);
+                    window.location.href = "{{ url_for('details2') }}";
+                }, 1000); // 1秒后跳转
                 }
             }
         }
