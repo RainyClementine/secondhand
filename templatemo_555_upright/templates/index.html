@@ -466,7 +466,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="media tm-news-item"
+                                    <div class="media tm-news-item" 
                                         data-cursor-image="{{ url_for('static', filename='img/indexPage/news4.png') }}">
                                         <div class="news-index d-flex justify-content-center align-items-center">
                                             04&nbsp;
@@ -487,13 +487,14 @@
                 <!-- 画廊部分 -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll"
-                        data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>
+                        data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}">
+                    </div>
                         
                     <section id="gallery" class="tm-section">
                         <!-- 标题部分 -->
-                        <div class="row mb-5 mt-5"> <!-- 同时添加顶部间距 -->
+                        <div class="row mb-5">
                             <div class="col-12 text-center">
-                                <h2 class="tm-text-primary mb-4">二手商品一览</h2>
+                                <h2 class="tm-text-primary mb-4"><br><br>二手商品一览</h2>
                                 <div class="divider-custom animated fadeInUp">
                                     <div class="divider-custom-line"></div>
                                     <div class="divider-custom-icon"><i class="fas fa-box-open"></i></div>
