@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Docpro - HTML 5 Template Preview</title>
+    <title>商品详情</title>
 
     <!-- Fav Icon -->
 
@@ -36,7 +36,7 @@
         <div class="preloader"></div>
         <!-- preloader -->
 
-        <!-- clinic-details -->
+        <!-- 商品详情 -->
         <section class="clinic-details bg-color-3">
             <div class="auto-container">
                 <div class="row clearfix">
@@ -47,7 +47,7 @@
                             <div class="clinic-block-one">
                                 <div class="inner-box">
                                     <figure class="image-box">
-                                        <img src="{{ url_for('static', filename='img/detailPage/phone0.png') }}" alt="二手iPhone 12 Pro">
+                                        <img src="{{ url_for('static', filename='img/detailPage/book1.png') }}" alt="高等数学课程教材">
                                     </figure>
                                     <div class="content-box">
                                         <div class="like-box">
@@ -58,12 +58,12 @@
                                         </div>
                                         <ul class="name-box clearfix">
                                             <li class="name">
-                                                <h2>iPhone 12 Pro 256GB</h2>
+                                                <h2>高等数学（第七版）上下册</h2>
                                             </li>
-                                            <li><i class="icon-Trust-1" title="官方验机"></i></li>
-                                            <li><i class="icon-Trust-2" title="质保30天"></i></li>
+                                            <li><i class="icon-Trust-1" title="正版教材"></i></li>
+                                            <li><i class="icon-Trust-2" title="学长推荐"></i></li>
                                         </ul>
-                                        <span class="designation">95新·全套包装·在保</span>
+                                        <span class="designation">9成新·同济大学出版·附带笔记</span>
                                         <div class="rating-box clearfix">
                                             <ul class="rating clearfix">
                                                 <li><i class="icon-Star"></i></li>
@@ -74,12 +74,12 @@
                                             </ul>
                                         </div>
                                         <div class="text">
-                                            <p>国行全网通，无拆无修，电池效率92%，屏幕完美无划痕，附带原装充电器和保护壳。</p>
+                                            <p>大一高等数学教材，附带学长精心整理的笔记和重点标注，适合数学基础薄弱的同学快速掌握重点。</p>
                                         </div>
                                         <div class="lower-box clearfix">
                                             <ul class="info clearfix">
                                                 <li><i class="fas fa-map-marker-alt"></i>嘉定校区 · 可面交</li>
-                                                <li><i class="fas fa-tag"></i><a href="">¥3899</a></li>
+                                                <li><i class="fas fa-tag"></i><a href="">¥35</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -92,36 +92,29 @@
                                     <ul class="tab-btns tab-buttons clearfix">
                                         <li class="tab-btn active-btn" data-tab="#tab-1">商品详情</li>
                                         <li class="tab-btn" data-tab="#tab-2">卖家信息</li>
-                                        <li class="tab-btn" data-tab="#tab-3">交易方式</li>
+                                        <li class="tab-btn" data-tab="#tab-3">交易方式</li>                           
                                     </ul>
                                 </div>
                                 <div class="tabs-content">
+
                                     <!-- 商品详情标签页 -->
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="inner-box">
                                             <div class="text">
                                                 <h3>商品描述：</h3>
-                                                <p>国行iPhone 12 Pro 256GB，2021年3月购于苹果官方店，全套包装盒、原装充电器、数据线、卡针齐全。手机无拆无修，所有功能正常使用，爱思验机全绿。</p>
-                            
-                                                <h3>核心参数</h3>
-                                                <ul class="list clearfix">
-                                                    <li><strong>型号：</strong>iPhone 12 Pro 256GB 国行</li>
-                                                    <li><strong>成色：</strong>95新（仅边框轻微使用痕迹）</li>
-                                                    <li><strong>电池健康：</strong>92%</li>
-                                                    <li><strong>屏幕：</strong>无划痕，已贴钢化膜</li>
-                                                    <li><strong>网络：</strong>全网通5G</li>
-                                                    <li><strong>保修：</strong>苹果官方保修至2023年3月</li>
-                                                </ul>
+                                                <p>同济大学数学系编著的《高等数学》第七版上册，2020年出版。
+                                                    本书为我校大一学生必修教材，内容涵盖函数与极限、导数与微分、微分中值定理与导数的应用、
+                                                    不定积分、定积分及其应用等。</p>
                                             </div>
                         
-                                            <!-- 配件清单 -->
+                                            <!-- 附加内容 -->
                                             <div class="award-box">
-                                                <h3>包含配件</h3>
+                                                <h3>包含资料</h3>
                                                 <ul class="list clearfix">
-                                                    <li>原装包装盒<span>(序列号匹配)</span></li>
-                                                    <li>原装20W充电器<span>(未使用)</span></li>
-                                                    <li>原装Lightning数据线<span>(1米)</span></li>
-                                                    <li>透明保护壳+钢化膜<span>(已贴好)</span></li>
+                                                    <li>教材本体<span>(第七版上册)</span></li>
+                                                    <li>手写笔记<span>(30页重点整理)</span></li>
+                                                    <li>电子版资料<span>(历年考题+答案)</span></li>
+                                                    <li>习题解答<span>(部分课后题详解)</span></li>
                                                 </ul>
                                             </div>
                             
@@ -130,16 +123,12 @@
                                                 <h3>实拍照片</h3>
                                                 <ul class="image-list clearfix">
                                                     <li>
-                                                        <figure class="image"><img src="{{ url_for('static', filename='img/detailPage/phone0.png') }}"
+                                                        <figure class="image"><img src="{{ url_for('static', filename='img/detailPage/book_extra0.png') }}"
                                                                 alt="正面照片"></figure>
                                                     </li>
                                                     <li>
-                                                        <figure class="image"><img src="{{ url_for('static', filename='img/detailPage/phone1.png') }}"
+                                                        <figure class="image"><img src="{{ url_for('static', filename='img/detailPage/book_extra1.png') }}"
                                                                 alt="背面照片"></figure>
-                                                    </li>
-                                                    <li>
-                                                        <figure class="image"><img src="{{ url_for('static', filename='img/detailPage/phone2.png') }}"
-                                                                alt="包装盒"></figure>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -149,7 +138,7 @@
                                     <!-- 卖家信息标签页 -->
                                     <div class="tab" id="tab-2">
                                         <div class="onboard-doctors">
-                                            <h3>卖家信息：</h3>
+                                            <h3>卖家信息</h3>
                             
                                             <!-- 卖家卡片1 -->
                                             <div class="team-block-one">
@@ -162,34 +151,21 @@
                                                             style="background-image: url('{{ url_for('static', filename='img/shape/shape-25.png') }}');">
                                                         </div>
                                                     </div>
-                                                    <figure class="image-box"><img src="{{ url_for('static', filename='img/seller-avatar.jpg') }}"
+                                                    <figure class="image-box"><img src="{{ url_for('static', filename='img/detailPage/avatar.png') }}"
                                                             alt="卖家头像"></figure>
                                                     <div class="content-box">
                                                         <div class="like-box"><a href="seller-profile.html"><i class="far fa-heart"></i></a></div>
                                                         <ul class="name-box clearfix">
-                                                            <li class="name">
-                                                                <h3><a href="seller-profile.html">数码达人张先生</a></h3>
-                                                            </li>
-                                                            <li><i class="icon-Trust-1" title="实名认证"></i></li>
-                                                            <li><i class="icon-Trust-2" title="金牌卖家"></i></li>
+                                                            <h3><a href="seller-profile.html">张同学</a></h3>
                                                         </ul>
-                                                        <span class="designation">个人卖家 · 3年平台会员</span>
-                                                        <div class="text">
-                                                            <p>专注苹果产品，所有商品均为自用一手转卖，提供完整购买凭证</p>
-                                                        </div>
-                                                        <div class="rating-box clearfix">
-                                                            <ul class="rating clearfix">
-                                                                <li><i class="icon-Star"></i></li>
-                                                                <li><i class="icon-Star"></i></li>
-                                                                <li><i class="icon-Star"></i></li>
-                                                                <li><i class="icon-Star"></i></li>
-                                                                <li><i class="icon-Star"></i></li>
-                                                                <li><a href="index.html">(42条评价)</a></li>
-                                                            </ul>
-                                                            <div class="link"><a href="seller-profile.html">近期在线</a></div>
+                                                        <span class="student-info">大三</span>
+                                                        <span class="student-info">学号225xxxx</span>
+                                                        <div class="contact-methods">
+                                                            <p><i class="fas fa-phone-alt"></i> 联系方式：138****1234</p>
+                                                            <p><i class="fas fa-comments"></i> 微信：请先私信获取</p>
                                                         </div>
                                                         <div class="location-box">
-                                                            <p><i class="fas fa-map-marker-alt"></i>北京朝阳区 · 可当面交易</p>
+                                                            <p><i class="fas fa-map-marker-alt"></i>同济大学嘉定校区 可当面交易</p>
                                                         </div>
                                                         <div class="btn-box">
                                                             <a href="contact-seller.html" class="theme-btn-one">联系卖家<i
@@ -201,40 +177,95 @@
                             
                                             <!-- 卖家其他商品 -->
                                             <h3 style="margin-top:30px;">该卖家其他商品</h3>
-                                            <div class="other-items clearfix">
-                                                <!-- 这里可以添加卖家其他商品的缩略展示 -->
+                                            <div class="other-items-grid">
+                                                <div class="item-card">
+                                                    <img src="{{ url_for('static', filename='img/detailPage/other_sells0.png') }}" alt="线性代数教材">
+                                                    <h4>线性代数教材</h4>
+                                                    <p>¥25</p>
+                                                </div>
+                                                <div class="item-card">
+                                                    <img src="{{ url_for('static', filename='img/detailPage/other_sells1.png') }}" alt="二手笔记本">
+                                                    <h4>二手笔记本</h4>
+                                                    <p>¥1200</p>
+                                                </div>
+                                                <div class="item-card">
+                                                    <img src="{{ url_for('static', filename='img/detailPage/other_sells2.png') }}" alt="校园自行车">
+                                                    <h4>校园自行车</h4>
+                                                    <p>¥180</p>
+                                                </div>                           
                                             </div>
                                         </div>
                                     </div>
                             
                                     <!-- 交易方式标签页 -->
                                     <div class="tab" id="tab-3">
-                                        <div class="location-box">
-                                            <h3>交易方式</h3>
-                            
+                                        <div class="campus-transaction">
+                                            <h3><i class="fas fa-exchange-alt"></i> 交易方式</h3>
+                                    
                                             <div class="delivery-options">
-                                                <h4>配送方式：</h4>
-                                                <ul class="list clearfix">
-                                                    <li><i class="fas fa-shipping-fast"></i> <strong>快递邮寄</strong>：顺丰包邮（签收前请验货）</li>
-                                                    <li><i class="fas fa-handshake"></i> <strong>当面交易</strong>：北京朝阳区望京地铁站附近</li>
-                                                    <li><i class="fas fa-store"></i> <strong>平台验机</strong>：支持官方验机中心检测</li>
+                                                <h4><i class="fas fa-truck"></i> 取货方式：</h4>
+                                                <ul class="campus-list">
+                                                    <li>
+                                                        <i class="fas fa-handshake"></i>
+                                                        <div>
+                                                            <strong>校内自取</strong>
+                                                            <p>嘉定校区图书馆前广场/西区宿舍楼下</p>
+                                                            <span class="time-badge"><i class="fas fa-clock"></i> 下午4-6点或周末</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-bicycle"></i>
+                                                        <div>
+                                                            <strong>送货上门</strong>
+                                                            <p>校内可送至教学楼或宿舍区（限嘉定校区）</p>
+                                                            <span class="time-badge"><i class="fas fa-clock"></i> 需提前预约时间</span>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-box"></i>
+                                                        <div>
+                                                            <strong>快递柜寄存</strong>
+                                                            <p>校内快递站智能柜暂存（24小时内取件）</p>
+                                                            <span class="fee-badge">免费</span>
+                                                        </div>
+                                                    </li>
                                                 </ul>
                                             </div>
-                            
-                                            <h4>支付方式：</h4>
-                                            <ul class="payment-methods clearfix">
-                                                <li><i class="fab fa-alipay"></i> 支付宝担保交易</li>
-                                                <li><i class="fas fa-money-bill-wave"></i> 现金交易（仅限面交）</li>
-                                                <li><i class="fas fa-credit-card"></i> 平台分期付款（可选）</li>
-                                            </ul>
-                            
-                                            <div class="notice-box">
-                                                <h4><i class="fas fa-exclamation-circle"></i> 注意事项：</h4>
-                                                <p>1. 签收快递时请当场验货，确认无误后再签收<br>
-                                                    2. 面交时请选择公共场所，建议白天交易<br>
-                                                    3. 收到商品后请于48小时内确认收货</p>
+                                    
+                                            <div class="payment-options">
+                                                <h4><i class="fas fa-money-bill-wave"></i> 支付方式：</h4>
+                                                <div class="payment-cards">
+                                                    <div class="payment-card wechat">
+                                                        <i class="fab fa-weixin"></i>
+                                                        <span>微信支付</span>
+                                                    </div>
+                                                    <div class="payment-card alipay">
+                                                        <i class="fab fa-alipay"></i>
+                                                        <span>支付宝</span>
+                                                    </div>
+                                                    <div class="payment-card cash">
+                                                        <i class="fas fa-money-bill-alt"></i>
+                                                        <span>现金支付</span>
+                                                        <small>(仅限面交)</small>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                    
+                                            <div class="safety-tips">
+                                                <h4><i class="fas fa-shield-alt"></i> 安全提示：</h4>
+                                                <ul class="tip-list">
+                                                    <li><i class="fas fa-check-circle"></i> 面交时请选择校园内公共场所</li>
+                                                    <li><i class="fas fa-check-circle"></i> 建议白天交易，避免夜间单独见面</li>
+                                                    <li><i class="fas fa-check-circle"></i> 贵重物品建议在监控区域完成交易</li>
+                                                    <li><i class="fas fa-check-circle"></i> 可邀请同学陪同完成交易</li>
+                                                </ul>
+                                    
+                                                <div class="contact-support">
+                                                    <i class="fas fa-question-circle"></i> 如有任何疑问或需要协助，请联系平台客服
+                                                    <a href="mailto:support@campus-trade.edu">support@campus-trade.edu</a>
+                                                </div>
+                                            </div>
+                                        </div>                             
                                     </div>
                                 </div>
                             </div>
@@ -247,14 +278,10 @@
                             <!-- 评论区HTML -->
                             <div class="info-widget qa-widget">
                                 <div class="info-title">
-                                    <h3 style="color: #2e86de; font-weight: 600; margin-bottom: 8px; font-size: 22px;"><i class="fas fa-comments"
-                                            style="color: #54a0ff; margin-right: 8px;"></i> 买家咨询与卖家回复</h3>
-                                    <p style="color: #636e72; font-size: 14px; margin-top: 0; margin-bottom: 15px;">商品问答区 - <span
-                                            style="color: #ff6b6b; font-weight: 500;">实时更新</span></p>
-                                    <div class="qa-stats">
-                                        <span><i class="fas fa-question-circle"></i> 问题数：3</span>
-                                        <span><i class="fas fa-thumbs-up"></i> 满意度：98%</span>
-                                    </div>
+                                    <h3 style="color: #2e86de; font-weight: 600; margin-bottom: 8px; font-size: 22px;">
+                                        <i class="fas fa-comments" style="color: #54a0ff; margin-right: 8px;"></i>
+                                        同学咨询与卖家回复                       
+                                    </h3>
                                 </div>
                                 <div class="info-inner">
                                     <ul class="info-list qa-list clearfix">
@@ -268,60 +295,31 @@
                                                     <span class="qa-time">今天 14:30</span>
                                                     <span class="user-tag buyer-tag">买家</span>
                                                 </h4>
-                                                <p>这款手机还有磨损吗？电池续航如何？想了解下具体使用情况。</p>
+                                                <p>你好，请问这本高数教材有没有笔记？有没有缺页或破损？</p>
                                             </div>
                                         </li>
                             
                                         <li class="qa-item seller-response">
                                             <div class="qa-avatar seller-avatar">
-                                                <img src="{{ url_for('static', filename='img/avatars/avatar2.png') }}" alt="卖家头像" />
+                                                <img src="{{ url_for('static', filename='img/detailPage/avatar.png') }}" alt="卖家头像" />
                                             </div>
                                             <div class="qa-content">
                                                 <h4>
-                                                    <span class="username seller-name">哆啦A梦</span>
+                                                    <span class="username seller-name">张同学</span>
                                                     <span class="qa-time">今天 15:05</span>
                                                     <span class="user-tag seller-tag">卖家</span>
                                                 </h4>
-                                                <p>手机95新，仅有轻微使用痕迹，主要在边框有些小擦伤。电池健康度89%，可持续使用5-6小时，重度游戏大约3小时左右。已恢复出厂设置并消毒清洁完毕。</p>
+                                                <p>你好，书整体保存较好，没有缺页，有些章节做了铅笔笔记，可以轻松擦掉。封面有轻微磨痕，不影响阅读。适合用来备考。</p>
                                                 <span class="helpful-count"><i class="fas fa-thumbs-up"></i> 3人觉得有用</span>
                                                 <div class="media-proof">
-                                                    <img src="{{ url_for('static', filename='img/detailPage/phone1.png') }}" alt="手机背面"
+                                                    <img src="{{ url_for('static', filename='img/detailPage/book_chat0.png') }}" alt="手机背面"
                                                         class="media-item" />
-                                                    <img src="{{ url_for('static', filename='img/detailPage/phone2.png') }}" alt="手机正面"
+                                                    <img src="{{ url_for('static', filename='img/detailPage/book_chat1.png') }}" alt="手机正面"
                                                         class="media-item" />
                                                 </div>
                                             </div>
                                         </li>
                             
-                                                                   
-                                        <li class="qa-item">
-                                            <div class="qa-avatar buyer-avatar">
-                                                <img src="{{ url_for('static', filename='img/avatars/avatar4.png') }}" alt="买家头像" />
-                                            </div>
-                                            <div class="qa-content">
-                                                <h4>
-                                                    <span class="username buyer-name">野原家的</span>
-                                                    <span class="qa-time">2天前</span>
-                                                    <span class="user-tag buyer-tag">买家</span>
-                                                </h4>
-                                                <p>这个商品支持当面交易吗？我想当面验货，确认没有问题再付款。</p>
-                                            </div>
-                                        </li>
-                            
-                                        <li class="qa-item seller-response">
-                                            <div class="qa-avatar seller-avatar">
-                                                <img src="{{ url_for('static', filename='img/avatars/avatar2.png') }}" alt="卖家头像" />
-                                            </div>
-                                            <div class="qa-content">
-                                                <h4>
-                                                    <span class="username seller-name">哆啦A梦</span>
-                                                    <span class="qa-time">2天前</span>
-                                                    <span class="user-tag seller-tag">卖家</span>
-                                                </h4>
-                                                <p>支持当面交易，可以在市中心地铁站附近见面，欢迎验货。我们有专业检测工具，可以当面测试所有功能。如有需要，请私信我安排时间。</p>
-                                                <span class="helpful-count"><i class="fas fa-thumbs-up"></i> 2人觉得有用</span>
-                                            </div>
-                                        </li>
                                     </ul>
 
                                     <div class="comment-form">
@@ -646,5 +644,301 @@
 .upload-option i {
     margin-right: 5px;
 }
+
+/* 标签按钮容器样式 */
+.tab-btn-box {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 标签按钮列表样式 */
+.tab-btn-box .tab-btns {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+/* 单个标签按钮基础样式 */
+.tab-btn-box .tab-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #e9ecef;
+    color: #007BFF; /* 统一设置蓝色文字 */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+/* 悬停状态 */
+.tab-btn-box .tab-btn:hover {
+    background-color: #dbeafe;
+    color: #0056b3; /* 深蓝色文字 */
+}
+
+/* 激活状态 */
+.tab-btn-box .tab-btn.active-btn {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(102, 152, 234, 0.3);
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .tab-btn-box .tab-btns {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn-box .tab-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* 商家其他商品 */
+.other-items-title {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.other-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.item-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 10px;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.item-card h4 {
+    font-size: 15px;
+    margin: 5px 0;
+    color: #2f3542;
+}
+
+.item-card p {
+    color: #ff4757;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* 交易方式整体样式 */
+.campus-transaction {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.campus-transaction h3 {
+    color: #4a6bdf;
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.campus-transaction h3 i {
+    margin-right: 10px;
+}
+
+.campus-transaction h4 {
+    color: #2f3542;
+    margin: 20px 0 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.campus-transaction h4 i {
+    margin-right: 8px;
+    color: #4a6bdf;
+}
+
+/* 取货方式列表 */
+.campus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.campus-list li {
+    display: flex;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s;
+    align-items: flex-start;
+}
+
+.campus-list li:hover {
+    background: #f1f5ff;
+    transform: translateY(-2px);
+}
+
+.campus-list li i {
+    font-size: 24px;
+    color: #4a6bdf;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.campus-list li strong {
+    display: block;
+    color: #2f3542;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.campus-list li p {
+    color: #57606f;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.time-badge, .fee-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fee-badge {
+    background: #e6f7e6;
+    color: #2e7d32;
+}
+
+/* 支付方式 */
+.payment-cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-card {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.payment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.payment-card i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.payment-card span {
+    display: block;
+    font-weight: 500;
+    color: #2f3542;
+}
+
+.payment-card small {
+    display: block;
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 3px;
+}
+
+.wechat i { color: #09b83e; }
+.alipay i { color: #1677ff; }
+.cash i { color: #52c41a; }
+
+/* 安全提示 */
+.safety-tips {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8faff;
+    border-radius: 10px;
+    border-left: 4px solid #4a6bdf;
+}
+
+.tip-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.tip-list li {
+    margin-bottom: 10px;
+    color: #57606f;
+    display: flex;
+    align-items: center;
+}
+
+.tip-list li i {
+    color: #4a6bdf;
+    margin-right: 10px;
+}
+
+.contact-support {
+    margin-top: 20px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #57606f;
+}
+
+.contact-support a {
+    color: #4a6bdf;
+    text-decoration: none;
+}
+
+.contact-support a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .payment-cards {
+        flex-direction: column;
+    }
+    
+    .payment-card {
+        min-width: 100%;
+    }
+}
+
 
 </style>
