@@ -30,9 +30,6 @@
             margin-left: -20px;
             
         }
-        
-        
-        
     </style>
 </head>
 
@@ -92,7 +89,7 @@
             </div>
 
             <div class="tm-main">
-                <!-- Home section -->
+                <!-- 主页部分 -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll"
                         data-image-src="{{ url_for('static', filename='img/img-01.jpg') }}"></div>
@@ -121,8 +118,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-
                         
                         <div class="row tm-features-row">
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -156,10 +151,6 @@
                             </div>
                         </div>
 
-
-
-                        
-
                         <div class="portrait-container-wrapper">
                             <!-- Left recycle text line -->
                             <div class="home_portrait_textline">
@@ -190,8 +181,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         <!-- 热门商品轮播 -->
                         <!-- <div class="row mb-5">
@@ -495,13 +484,28 @@
                     </section>
                 </div>
 
-                <!-- Gallery section -->
+                <!-- 画廊部分 -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll"
                         data-image-src="{{ url_for('static', filename='img/img-02.jpg') }}"></div>
+                        
                     <section id="gallery" class="tm-section">
-                        <h2 class="tm-text-primary">Upright Gallery</h2>
-                        <hr class="mb-5">
+                        <!-- 标题部分 -->
+                        <div class="row mb-5 mt-5"> <!-- 同时添加顶部间距 -->
+                            <div class="col-12 text-center">
+                                <h2 class="tm-text-primary mb-4">二手商品一览</h2>
+                                <div class="divider-custom animated fadeInUp">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-box-open"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <p class="lead tm-text-gray">
+                                    精选校园好物，淘你喜欢的二手宝贝
+                                    <br>
+                                    <small class="text-muted">按分类浏览、按价格筛选，总有一款适合你</small>
+                                </p>
+                            </div>
+                        </div>
 
                         <!-- 添加一个包装容器以实现更好的布局控制 -->
                         <div class="gallery-content-wrapper" , style="display: flex;">
@@ -881,80 +885,184 @@
                     </section>
                 </div>
 
-
-                <!-- About section -->
+                <!-- 跑腿地图 -->
                 <div class="tm-section-wrap">
-                    <div class="tm-parallax" data-parallax="scroll"
-                        data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
-
+                    <div class="tm-parallax" data-parallax="scroll" data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}">
+                    </div>
+                
                     <section id="about" class="tm-section">
                         <div class="container">
-                            <div class="row mb-1">
-                                <div class="col-12">
-                                    <h2 class="tm-text-primary">跑腿地图</h2>
-                                    <hr class="mb-2">
+                            <!-- 标题 -->
+                            <div class="row mb-4">
+                                <div class="col-12 text-center">
+                                    <h2 class="tm-text-primary mb-3">校园互助跑腿地图</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <p class="lead">连接校园内的供需双方，让闲置物品和跑腿服务触手可及</p>
                                 </div>
                             </div>
-                            <h4 class="carousel-title">🚶‍♂️🚴‍♀️ 你的需求，有人刚好路过！一张地图，连接全校跑腿帮手！</h4>
-                            <!-- Map - Now with map-section class -->
-                            <div class="row mb-2 map-section">
+                
+                            <!-- 功能说明卡片组 -->
+                            <div class="row mb-5 feature-cards">
+                                <div class="col-md-4 mb-4">
+                                    <div class="feature-card h-100">
+                                        <div class="feature-icon bg-primary">
+                                            <i class="fas fa-route"></i>
+                                        </div>
+                                        <h4>实时位置展示</h4>
+                                        <p>在地图上直观查看校园内可提供的跑腿服务和闲置物品位置，距离一目了然</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="feature-card h-100">
+                                        <div class="feature-icon bg-success">
+                                            <i class="fas fa-hand-holding-heart"></i>
+                                        </div>
+                                        <h4>互助共享</h4>
+                                        <p>顺路帮忙取快递、带餐食，让校园生活更便捷，还能赚点零花钱</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="feature-card h-100">
+                                        <div class="feature-icon bg-info">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4>安全可靠</h4>
+                                        <p>所有用户均经过学生认证，交易过程可追溯，保障双方权益</p>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- 地图区域 -->
+                            <div class="row mb-4 map-section">
                                 <div class="col-12">
-                                    <div class="mapouter">
-                                        <div id="amap-container-2" class="amap-container"
-                                            style="width: 100%; height: 580px;"></div>
+                                    <div class="map-header d-flex justify-content-between align-items-center mb-3">
+                                        <h4><i class="fas fa-map-marked-alt mr-2"></i>校园跑腿热点地图</h4>
+                                        <div class="map-legend">
+                                            <span class="legend-item"><i class="fas fa-circle text-primary"></i> 跑腿服务</span>
+                                            <span class="legend-item"><i class="fas fa-circle text-success"></i> 闲置物品</span>
+                                            <span class="legend-item"><i class="fas fa-circle text-warning"></i> 紧急需求</span>
+                                        </div>
+                                    </div>
+                                    <div class="map-container shadow-lg rounded">
+                                        <div id="amap-container-2" class="amap-container" style="width: 100%; height: 580px;"></div>
+                                        <div class="map-overlay">
+                                            <button id="btn-locate" class="btn btn-outline-primary btn-sm map-control">
+                                                <i class="fas fa-location-arrow"></i> 定位我的位置
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Button row with additional class for spacing -->
-                            <div class="row button-row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <select class="form-control rounded-0" id="contact-select-2" name="kind">
+                            <!-- 筛选功能区 -->
+                            <div class="row button-row mb-5">
+                                <!-- 类别筛选 -->
+                                <div class="col-md-3 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-filter"></i></span>
+                                        </div>
+                                        <select class="form-control" id="contact-select-2" name="kind">
                                             <option value="all">全部类别</option>
                                             <option value="elec">数码 &amp; 电子商品</option>
                                             <option value="cloth">衣服 &amp; 运动户外</option>
-                                            <option value="book">书籍</option>
-                                            <option value="run">跑腿</option>
+                                            <option value="book">书籍 &amp; 学习资料</option>
+                                            <option value="run">跑腿服务</option>
+                                            <option value="food">代购 &amp; 带餐</option>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <input type="number" id="price_min" name="price_min" min="0" step="1"
-                                            class="form-control rounded-0" placeholder="最低价格" required />
+                                <!-- 最低价格筛选 -->
+                                <div class="col-md-3 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">¥</span>
+                                        </div>
+                                        <input type="number" id="price_min" name="price_min" min="0" step="1" class="form-control"
+                                            placeholder="最低价" />
                                     </div>
                                 </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <input type="number" id="price_max" name="price_max" max="2000" step="2"
-                                            class="form-control rounded-0" placeholder="最高价格" required />
+                                <!-- 最高价格筛选 -->
+                                <div class="col-md-3 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">¥</span>
+                                        </div>
+                                        <input type="number" id="price_max" name="price_max" max="2000" step="2" class="form-control"
+                                            placeholder="最高价" />
                                     </div>
                                 </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block" id="btn-map">筛选</button>
+                                <!-- 筛选按钮 -->
+                                <div class="col-md-3 mb-3">
+                                    <button type="submit" class="btn btn-primary btn-block" id="btn-map">
+                                        <i class="fas fa-search mr-2"></i>筛选
+                                    </button>
+                                </div>
+                            </div>
+                
+                            <!-- 使用指南折叠面板 -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <div class="guide-accordion" id="guideAccordion">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                                        data-target="#collapseOne">
+                                                        <i class="fas fa-question-circle mr-2"></i>如何使用跑腿地图？
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#guideAccordion">
+                                                <div class="card-body">
+                                                    <ol>
+                                                        <li>在地图上查看附近的跑腿服务或闲置物品位置</li>
+                                                        <li>点击标记点查看详情和联系方式</li>
+                                                        <li>通过筛选功能快速找到您需要的服务或物品</li>
+                                                        <li>联系对方协商交易细节</li>
+                                                        <li>完成交易后互相评价，积累信用</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                
+                            
                         </div>
-                    </section>
+                    </section>          
                 </div>
 
-
-
-
-
-                <!-- Contact section -->
+                <!-- 发布二手商品或跑腿 -->
                 <div class="tm-section-wrap">
                     <div class="tm-parallax" data-parallax="scroll"
                         data-image-src="{{ url_for('static', filename='img/img-04.jpg') }}"></div>
+
                     <div id="contact" class="tm-section">
-                        <h2 class="tm-text-primary">Contact Upright</h2>
-                        <hr class="mb-5">
+                        <!-- 标题部分 -->
+                        <div class="row mb-5">
+                            <div class="col-12 text-center">
+                                <h2 class="tm-text-primary mb-4">二手物品发布</h2>
+                                <div class="divider-custom animated fadeInUp">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-handshake"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <p class="lead tm-text-gray">
+                                    闲置不用的物品，转手也能发光发热
+                                    <br>
+                                    <small class="text-muted">发布你的二手好物，让资源流动起来，让校园更环保</small>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 发布二手商品和拍腿的部分 -->
                         <div class="row">
                             <div class="col-xl-6 tm-contact-col-l mb-4">
                                 <form id="contact-form" action="" method="POST" class="tm-contact-form">
@@ -990,39 +1098,6 @@
                                     <div id="amap-container-1" class="amap-container"
                                         style="width: 100%; height: 520px;"></div>
                                 </div>
-
-                                <!-- Address -->
-                                <address class="mb-4">
-                                    120-240 eget purus luctus sodales. Sed<br>
-                                    auctor odio quis ligula dignissim efficitur<br>
-                                    vitae vitae quam 16502
-                                </address>
-
-                                <!-- Links -->
-                                <ul class="tm-contact-links mb-4">
-                                    <li class="mb-2">
-                                        <a href="tel:0100200340">
-                                            <i class="fas fa-phone mr-2 tm-contact-link-icon"></i>
-                                            Tel: 010-020-0340
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:info@company.com">
-                                            <i class="fas fa-at mr-2 tm-contact-link-icon"></i>
-                                            Email: info@company.com
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="tm-contact-social">
-                                    <li><a href="https://fb.com/templatemo" class="tm-social-link"><i
-                                                class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com" class="tm-social-link"><i
-                                                class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://instagram.com" class="tm-social-link"><i
-                                                class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://youtube.com" class="tm-social-link"><i
-                                                class="fab fa-youtube"></i></a></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1058,3 +1133,172 @@
 </body>
 
 </html>
+
+<style>
+/* 新增样式 */
+.tm-text-primary {
+    color: #4a6bdf;
+    font-weight: 700;
+}
+
+.divider-custom {
+    display: flex;
+    align-items: center;
+    margin: 1.25rem 0;
+}
+
+.divider-custom-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.divider-custom-icon {
+    padding: 0 1rem;
+    color: #4a6bdf;
+    font-size: 1.5rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #57606f;
+}
+
+/* 功能卡片样式 */
+.feature-cards {
+    margin-top: 2rem;
+}
+
+.feature-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.bg-primary { background-color: #4a6bdf; }
+.bg-success { background-color: #28a745; }
+.bg-info { background-color: #17a2b8; }
+
+.feature-card h4 {
+    margin-bottom: 1rem;
+    color: #2f3542;
+}
+
+.feature-card p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* 地图容器样式 */
+.map-header {
+    background: #f8f9fa;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #eee;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.map-legend {
+    font-size: 0.85rem;
+}
+
+.legend-item {
+    margin-left: 1rem;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.map-control {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 使用指南样式 */
+.guide-accordion .card {
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.guide-accordion .card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.guide-accordion .btn-link {
+    color: #4a6bdf;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 筛选区域样式 */
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+.form-control {
+    border-radius: 4px !important;
+}
+
+/* 热门服务标签 */
+.hot-services {
+    margin: 1rem 0;
+}
+
+.hot-services .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: normal;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+}
+
+.hot-services .badge:hover {
+    background-color: #4a6bdf !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.section-subtitle {
+    color: #4a6bdf;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+</style>

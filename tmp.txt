@@ -1,0 +1,60 @@
+                <div class="tm-section-wrap">
+                    <div class="tm-parallax" data-parallax="scroll"
+                        data-image-src="{{ url_for('static', filename='img/img-03.jpg') }}"></div>
+
+                    <section id="about" class="tm-section">
+                        <div class="container">
+                            <div class="row mb-1">
+                                <div class="col-12">
+                                    <h2 class="tm-text-primary">跑腿地图</h2>
+                                    <hr class="mb-2">
+                                </div>
+                            </div>
+                            <h4 class="carousel-title">🚶‍♂️🚴‍♀️ 你的需求，有人刚好路过！一张地图，连接全校跑腿帮手！</h4>
+                            <!-- Map - Now with map-section class -->
+                            <div class="row mb-2 map-section">
+                                <div class="col-12">
+                                    <div class="mapouter">
+                                        <div id="amap-container-2" class="amap-container"
+                                            style="width: 100%; height: 580px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button row with additional class for spacing -->
+                            <div class="row button-row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <select class="form-control rounded-0" id="contact-select-2" name="kind">
+                                            <option value="all">全部类别</option>
+                                            <option value="elec">数码 &amp; 电子商品</option>
+                                            <option value="cloth">衣服 &amp; 运动户外</option>
+                                            <option value="book">书籍</option>
+                                            <option value="run">跑腿</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="number" id="price_min" name="price_min" min="0" step="1"
+                                            class="form-control rounded-0" placeholder="最低价格" required />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <input type="number" id="price_max" name="price_max" max="2000" step="2"
+                                            class="form-control rounded-0" placeholder="最高价格" required />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block" id="btn-map">筛选</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
