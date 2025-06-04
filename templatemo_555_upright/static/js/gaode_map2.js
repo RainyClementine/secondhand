@@ -47,6 +47,7 @@ function clearAllMarkers() {
     }
 }
 
+
 // 在地图上添加物品标记
 function addItemsToMap(items) {
     // 先清除现有标记
@@ -61,15 +62,151 @@ function addItemsToMap(items) {
             map: map2
         });
         
-        // 创建信息窗体
-        let infoWindow = new AMap.InfoWindow({
-            content: `<div>
-                        <h4>${item.name}</h4>
-                        <p>价格: ¥${item.price}</p>
-                      </div>`,
-            offset: new AMap.Pixel(0, -30)
-        });
+        // 构建信息窗体内容
+        // 构建信息窗体内容 - 完全无白边版本
+let infoContent = `
+    <div style="
+        padding: 15px; 
+        min-width: 220px; 
+        max-width: 280px;
+        background: linear-gradient(135deg,rgb(13, 152, 156) 0%,rgb(202, 194, 86) 100%);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        font-family: 'Arial', sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        margin: 0 !important;
+        border: none !important;
+    ">
+        <!-- 装饰性背景元素 -->
+        <div style="
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        "></div>
         
+        <!-- 头部信息区域 -->
+        <div style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+        ">
+            <div style="flex: 1; margin-right: 10px;">
+                <h4 style="
+                    margin: 0 0 8px 0; 
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+                    line-height: 1.3;
+                ">${item.name}</h4>
+                <p style="
+                    margin: 0; 
+                    font-weight: bold; 
+                    color: #FFE066;
+                    font-size: 15px;
+                    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+                ">¥${item.price}</p>
+            </div>
+            
+            <!-- 圆形查看详情按钮 -->
+            <button onclick="viewItemDetails()" 
+                    style="
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        background: linear-gradient(45deg,rgb(137, 171, 229),rgb(239, 244, 250));
+                        border: 2px solid rgba(255,255,255,0.3);
+                        color: white;
+                        cursor: pointer;
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+                        flex-shrink: 0;
+                    "
+                    onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 20px rgba(255,107,107,0.6)';"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255,107,107,0.4)';"
+                    title="查看详情">
+                →
+            </button>
+        </div>
+`;
+
+// 如果有图片URL，添加图片显示
+if (item.image_url && item.image_url.trim() !== '') {
+    infoContent += `
+        <div style="
+            margin: 10px 0 0 0;
+            position: relative;
+            z-index: 2;
+        ">
+            <img src="${item.image_url}" 
+                 alt="${item.name}" 
+                 style="
+                     width: 100%;
+                     max-height: 120px;
+                     object-fit: cover;
+                     border-radius: 8px;
+                     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                     transition: transform 0.3s ease;
+                 "
+                 onmouseover="this.style.transform='scale(1.02)'"
+                 onmouseout="this.style.transform='scale(1)'"
+                 onerror="this.parentElement.style.display='none'">
+        </div>
+    `;
+}
+
+// 关闭div标签
+infoContent += `
+    </div>
+`;
+        // 创建信息窗体
+        // let infoWindow = new AMap.InfoWindow({
+        //     content: infoContent,
+        //     offset: new AMap.Pixel(0, -30)
+        // });
+        let infoWindow = new AMap.InfoWindow({
+    isCustom: true,  // 使用完全自定义模式
+    content: infoContent,
+    offset: new AMap.Pixel(0, -30),
+    closeWhenClickMap: true
+});
+
+// 添加全局CSS样式来确保无白边
+const style = document.createElement('style');
+style.textContent = `
+    .amap-info-window {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .amap-info-window .amap-info-window-content {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+`;
+document.head.appendChild(style);
+
+
+
         // 点击标记时显示信息窗体
         marker.on('click', function() {
             infoWindow.open(map2, marker.getPosition());
@@ -85,6 +222,10 @@ function addItemsToMap(items) {
     }
 }
 
+function viewItemDetails() {
+    window.location.href = '/details2';
+}
+
 // 监听按钮点击事件
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-map').addEventListener('click', function() {
@@ -94,10 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const kindSelect = document.getElementById('contact-select-2');
         // id = contact-select-2 是为了和发布页面的那个类别输入框区分
         
+        const kind = kindSelect.value === "all" ? ["elec", "cloth", "book", "run"] : [kindSelect.value];
         
-        const kind = kindSelect.value === "all" ? ["elec", "cloth", "book", "run"] : [kindSelect.value] ;
-        console.log("ooo",kindSelect)
-        console.log("ooo",kind)
+        
         // 准备发送到后端的数据
         const filterData = {
             minprice: minPrice,
@@ -135,4 +275,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
