@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@localhost:3306/shb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:qq;200301161517@localhost:3306/shb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'My_secret_key'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=3)  # 设置 session 有效期
@@ -27,6 +27,7 @@ class Item(db.Model):
     longitude = db.Column(db.Float)
     latitude = db.Column(db.Float)
     user = db.Column(db.String(50), db.ForeignKey('users.username', ondelete='CASCADE'))
+    image_url = db.Column(db.String(255))
 
 @app.route('/')
 @app.route('/index')
@@ -176,44 +177,46 @@ def post_item():
     else:
         return render_template('login_user.html'),403
 
-@app.route('/get_items',methods=['GET','POST'])
+
+@app.route('/get_items', methods=['GET', 'POST'])
 def get_items():
     # 获取前端发送的筛选条件（JSON格式）
     filters = request.get_json()
-    
+
     # 初始化查询
     query = Item.query
-    
+
     # 价格范围筛选
     min_price = filters.get('minprice')
     if min_price is not None:
         query = query.filter(Item.price >= float(min_price))
-        
+
     max_price = filters.get('maxprice')
     if max_price is not None:
         query = query.filter(Item.price <= float(max_price))
-    
+
     # 类别筛选
     kind_list = filters.get('kindlist', [])
     if kind_list:  # 如果类别列表不为空
         query = query.filter(Item.kind.in_(kind_list))
-    
+
     # 执行查询
     items = query.all()
-    
-    # 构建响应数据
+
+    # 构建响应数据 - 添加id和image_url字段
     items_list = [{
+        'id': item.id,  # 添加id字段用于跳转
         'name': item.name,
         'price': item.price,
         'longitude': item.longitude,
-        'latitude': item.latitude
+        'latitude': item.latitude,
+        'image_url': item.image_url  # 添加图片URL字段
     } for item in items]
-    
+
     return jsonify({
         'success': True,
         'items': items_list
     })
-
 
 if __name__ == '__main__':
     with app.app_context():
